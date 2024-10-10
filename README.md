@@ -17,6 +17,6 @@
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aziz-boujaada&progress=true)
 
-[![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=aziz-boujaada)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)
+[![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=azizboujaada12)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)
 
 
