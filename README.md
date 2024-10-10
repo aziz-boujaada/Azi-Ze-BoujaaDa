@@ -3,6 +3,10 @@
 ##🙋‍♂️I'm 22 Years old .</br>
 ##🌄From Amizmiz City .</br>
 ##👨‍🎓studied (web-dev By myself).</br>
+##🔭 I’m currently working on my goal 🎯 to become a good developer</br>
+
+
+
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=aziz-boujaada&theme=dark&show_icons=true)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=aziz-boujaada&repo=Azi-Ze-BoujaaDa)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)
 
