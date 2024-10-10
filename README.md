@@ -14,9 +14,9 @@
 ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
 
 
-
+ # 💻Most Language used
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aziz-boujaada&progress=true)
-
+# ⏳Time statistics
 [![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=azizboujaada12)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)
 
 
