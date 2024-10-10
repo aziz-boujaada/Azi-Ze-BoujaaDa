@@ -4,7 +4,7 @@
 ##🌄From Amizmiz City .</br>
 ##👨‍🎓studied (web-dev By myself).</br>
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=aziz-boujaada&theme=dark&show_icons=true)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=aziz-boujaada&repo=Azi-Ze-BoujaaDa)](https://github.com/Azi-Ze-BoujaaDa.com)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=aziz-boujaada&repo=Azi-Ze-BoujaaDa)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)
 
 ##🌍when i'm get my Education .</br>
 
