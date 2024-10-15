@@ -11,7 +11,7 @@
 
 
 # 🛠⚙tech-skills .</br>
-https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white
+`![Git](https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png "Git")` `![GitHub](https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png "GitHub")` `![Visual Studio Code](https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png "Visual Studio Code")` `![C](https://user-images.githubusercontent.com/25181517/192106070-46255bcf-65e6-4c6b-a296-bf8d0d8fb2a7.png "C")`
 # 🌍where i'm get my Education .</br>
 
 ![Codecademy](https://img.shields.io/badge/Codecademy-FFF0E5?style=for-the-badge&logo=codecademy&logoColor=1F243A)
