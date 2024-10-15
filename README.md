@@ -9,7 +9,7 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=aziz-boujaada&theme=dark&show_icons=true)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=aziz-boujaada&repo=Azi-Ze-BoujaaDa)](https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git)</br>
-[![GitHub Streak](https://streak-stats.demolab.com/?user=aziz-boujaada)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=aziz-boujaada&theme=radical&hide_border=true&border_radius=4)](https://git.io/streak-stats)
 
 # 🌍where i'm get my Education .</br>
 
