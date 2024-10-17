@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER  */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(220, 238, 238);
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    margin-left: 12px;
+    cursor: pointer;
+    color: rgb(48, 46, 46);
+
+}
+
+.logo span {
+    font-size: 24px;
+    margin-left: 12px;
+    color: blue;
+    transition: 0.3s;
+
+}
+
+.logo span:hover {
+    color: rgb(48, 46, 46);
+    transition: 0.5;
+    transform: scale(0.6s);
+}
+
+/* NAV LIST*/
+
+.list nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.list nav ul li {
+    margin-left: 45px;
+    font-size: 20px;
+    color: rgb(48, 46, 46);
+    transition: 0.1s;
+}
+
+.list nav ul li:hover {
+    color: blue;
+    cursor: pointer;
+    transform: scale(0.3s);
+    border-bottom: 2px solid blue;
+
+}
+
+/*SOCIAL ICONS */
+.social_icon a {
+    color: rgb(48, 46, 46);
+    margin-right: 12px;
+    padding-left: 10px;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+.social_icon a:hover {
+    color: blue;
+    margin-right: 12px;
+    padding-left: 10px;
+    font-size: 22px;
+    transform: scale(0.5);
+}
