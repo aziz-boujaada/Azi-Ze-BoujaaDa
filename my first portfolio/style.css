@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-/* HEADER  */
+    /* HEADER  */  
 .nav {
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@ body {
     background-color: rgb(220, 238, 238);
 }
 
-/* LOGO */
+         /* LOGO */
 .logo {
     font-size: 22px;
     margin-left: 12px;
@@ -34,8 +34,7 @@ body {
     transform: scale(0.6s);
 }
 
-/* NAV LIST*/
-
+    /* NAV LIST*/
 .list nav ul {
     list-style: none;
     display: flex;
