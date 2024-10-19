@@ -3,7 +3,8 @@
     --primary-colr:rgb(83, 197, 159);
     --sicndary-colr:rgb(128, 180, 157);
     --hover-colr:rgb(110, 251, 194);;
-
+    --hover-color2:rgb(4, 113, 97);
+    
  }
  
  body {
@@ -14,6 +15,7 @@
     /* HEADER  */  
 .nav {
     width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,25 +47,30 @@
 }
 
 .logo span:hover {
-    color: var(--hover-colr);
+    color: var(--hover-color2);
     transition: 0.5;
     transform: scale(0.6s);
 }
 
-    /* NAVBAR LIST*/
+/* NAVBAR LIST*/
 .list nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-
+    
 }
 
-.list nav ul li {
+.list nav ul a {
+   text-decoration: none;
+}
+.list nav ul li  {
     margin-left: 40px;
     margin-right: 40px;
+    text-decoration: none;
     font-size: 20px;
     color:white;
     transition: 0.1s;
+   
 }
 
 .list nav ul li:hover {
@@ -85,6 +92,7 @@
     background-color: var(--primary-colr);
     border-radius: 5px;
     border: 1px solid var(--primary-colr);
+    transition: 0.5s;
     cursor: pointer;
 }
 .list nav ul  button:hover{
@@ -93,6 +101,7 @@
     background-color: rgb(220, 218, 218);
     border-radius: 5px;
     border: 1px solid var(--primary-colr);
+    transform: translate(0.3s);
 }
 
 
@@ -103,26 +112,27 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-colr);
+    height: 100vh;
 }
 
 .home_info {
    margin-left: 50px;
-   margin-top: 40px;
+   margin-top: 60px;
 }
 .home_info h1 {
   color: azure;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
+  font-size: 55px;
 }
 .home_info h1 span{
   color: rgb(4, 113, 97);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
+  font-size: 45px;
 }
 .home_info h2{
   color: rgb(228, 235, 233);
   padding-top: 15px;
-  font-size: 28px;
+  font-size: 35px;
 }
 .home_info p{
   color: rgb(4, 113, 97);
@@ -135,20 +145,22 @@
 }
 
 /*SOCIAL ICONS */
-.social_icon a {
+ .home_info .social_icon {
+    padding-top: 40px;
+    
+}
+ .home_info .social_icon a{
     padding-top: 30px;
     color:white;
-    margin-right: 16px;
-    padding-left: 15px;
-    font-size: 26px;
+    margin-right:32px ;
+    
+    font-size: 28px;
     transition: 0.5s;
 }
 
 .social_icon a:hover {
-    color:var(--hover-colr);
-    margin-right: 12px;
-    padding-left: 10px;
-    font-size: 22px;
+    color:rgb(4, 113, 97);;
+    font-size: 27px;
     transform: scale(0.5);
 }
 
@@ -156,6 +168,106 @@
 .home_img img{
    width: 100%;
    height: 100vh;
-   margin-right: 20px;
-   margin-bottom: 30px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid var(--primary-colr);
+   border-radius: 40%;
+}
+
+
+
+/*  SUBPAGE ABOUT*/
+
+
+/*ABOUT ME*/
+#About{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+#About .image_about img{
+    width: 100%;
+    height: 80vh;
+}
+#About .about_me{
+  background-color:rgb(240, 255, 255);
+  border-radius: 8px;
+}
+
+#About .about_me h1{
+ font-size: 35px;
+ padding-left: 10Px;
+}
+#About .about_me p{
+ font-size: 25px;
+ padding-left: 15Px;
+ padding-top: 20px;
+ color: var(--hover-color2);
+}
+#About .about_me p span{
+ font-size: 25px;
+ font-weight: bolder;
+ color: rgb(0, 255, 204);
+}
+
+/*EDUCATION BANNER*/
+#Education_banner{
+  text-align: center;
+  background-color: var(--primary-colr);
+  height: 180px;
+}
+#Education_banner h1{
+ font-size: 30px;
+ color: white;
+ padding-top: 15px;
+}
+#Education_banner p{
+ font-size: 26px;
+ color: var(--hover-color2);
+}
+#Education_banner p span{
+ font-size: 26px;
+ color: white;
+ font-weight: bolder;
+}
+#Education_banner button{
+ font-size: 20px;
+ width: 160px;
+ height: 40px;
+ color: white;
+ background-color: rgb(110, 251, 194);
+ border: 1px solid rgb(110, 251, 194);
+ border-radius: 10px;
+ transition: 0.4s;
+}
+#Education_banner button:hover{
+ font-size: 22px;
+ color:rgb(110, 251, 194);
+ background-color: white;
+ border: 2px solid rgb(110, 251, 194) ;
+ transform: scale(0.5s);
+}
+
+#Education{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+#Education .education_card{
+   margin-top: 30px;
+   margin-left: 10px;
+   background-color: rgb(247, 245, 242);
+   border-radius: 10px;
+   text-align: center;
+}
+#Education .education_card  i{
+color: var(--primary-colr);
+padding-top: 15px;
+font-size: 30px;
+}
+#Education .education_card  h2{
+color: var(--sicndary-colr);
+padding-top: 15px;
+font-size: 20px;
 }
