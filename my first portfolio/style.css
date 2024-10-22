@@ -378,7 +378,7 @@ letter-spacing: 2px;
 }
 #footer_info .pages ul   li:hover{
     color:var(--footer-color);
-    transform: scale(1.1);
+    transform:translate(7px);
 }
 
 /*ccontact us part*/
@@ -395,7 +395,7 @@ letter-spacing: 2px;
 }
 #footer_info .contact_us ul li:hover{
     color:var(--footer-color);
-    transform: scale(1.05);
+    transform: translate(7px);
 }
 /*Follow us part*/
 #footer_info .follow_us h2{
@@ -407,11 +407,11 @@ letter-spacing: 2px;
     margin-left: 30px;
     font-size: 22px;
     cursor: pointer;
-    transition: 0.4s; 
+    transition: 0.5s; 
 }
 #footer_info .follow_us a:hover{
     color:var(--footer-color);
-    transform: scale(1.3);
+    transform: translate(8px);
 }
 
 /*Newslleter part*/
@@ -431,7 +431,6 @@ letter-spacing: 2px;
  }
 #footer_info .Newsllater input:hover{
     border: 1px solid var(--footer-color);
-    transform: scale(1.1);
  }
 #footer_info .Newsllater button{
     color: white;
@@ -443,12 +442,13 @@ letter-spacing: 2px;
     border-radius: 0 5px 5px 0;
     font-size: 17px;
     transition: 0.4s;
+    cursor: pointer;
  }
 #footer_info .Newsllater button:hover{
     color: var(--footer-color);
     border: 1px solid var(--footer-color);
     background-color: white;
-    transform: scale(1.1);
+    transform: scale(1.03);
  }
 
  /*SERVICES PAGE*/
@@ -514,6 +514,7 @@ border-radius: 6px;
 color: aliceblue;
 background-color: var(--primary-colr);
 transition: 0.5s;
+cursor: pointer;
 }
 .services_card .services_info button:hover{
 border: 1px solid var(--primary-colr);
@@ -530,7 +531,7 @@ transform: rotate(1.2);
     align-items: center;
     justify-content: space-around;
     height: 80vh;
-    
+    background-color: aliceblue;
     
 }
 #services_banner .Thanks_img img{
@@ -560,6 +561,7 @@ color: var(--primary-colr);
     background-color: var(--primary-colr);
     transition: 0.5s;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 #services_banner .banner_info a button:hover{
@@ -568,3 +570,145 @@ color: var(--primary-colr);
     background-color: aliceblue;
     transform: rotate(1.2);
 }
+
+
+/*CONTACT PAGE*/
+#contact .contact_header{
+    text-align: center;
+    padding-top: 30px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+   
+}
+
+ .contact_header  img{
+  width: 70%;
+  height: 70vh;
+  margin-top: 50px;
+  
+}
+ .contact_header h1{
+   font-size: 38px;
+   letter-spacing: 4px;
+}
+ .contact_header h1 span{
+   color: var(--primary-colr);
+   letter-spacing: 5px;
+}
+ .contact_header p{
+    font-size: 24px;
+   letter-spacing: 3px;
+}
+
+/* contact card and Form*/
+.contact_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    height: 70vh;
+    width: 60vw;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+    margin-top: 100px;
+}
+
+/*contact card*/
+.contact_card{
+    background-color:var(--primary-colr);
+    border-radius: 20px;
+    
+}
+.contact_card h2{
+   color: aliceblue;
+   font-size: 20px;
+   text-align: center;
+   letter-spacing: 2px;
+}
+.contact_card h3{
+   font-size: 20px;
+   text-align: center;
+}
+.contact_card  i{
+   color: aliceblue;
+   font-size: 30px;
+   font-weight: 800;
+   padding-left: 15px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+}
+.contact_card  span{
+   color: aliceblue;
+   font-size: 20px;
+   padding-left: 15px;
+ 
+}
+
+/*Form contact*/
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+ .contact_form  label {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+ .contact_form .inputs input {
+   border: none;
+   outline: none;
+   padding-top: 20px;
+   border-bottom: 1px solid black;
+   background-color: aliceblue;
+   width: 100%;
+ 
+}
+ .contact_form .inputs .name{
+   display: flex;
+   padding-right: 12px;
+   
+ }
+  .name .first_name{
+   padding-right: 40px;
+ }
+  .inputs .email_phone{
+  margin-top: 30px;
+ }
+ .contact_form .text_area label{
+    color: var(--hover-color2);
+ }
+  .contact_form textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: aliceblue;
+  border-bottom: 1px solid var(--primary-colr);
+  width: 100%;
+  height: 100px;
+  margin-top: 12px;
+ }
+ .contact_form .button_contact{
+  text-align: center;
+ }
+ .contact_form  button{
+  width: 200px;
+  height: 40px;
+  color: aliceblue;
+  font-size: 18px;
+  background-color: var(--primary-colr);
+  border: 1px solid aliceblue;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+ }
+ .contact_form  button:hover{
+    color: var(--primary-colr);
+    background-color: aliceblue;
+    border: 1px solid  var(--primary-colr);
+    
+ }
+ 

@@ -14,7 +14,7 @@ for(int j=nbr_line-i ; j>=1; j--)
     for(int j=1 ;j<i+i+2 ;j++)
 
 
-    printf("*");
+    printf("1");
     printf("\n");
     
 }
