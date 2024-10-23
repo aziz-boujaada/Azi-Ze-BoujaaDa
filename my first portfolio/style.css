@@ -51,7 +51,7 @@
  .logo span:hover {
      color: var(--hover-color2);
      transition: 0.5;
-     transform: scale(0.6s);
+     transform: scale(0.6);
  }
 
  /* NAVBAR LIST*/
@@ -347,109 +347,102 @@ letter-spacing: 2px;
      text-decoration-line: underline;
  }
 
+/*SKILLS*/
+  /*skills header*/
+#skills .head_skills{
+text-align: center;
+}
+#skills .head_skills h1{
+font-size: 35px;
+letter-spacing: 5px;
+padding-top: 20px;
+}
+#skills .head_skills h1 span{
+font-size: 35px;
+letter-spacing: 7px;
+color: var(--primary-colr);
+}
+#skills .head_skills h3{
+font-size: 24px;
+letter-spacing: 5px;
+}
 
- /* FOOTER*/
- 
-#footer_info{
+
+/*skills contanair / technique skills / social skills */
+.skills_container{
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*socail & technical skills cards ///////// I used one name (tech_skills) to both cards to shoorten the code ////  */
+.tech_skills {
+   background-color: aliceblue;
+   width: 500px;
+   height: 300px;
+   border-radius: 6px;
+   transition: 0.6s;
+   margin-top: 40px;
+   cursor: pointer;
+}
+.tech_skills:hover{
+   background-color:rgb(207, 247, 227);
+   transform: scale(1.03);
+}
+.tech_skills h2{
+    font-size: 25px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+/* Languages and social skills (name ,proogress , porsentage) */
+.lang_skills{
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: rgb(208, 226, 217);
-    flex-wrap: wrap;
-}
-/* pages part*/
-#footer_info h1{
-    margin-left: 12px;
-}
-#footer_info .pages h2{
-   margin-left: 35px; 
-   border-bottom: 2px solid black;
-}
-#footer_info .pages ul a{
-    text-decoration: none;
-    color: black;
-}
-#footer_info .pages ul  li{
-    list-style: none;
-    padding-top: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.4s; 
-}
-#footer_info .pages ul   li:hover{
-    color:var(--footer-color);
-    transform:translate(7px);
+    padding-top: 30px;
+    margin-bottom: 15px;
 }
 
-/*ccontact us part*/
-#footer_info .contact_us h2{
-    margin-left: 35px; 
-    border-bottom: 2px solid black;
- }
- #footer_info .contact_us ul  li{
-    list-style: none;
-    padding-top: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.4s; 
+/*(name ,proogress , porsentage)*/
+
+/*(Name of skills )*/
+.lang_skills .lang_name {
+    font-size:16px ;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-left: 12px;
 }
-#footer_info .contact_us ul li:hover{
-    color:var(--footer-color);
-    transform: translate(7px);
+/*(Porsentage % of skills )*/
+.lang_skills .persentage {
+    font-size:16px ;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-right: 12px;
 }
-/*Follow us part*/
-#footer_info .follow_us h2{
-    margin-left: 35px; 
-    border-bottom: 2px solid black;
- }
- #footer_info .follow_us a{
-    color: black;
-    margin-left: 30px;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s; 
-}
-#footer_info .follow_us a:hover{
-    color:var(--footer-color);
-    transform: translate(8px);
+/*(Proogress of skills )*/
+
+/*(OUTSIDE Proogress  )*/
+.range {
+   
+   border: 1px solid var(--primary-colr);
+   width: 100%;
+   height: 10px;
+   overflow: hidden;
+   border-radius: 6px;
+   margin-left: 12px;
+   margin-right: 12px;
 }
 
-/*Newslleter part*/
-#footer_info .Newsllater {
-    margin-right: 20px;
- }
-#footer_info .Newsllater h2{
-    border-bottom: 2px solid black;
- }
-#footer_info .Newsllater input{
-    height: 35px;
-    width: 200px;
-    border-radius: 5px 0 0 5px;
-    border: 1px solid white;
-    padding-left: 10px;
-    transition: 0.4s;
- }
-#footer_info .Newsllater input:hover{
-    border: 1px solid var(--footer-color);
- }
-#footer_info .Newsllater button{
-    color: white;
-    margin-left: 12px;
-    border: 1px solid var(--footer-color);
-    background-color: var(--footer-color);
-    height: 37px;
-    width: 100px;
-    border-radius: 0 5px 5px 0;
-    font-size: 17px;
-    transition: 0.4s;
-    cursor: pointer;
- }
-#footer_info .Newsllater button:hover{
-    color: var(--footer-color);
-    border: 1px solid var(--footer-color);
-    background-color: white;
-    transform: scale(1.03);
- }
+/*(INSIDE Proogress  )*/
+.range .tape {
+  background-color:var(--primary-colr);
+   height: 10px;
+   border-radius: 6px;
+}
+ 
 
  /*SERVICES PAGE*/
  
@@ -710,5 +703,190 @@ color: var(--primary-colr);
     background-color: aliceblue;
     border: 1px solid  var(--primary-colr);
     
+ }
+
+
+/*PROJECT SECTION*/
+
+/*Head Project*/
+.head_project{
+    text-align: center;
+    margin-top: 40px;
+}
+.head_project h1{
+    font-size: 38px;
+    letter-spacing: 4px;
+ }
+  .head_project h1 span{
+    color: var(--primary-colr);
+    letter-spacing: 5px;
+ }
+  .head_project p{
+    font-size: 24px;
+    letter-spacing: 2px;
+ }
+  
+ /*my all projects*/
+ .my_projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+ }
+
+ 
+ 
+ .project_info img{
+    width: 330px;
+    height: 250px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
+   
+ }
+
+ .project_info .description{
+   text-align: center;
+   position: relative;
+   bottom: 33vh;
+   color: rgb(6, 248, 151);
+   filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
+   background-color: rgba(57, 62, 66, 0.5);
+   opacity: 0;
+   border-radius: 15px;
+   cursor: pointer;
+   transition: opacity 0.7s, transform 0.3s; 
+
+ }
+ .project_info .description:hover{
+   opacity: 1;
+   transform: scale(1.01);
+   
+ }
+/*description editing*/
+.description h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.description p{
+    letter-spacing: 2px;
+}
+.description a {
+    padding-left: 20px;
+    font-size: 22px;
+    color: aliceblue;
+}
+.description a:hover{
+     color: rgb(6, 248, 151);
+}
+ 
+
+
+
+
+
+
+  /* FOOTER*/
+ 
+#footer_info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(208, 226, 217);
+    flex-wrap: wrap;
+}
+/* pages part*/
+#footer_info h1{
+    margin-left: 12px;
+}
+#footer_info .pages h2{
+   margin-left: 35px; 
+   border-bottom: 2px solid black;
+}
+#footer_info .pages ul a{
+    text-decoration: none;
+    color: black;
+}
+#footer_info .pages ul  li{
+    list-style: none;
+    padding-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+#footer_info .pages ul   li:hover{
+    color:var(--footer-color);
+    transform:translate(7px);
+}
+
+/*contact us part*/
+#footer_info .contact_us h2{
+    margin-left: 35px; 
+    border-bottom: 2px solid black;
+ }
+ #footer_info .contact_us ul  li{
+    list-style: none;
+    padding-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+#footer_info .contact_us ul li:hover{
+    color:var(--footer-color);
+    transform: translate(7px);
+}
+/*Follow us part*/
+#footer_info .follow_us h2{
+    margin-left: 35px; 
+    border-bottom: 2px solid black;
+ }
+ #footer_info .follow_us a{
+    color: black;
+    margin-left: 30px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s; 
+}
+#footer_info .follow_us a:hover{
+    color:var(--footer-color);
+    transform: translate(8px);
+}
+
+/*Newslleter part*/
+#footer_info .Newsllater {
+    margin-right: 20px;
+ }
+#footer_info .Newsllater h2{
+    border-bottom: 2px solid black;
+ }
+#footer_info .Newsllater input{
+    height: 35px;
+    width: 200px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid white;
+    padding-left: 10px;
+    transition: 0.4s;
+ }
+#footer_info .Newsllater input:hover{
+    border: 1px solid var(--footer-color);
+ }
+#footer_info .Newsllater button{
+    color: white;
+    margin-left: 12px;
+    border: 1px solid var(--footer-color);
+    background-color: var(--footer-color);
+    height: 37px;
+    width: 100px;
+    border-radius: 0 5px 5px 0;
+    font-size: 17px;
+    transition: 0.4s;
+    cursor: pointer;
+ }
+#footer_info .Newsllater button:hover{
+    color: var(--footer-color);
+    border: 1px solid var(--footer-color);
+    background-color: white;
+    transform: scale(1.03);
  }
  
