@@ -4,7 +4,7 @@
      --hover-colr: rgb(110, 251, 194);
      --footer-color:rgb(23, 231, 161);
      --hover-color2: rgb(4, 113, 97);
-     
+     --projects-color:rgb(15, 185, 43);
 
  }
 
@@ -14,13 +14,17 @@
  body {
      margin: 0;
      padding: 0;
- }
-
+    }
+    
+    span{
+       color: var(--primary-colr);
+    }
+  
 
  /* HEADER  */
  .nav {
      width: 100%;
-     height: 60px;
+     height: 70px;
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -124,10 +128,17 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-     background-color: var(--primary-colr);
      height: 100vh;
      flex-wrap: wrap;
+     background-image: url(./images/home_cover.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     
  }
+ 
+    
+
 
  .home_info {
      margin-left: 50px;
@@ -194,7 +205,7 @@ padding-top: 50px;
 margin-right: 40px;
 }
  .home_info .experienc .my_exp i{
- color: var(--hover-color2);
+ color: rgb(84, 153, 113);
  font-size: 30px;
  letter-spacing: 5px;
 }
@@ -363,7 +374,7 @@ padding-top: 20px;
 #skills .head_skills h1 span{
 font-size: 35px;
 letter-spacing: 7px;
-color: var(--primary-colr);
+
 }
 #skills .head_skills h3{
 font-size: 24px;
@@ -457,7 +468,6 @@ letter-spacing: 5px;
    margin-top: 50px;
  }
  #services h1 span{
-  color: var(--primary-colr);
    letter-spacing: 4px;
  }
  #services .serv_p {
@@ -569,6 +579,259 @@ color: var(--primary-colr);
 }
 
 
+
+
+
+/*PROJECT SECTION*/
+
+/*Head Project*/
+.head_project{
+    text-align: center;
+    margin-top: 40px;
+}
+.head_project h1{
+    font-size: 38px;
+    letter-spacing: 4px;
+ }
+  .head_project h1 span{
+    letter-spacing: 5px;
+ }
+  .head_project p{
+    font-size: 24px;
+    letter-spacing: 2px;
+ }
+  
+ /*my all projects*/
+ .my_projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    height: 50vh;
+ }
+
+ 
+ 
+ .project_info img{
+    width: 330px;
+    height: 250px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
+   
+ }
+ 
+ /*short description to projects*/
+ .project_info .description{
+   text-align: center;
+   position: relative;
+   bottom: 33vh;
+   color: rgb(6, 248, 151);
+   filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
+   background-color: rgba(57, 62, 66, 0.5);
+   opacity: 0;
+   border-radius: 15px;
+   cursor: pointer;
+   transition: opacity 0.7s, transform 0.3s; 
+
+ }
+ .project_info .description:hover{
+   opacity: 1;
+   transform: scale(1.01);
+   
+ }
+/*description editing*/
+.description h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.description p{
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+.description a {
+    padding-left: 20px;
+    font-size: 22px;
+    color: aliceblue;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+.description a:hover{
+     color: rgb(6, 248, 151);
+}
+
+/* icon link to GitHub repository with a short hint*/
+.GitHub{
+  position: relative;
+  display: inline-block;
+}
+.description  .GitHub a .show_text{
+    position: absolute;
+    bottom: 80%;
+    right: 50%;
+    padding: 3px;
+    margin-bottom: 3px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgba(68, 74, 80, 0.5);     
+    border-radius:0 8px 0 8px;
+    box-shadow: 0 4px 6px rgb(0, 255, 204);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.description .GitHub a:hover .show_text{
+    opacity: 1;
+}
+
+/* icon Eye link to outside page to show projects details with a short hint*/
+.Eye{
+  position: relative;
+  display: inline-block;
+}
+.description  .Eye a .show_text{
+    position: absolute;
+    bottom: 80%;
+    left: 80%;
+    padding: 3px;
+    padding-top: 2px;
+    margin-bottom: 4px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgba(68, 74, 80, 0.5);  ;
+    border-radius:8px 0 8px 0;
+    box-shadow: 0 4px 6px rgb(0, 255, 204);
+    pointer-events: none;
+    opacity: 0;
+}
+.description .Eye a:hover .show_text{
+    opacity: 1;
+}
+ 
+/*WHATS NEXT PROJECTS*/
+
+#next_projects .next_head{
+    text-align: center;
+}
+ .next_head h1{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+ .next_head h1 span{
+    font-size: 38px;
+    letter-spacing: 4px;
+    color: var(--primary-colr);
+}
+
+.whats_next{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom:1px solid var(--primary-colr) ;
+  
+}
+.whats_next .next_img img{
+  width: 80%;
+  height: 70vh;
+
+}
+
+ .next_description p{
+  font-size: 24px;
+  font-weight: 600;
+ 
+ }
+
+ /* newsletter subscribe  Form */
+ .Newsllater_sub{
+display: flex;
+align-items: center;
+justify-content: space-around;
+ 
+ }
+ .newsletters_img img {
+    width: 80%;
+    height: 70vh;
+ }
+.news_form{
+    background-color: aliceblue;
+    box-shadow:  0 4px 6px var(--primary-colr);
+    border-radius: 12px;
+}
+.news_form h2{
+ text-align: center;
+ padding: 10px;
+ font-size: 20px;
+ letter-spacing: 2px;
+}
+.form h2{
+ text-align: center;
+ padding: 5px;
+ font-size: 22px;
+ font-weight: bold;
+ letter-spacing: 2px;
+ color: var(--primary-colr);
+}
+
+
+.news_input label {
+font-size: 18px;
+letter-spacing: 3px;
+}
+.news_input input {
+border: none;
+outline: none;
+border-bottom: 1px solid var(--primary-colr);
+background-color: aliceblue;
+margin-top: 25px;
+width: 100%;
+}
+.news_input .name{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+   padding: 15px;
+
+}
+.news_input .news_email{
+   margin-top: 20px;
+   padding: 15px;
+}
+
+.subscribe_btn{
+    text-align: center;
+}
+.subscribe_btn button{
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    background-color: var(--primary-colr);
+    color: aliceblue;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5S;
+    cursor: pointer;
+}
+.subscribe_btn button:hover{
+
+    border: 1px solid var(--primary-colr);
+    background-color: aliceblue;
+    color: var(--primary-colr);
+   
+}
+ 
+
+
 /*CONTACT PAGE*/
 #contact .contact_header{
     text-align: center;
@@ -592,7 +855,6 @@ color: var(--primary-colr);
    letter-spacing: 4px;
 }
  .contact_header h1 span{
-   color: var(--primary-colr);
    letter-spacing: 5px;
 }
  .contact_header p{
@@ -711,254 +973,6 @@ color: var(--primary-colr);
  }
 
 
-/*PROJECT SECTION*/
-
-/*Head Project*/
-.head_project{
-    text-align: center;
-    margin-top: 40px;
-}
-.head_project h1{
-    font-size: 38px;
-    letter-spacing: 4px;
- }
-  .head_project h1 span{
-    color: var(--primary-colr);
-    letter-spacing: 5px;
- }
-  .head_project p{
-    font-size: 24px;
-    letter-spacing: 2px;
- }
-  
- /*my all projects*/
- .my_projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 30px;
-    height: 50vh;
- }
-
- 
- 
- .project_info img{
-    width: 330px;
-    height: 250px;
-    border-radius: 8px;
-    filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
-   
- }
-
- .project_info .description{
-   text-align: center;
-   position: relative;
-   bottom: 33vh;
-   color: rgb(6, 248, 151);
-   filter: drop-shadow(0 0 10px rgb(9, 197, 178) );
-   background-color: rgba(57, 62, 66, 0.5);
-   opacity: 0;
-   border-radius: 15px;
-   cursor: pointer;
-   transition: opacity 0.7s, transform 0.3s; 
-
- }
- .project_info .description:hover{
-   opacity: 1;
-   transform: scale(1.01);
-   
- }
-/*description editing*/
-.description h2{
-    font-size: 25px;
-    font-weight: 600;
-}
-.description p{
-    letter-spacing: 2px;
-    margin-bottom: 22px;
-}
-.description a {
-    padding-left: 20px;
-    font-size: 22px;
-    color: aliceblue;
-    text-decoration: none;
-    margin-bottom: 12px;
-}
-.description a:hover{
-     color: rgb(6, 248, 151);
-}
-
-.GitHub{
-  position: relative;
-  display: inline-block;
-}
-.description  .GitHub a .show_text{
-    position: absolute;
-    bottom: 80%;
-    right: 50%;
-    padding: 3px;
-    margin-bottom: 3px;
-    width: 100px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: aliceblue;
-    background-color: rgba(68, 74, 80, 0.5);     
-    border-radius:0 8px 0 8px;
-    box-shadow: 0 4px 6px rgb(0, 255, 204);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s;
-}
-.description .GitHub a:hover .show_text{
-    opacity: 1;
-}
-.Eye{
-  position: relative;
-  display: inline-block;
-}
-.description  .Eye a .show_text{
-    position: absolute;
-    bottom: 80%;
-    left: 80%;
-    padding: 3px;
-    padding-top: 2px;
-    margin-bottom: 4px;
-    width: 100px;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-align: center;
-    color: aliceblue;
-    background-color: rgba(68, 74, 80, 0.5);  ;
-    border-radius:8px 0 8px 0;
-    box-shadow: 0 4px 6px rgb(0, 255, 204);
-    pointer-events: none;
-    opacity: 0;
-}
-.description .Eye a:hover .show_text{
-    opacity: 1;
-}
- 
-/*WHATS NEXT PROJECTS*/
-
-#next_projects .next_head{
-    text-align: center;
-}
- .next_head h1{
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
- .next_head h1 span{
-    font-size: 38px;
-    letter-spacing: 4px;
-    color: var(--primary-colr);
-}
-
-.whats_next{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-bottom:1px solid var(--primary-colr) ;
-  
-}
-.whats_next .next_img img{
-  width: 80%;
-  height: 70vh;
-
-}
-
- .next_description p{
-  font-size: 24px;
-  font-weight: 600;
- 
- }
- .Newsllater{
-display: flex;
-align-items: center;
-justify-content: space-around;
- 
- }
- .Newsllater .newsletter_img img {
-    width: 80%;
-    height: 70vh;
- }
-.news_form{
-    background-color: aliceblue;
-    box-shadow:  0 4px 6px var(--primary-colr);
-    border-radius: 12px;
-}
-.news_form h2{
- text-align: center;
- padding: 10px;
- font-size: 20px;
- letter-spacing: 2px;
-}
-.form h2{
- text-align: center;
- padding: 5px;
- font-size: 22px;
- font-weight: bold;
- letter-spacing: 2px;
- color: var(--primary-colr);
-}
-
-
-.news_input label {
-font-size: 18px;
-letter-spacing: 3px;
-}
-.news_input input {
-border: none;
-outline: none;
-border-bottom: 1px solid black;
-background-color: aliceblue;
-margin-top: 25px;
-width: 100%;
-}
-.news_input .name{
-   display: flex;
-   justify-content: space-between;
-   margin-top: 20px;
-   padding: 15px;
-
-}
-.news_input .news_email{
-   margin-top: 20px;
-   padding: 15px;
-}
-
-.subscribe_btn{
-    text-align: center;
-}
-.subscribe_btn button{
-    margin: 20px;
-    text-align: center;
-    width: 200px;
-    height: 35px;
-    background-color: var(--primary-colr);
-    color: aliceblue;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    transition: 0.5S;
-    cursor: pointer;
-}
-.subscribe_btn button:hover{
-
-    border: 1px solid var(--primary-colr);
-    background-color: aliceblue;
-    color: var(--primary-colr);
-   
-}
- 
-
-
-
-
-
 
   /* FOOTER*/
  
@@ -998,14 +1012,20 @@ width: 100%;
     margin-left: 35px; 
     border-bottom: 2px solid black;
  }
- #footer_info .contact_us ul  li{
+ #footer_info .contact_us ul   li {
     list-style: none;
     padding-top: 10px;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.4s; 
+ }
+ #footer_info .contact_us ul a  {
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    transition: 0.4s;   
 }
-#footer_info .contact_us ul li:hover{
+
+#footer_info .contact_us ul   a:hover{
     color:var(--footer-color);
     transform: translate(7px);
 }
@@ -1027,15 +1047,15 @@ width: 100%;
 }
 
 /*Newslleter part*/
-#footer_info .Newsllater {
+#footer_info .Newslatter {
     margin-right: 20px;
     margin-left: 35px; 
-    
  }
-#footer_info .Newsllater h2{
+#footer_info .Newslatter h2{
     border-bottom: 2px solid black;
+    margin-bottom: 30px;
  }
-#footer_info .Newsllater input{
+#footer_info .Newslatter input{
     height: 35px;
     width: 200px;
     outline: none;
@@ -1044,10 +1064,10 @@ width: 100%;
     padding-left: 10px;
     transition: 0.4s;
  }
-#footer_info .Newsllater input:hover{
+#footer_info .Newslatter input:hover{
     border: 1px solid var(--footer-color);
  }
-#footer_info .Newsllater button{
+#footer_info .Newslatter button{
     color: white;
     margin-left: 12px;
     border: 1px solid var(--footer-color);
@@ -1059,10 +1079,12 @@ width: 100%;
     transition: 0.4s;
     cursor: pointer;
  }
-#footer_info .Newsllater button:hover{
+#footer_info .Newslatter button:hover{
     color: var(--footer-color);
     border: 1px solid var(--footer-color);
     background-color: white;
     transform: scale(1.03);
  }
- 
+
+
+
