@@ -1,0 +1,391 @@
+:root {
+    --primary-colr: rgb(83, 197, 159);
+    --sicndary-colr: rgb(128, 180, 157);
+    --hover-colr: rgb(110, 251, 194);
+    --footer-color: rgb(23, 231, 161);
+    --hover-color2: rgb(4, 113, 97);
+    --projects-color: rgb(15, 185, 43);
+    --bg-color: aliceblue;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    color: var(--projects-color);
+}
+
+
+button {
+    height: 35px;
+    width: 160px;
+    text-align: center;
+    background-color: var(--projects-color);
+    color: var(--bg-color);
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 1px solid var(--projects-color);
+    border-radius: 8px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-color);
+    color: var(--projects-color);
+    border: 1px solid var(--projects-color);
+
+}
+
+
+/*OUTSIDE PAGE FOR PROJECTS DETAILS*/
+/*HEADER*/
+#header {
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    height: 65px;
+
+}
+
+#header .nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/*logo*/
+.nav_bar .logo img {
+    width: 160px;
+    height: 70px;
+}
+
+/*list*/
+.nav_bar .list ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_bar .list ul li {
+    padding-left: 60px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.nav_bar .list ul li:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.nav_bar .list ul a {
+    text-decoration: none;
+    color: var(--projects-color);
+}
+
+/*Search*/
+.search input {
+    position: relative;
+    width: 280px;
+    height: 30px;
+    outline: none;
+    background-color: var(--bg-color);
+    border: 1px solid var(--projects-color);
+    border-radius: 15px;
+    padding-left: 10px;
+    transition: 0.3S;
+}
+
+.search input:hover {
+    border: 1px solid black;
+    transform: scale(1.01);
+}
+
+.search span {
+    position: absolute;
+    text-align: center;
+    left: 80%;
+    top: 40%;
+    font-size: 18px;
+    color: var(--projects-color);
+    cursor: pointer;
+}
+
+.search span:hover {
+    color: black;
+}
+
+/*GitHub Icon*/
+.github_icon a {
+    font-size: 25px;
+    color: var(--projects-color);
+    transition: 0.5s;
+}
+
+.github_icon a:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+/*HOME SECTION */
+#project_home {
+    background-image: url(./p_images/projects_home_cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.welcome {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.welcome .welcome_description {
+    margin-left: 20px;
+}
+
+.welcome h1 {
+    color: aliceblue;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+}
+
+.welcome p {
+    color: aliceblue;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+
+.welcome p span {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.welcome button {
+    margin-top: 40px;
+}
+
+.welcome a {
+    padding-left: 20px;
+}
+
+.welcome .welcome_img img {
+    width: 90%;
+    height: 100vh;
+}
+
+/*Projects */
+#projects {
+    background-color: var(--bg-color);
+}
+
+#projects .project_intro {
+    text-align: center;
+}
+
+.project_intro h1 {
+    font-size: 35px;
+    letter-spacing: 4px;
+    padding-top: 30px;
+}
+
+.project_intro p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 15px;
+}
+
+
+.all_projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all_projects a {
+    text-decoration: none;
+}
+
+.project_information .P_img img {
+    max-width: 340px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project_script {
+    text-align: center;
+    position: relative;
+    bottom: 35vh;
+    border-radius: 12px 12px 0 0;
+    background-color: rgba(42, 48, 50, 0.5);
+    opacity: 0;
+    transition: 0.8s ease-in;
+}
+
+.project_script:hover {
+
+    opacity: 1;
+
+}
+
+.project_script h2 {
+    padding-top: 5px;
+    color: var(--bg-color);
+    letter-spacing: 2px;
+}
+
+.project_script p {
+    padding-top: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: rgb(2, 245, 2);
+}
+
+.project_script a button {
+
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    background-color: var(--projects-color);
+    transition: 0.7s;
+}
+
+.project_script a button:hover {
+    border: 1px solid rgb(20, 123, 66);
+    color: aliceblue;
+    background-color: rgb(20, 123, 66);
+
+}
+
+
+
+/*FIRST PROJECT*/
+/*aside Nav BAR*/
+#first_project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.script_image img {
+    height: 90vh;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.left_nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 47, 48);
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 10px;
+    width: 50px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+
+.write i {
+    margin-top: 30px;
+    padding: 6px;
+    font-size: 18px;
+    border-radius:6px 0  0  6px;
+   
+}
+
+.tool i {
+    margin-top: 30px;
+    padding: 6px;
+    font-size: 18px;
+    border-radius:6px 0  0  6px;
+    
+
+}
+
+.gallery i {
+    margin-top: 30px;
+    padding: 6px;
+    font-size: 18px;
+    border-radius:6px 0  0  6px;
+    
+}
+
+.questions  i {
+    margin-top: 30px;
+    padding: 6px;
+    font-size: 22px;
+    border-radius:6px 0  0  6px;
+   
+}
+
+.left_nav a {
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.left_nav a i:hover,
+  a #active
+{
+    color:var(--projects-color);
+}
+
+.left_nav a i {
+    color:aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.left_nav a span {
+    position: relative;
+    bottom: 27px;
+    left: 45px;
+    opacity: 0;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    background-color:rgb(36, 47, 48);
+    color: aliceblue;
+    transition: opacity 0.7s ease-in;
+    pointer-events: none;
+}
+
+.left_nav a:hover span {
+
+    opacity: 1;
+}
+
+/*description content*/
+.description_project {
+  margin-left: 120px;
+}
+.description_project h1{
+    font-size: 50px;
+    color: aliceblue;
+}
+.description_project p{
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
