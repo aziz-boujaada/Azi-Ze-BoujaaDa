@@ -5,6 +5,7 @@
      --footer-color:rgb(23, 231, 161);
      --hover-color2: rgb(4, 113, 97);
      --projects-color:rgb(15, 185, 43);
+     --header-color:rgb(10, 214, 10);
 
  }
 
@@ -28,7 +29,7 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-     background-color: var(--sicndary-colr);
+     background-color: aliceblue;
      scroll-behavior: smooth;
      position: fixed;
      top: 0;
@@ -43,14 +44,14 @@
      font-size: 22px;
      margin-left: 12px;
      cursor: pointer;
-     color: white;
+     color: black;
 
  }
 
  .logo span {
      font-size: 24px;
      margin-left: 12px;
-     color: rgb(169, 249, 230);
+     color: var(--header-color);
      transition: 0.3s;
 
  }
@@ -75,7 +76,7 @@
    .list nav a li:hover,
     .list  a li.active {
      text-decoration: none;
-     color: var(--hover-colr);
+     color: var(--header-color);
     
  }
 
@@ -84,16 +85,16 @@
      margin-right: 40px;
      text-decoration: none;
      font-size: 20px;
-     color: white;
+     color: black;
      transition: 0.3s;
 
  }
 
  .list nav ul li:hover {
-     color: var(--hover-colr);
+    color: var(--header-color);
      cursor: pointer;
      transform: scale(1.1);
-     border-bottom: 2px solid var(--hover-colr);
+     border-bottom: 2px solid var(--header-color);
 
  }
 
@@ -115,7 +116,7 @@
  .list nav ul button:hover {
 
      color: var(--primary-colr);
-     background-color: rgb(220, 218, 218);
+     background-color: aliceblue;
      border-radius: 5px;
      border: 1px solid var(--primary-colr);
      transform: translate(1.1);

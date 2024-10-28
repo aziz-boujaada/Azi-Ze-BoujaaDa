@@ -50,6 +50,7 @@ button:hover {
 #header {
     background-color: var(--bg-color);
     position: fixed;
+    z-index: 10;
     width: 100%;
     height: 65px;
 
@@ -280,11 +281,11 @@ button:hover {
 
 /*FIRST PROJECT*/
 /*aside Nav BAR*/
-#first_project {
+#first_project_description {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 .script_image img {
@@ -296,6 +297,7 @@ button:hover {
 .left_nav {
     display: flex;
     flex-direction: column;
+    position: fixed;
     background-color: rgb(36, 47, 48);
     border-radius: 30px;
     padding: 10px;
@@ -310,16 +312,16 @@ button:hover {
     margin-top: 30px;
     padding: 6px;
     font-size: 18px;
-    border-radius:6px 0  0  6px;
-   
+    border-radius: 6px 0 0 6px;
+
 }
 
 .tool i {
     margin-top: 30px;
     padding: 6px;
     font-size: 18px;
-    border-radius:6px 0  0  6px;
-    
+    border-radius: 6px 0 0 6px;
+
 
 }
 
@@ -327,30 +329,30 @@ button:hover {
     margin-top: 30px;
     padding: 6px;
     font-size: 18px;
-    border-radius:6px 0  0  6px;
-    
+    border-radius: 6px 0 0 6px;
+
 }
 
-.questions  i {
+.questions i {
     margin-top: 30px;
     padding: 6px;
     font-size: 22px;
-    border-radius:6px 0  0  6px;
-   
+    border-radius: 6px 0 0 6px;
+
 }
 
 .left_nav a {
     text-decoration: none;
     letter-spacing: 2px;
 }
+
 .left_nav a i:hover,
-  a #active
-{
-    color:var(--projects-color);
+a #active {
+    color: var(--projects-color);
 }
 
 .left_nav a i {
-    color:aliceblue;
+    color: aliceblue;
     font-size: 20px;
     text-align: center;
 }
@@ -364,7 +366,7 @@ button:hover {
     font-size: 20px;
     letter-spacing: 2px;
     border-radius: 12px;
-    background-color:rgb(36, 47, 48);
+    background-color: rgb(36, 47, 48);
     color: aliceblue;
     transition: opacity 0.7s ease-in;
     pointer-events: none;
@@ -377,15 +379,388 @@ button:hover {
 
 /*description content*/
 .description_project {
-  margin-left: 120px;
+    margin-left: 200px;
+
+
 }
-.description_project h1{
+
+.description_project h1 {
     font-size: 50px;
     color: aliceblue;
 }
-.description_project p{
+
+.description_project p {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 30px;
     letter-spacing: 2px;
     color: aliceblue;
+}
+
+.description_project button i {
+    opacity: 0;
+    padding-left: 10px;
+    transition: opacity 0.6S ease-in;
+}
+.description_project button:hover i {
+    opacity: 1;
+}
+
+
+
+/*Tools*/
+#tools_part{
+    background-color: var(--bg-color);
+    height: 60vh;
+}
+
+.tool_head {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tool_head h2 {
+    font-size: 35px;
+    letter-spacing: 7px;
+}
+
+.tool_head p {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+.tools_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(111, 221, 111);
+    width: 60%;
+    margin: 50px 20%;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.tool_type {
+    border-bottom: 2px solid black;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tool_type:hover {
+    border-bottom: 2px solid aliceblue;
+    color: aliceblue;
+    transform: translate(7px);
+}
+
+.tool-used {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    padding-right: 20px;
+    pointer-events: none;
+    color: black;
+    transition: opacity 0.6s ease-in;
+
+}
+
+.tool_type:hover .tool-used {
+
+    opacity: 1;
+
+}
+
+.tool_1 h4 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    align-items: center;
+
+}
+
+.tool_1 i {
+    font-size: 35px;
+    color: orange;
+    text-align: center;
+}
+
+.tool_2 h4 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+
+.tool_2 i {
+    font-size: 35px;
+    color: blue;
+    text-align: center;
+
+
+}
+
+.tools_navigation :nth-child(2),
+ .tool-used :nth-child(1){
+  padding-right: 16px;
+}
+
+
+/*GALLERY*/
+#Gallery{
+    background-color: var(--bg-color);
+}
+.head_gallery{
+    text-align: center;
+    padding-top: 30px;
+}
+.head_gallery h2{
+    font-size: 35px;
+    letter-spacing: 7px;
+}
+.head_gallery P{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 3px;
+}
+
+/*gallery pictures*/
+.gallery_pictures{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(600px,1fr));
+    gap: 10px;
+   overflow: hidden;
+    background-color:rgb(73, 73, 73);
+    
+}
+.picture img{
+    max-width: 500px;
+    height: 250px;
+    margin: 20px 0 30px 130px;
+    border-radius: 16px;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+.picture img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0  10px var(--projects-color));
+}
+
+
+
+
+
+/*FAQ SECTION*/
+
+.FAQ_question_part{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.faq_head {
+    text-align: center;
+   }
+   .faq_head h2{
+     font-size: 35px;
+     letter-spacing: 5px;
+   }
+   .faq_head {
+     font-size: 25px;
+     letter-spacing: 3px;
+   }
+/* send questions  Form */
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+     
+     }
+    
+    .message_form{
+        background-color: aliceblue;
+        box-shadow:  0 4px 6px var(--primary-colr);
+        border-radius: 12px;
+    }
+    .message_form h2{
+     text-align: center;
+     padding: 10px;
+     font-size: 20px;
+     letter-spacing: 2px;
+    }
+    .form h2{
+     text-align: center;
+     padding: 5px;
+     font-size: 22px;
+     font-weight: bold;
+     letter-spacing: 2px;
+     color: var(--primary-colr);
+    }
+    
+    
+    .message_input label {
+    font-size: 18px;
+    letter-spacing: 3px;
+    }
+    .message_input input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--primary-colr);
+    background-color: aliceblue;
+    margin-top: 25px;
+    width: 100%;
+    }
+    .message_input .name{
+       display: flex;
+       justify-content: space-between;
+       margin-top: 20px;
+       padding: 15px;
+    
+    }
+    .message_input .message_area{
+       margin-top: 20px;
+       padding: 15px;
+    }
+    
+    .send_btn{
+        text-align: center;
+    }
+    .send_btn button{
+        margin: 20px;
+        text-align: center;
+        width: 200px;
+        height: 35px;
+        background-color: var(--primary-colr);
+        color: aliceblue;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        transition: 0.5S;
+        cursor: pointer;
+    }
+    .send_btn button:hover{
+    
+        border: 1px solid var(--primary-colr);
+        background-color: aliceblue;
+        color: var(--primary-colr);
+       
+    }
+
+/*suggested questions*/
+
+.faq_container{
+   background-color: var(--bg-color);
+   box-shadow:  0 4px 6px var(--primary-colr);
+   border-radius: 18px;
+}
+.faq_question{
+    padding: 30px;
+}
+.faq_question h2{
+   text-align: center;
+   font-size: 22px;
+   color: var(--primary-colr);
+   letter-spacing: 3px;
+   margin-bottom: 30px;
+}
+.faq_question details{
+    width: 450px;
+    height: 40px; 
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: var(--bg-color);
+    margin-bottom: 10px;
+}
+.faq_question details span{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--projects-color);
+}
+
+
+
+
+
+
+
+
+
+  /* FOOTER*/
+ 
+  #footer_info{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: rgb(208, 226, 217);
+    flex-wrap: wrap;
+}
+/* pages part*/
+#footer_info h1{
+    margin-left: 12px;
+}
+#footer_info .pages h2{
+   margin-left: 35px; 
+   border-bottom: 2px solid black;
+}
+#footer_info .pages ul a{
+    text-decoration: none;
+    color: black;
+}
+#footer_info .pages ul  li{
+    list-style: none;
+    padding-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+#footer_info .pages ul   li:hover{
+    color:var(--projects-color);
+    transform:translate(7px);
+}
+
+/*contact us part*/
+#footer_info .contact_us h2{
+    margin-left: 35px; 
+    border-bottom: 2px solid black;
+ }
+ #footer_info .contact_us ul   li {
+    list-style: none;
+    padding-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+ }
+ #footer_info .contact_us  li a  {
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    transition: 0.4s;   
+}
+
+#footer_info .contact_us li   a:hover{
+    color:var(--projects-color);
+    transform: translate(7px);
+}
+/*Follow us part*/
+#footer_info .follow_us h2{
+    margin-left: 35px; 
+    border-bottom: 2px solid black;
+ }
+ #footer_info .follow_us a{
+    color: black;
+    margin-left: 30px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s; 
+}
+#footer_info .follow_us a:hover{
+    color:var(--projects-color);
+    transform: translate(8px);
 }
