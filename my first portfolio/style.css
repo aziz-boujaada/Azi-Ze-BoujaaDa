@@ -20,6 +20,12 @@
     span{
        color: var(--primary-colr);
     }
+
+
+    #mobile{
+       opacity: 0;
+       height: 0;
+    }
   
 
  /* HEADER  */
@@ -135,7 +141,7 @@
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
-     
+    
  }
  
     
@@ -274,7 +280,7 @@ letter-spacing: 2px;
  #Education_banner {
      text-align: center;
      background-color: var(--primary-colr);
-     height: 180px;
+     height: 200px;
  }
 
  #Education_banner h1 {
@@ -309,7 +315,7 @@ letter-spacing: 2px;
  #Education_banner button:hover {
      font-size: 22px;
      color: rgb(110, 251, 194);
-     background-color: white;
+     background-color:aliceblue;
      border: 2px solid rgb(110, 251, 194);
      transform: scale(0.5s);
  }
@@ -322,8 +328,9 @@ letter-spacing: 2px;
      align-items: center;
      justify-content: space-around;
      background-color: aliceblue;
-     height: 50vh;
      flex-wrap: wrap;
+     margin: 30px;
+     padding: 40px;
  }
 
  #Education .education_card {
@@ -386,6 +393,7 @@ letter-spacing: 5px;
 /*skills contanair / technique skills / social skills */
 .skills_container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -483,7 +491,11 @@ letter-spacing: 5px;
    gap: 30px;
    justify-content: space-between;
    padding: 40px  50px;
+   border-radius: 12px;
 }
+
+
+
 .services_card .services_info {
    text-align: center;
    background-color: aliceblue;
@@ -535,7 +547,6 @@ transform: rotate(1.2);
 
 #services_banner{
     display: flex;
-
     align-items: center;
     justify-content: space-around;
     height: 80vh;
@@ -549,7 +560,6 @@ transform: rotate(1.2);
 #services_banner .banner_info{
   text-align: center;
   padding-right: 35px;
- 
 }
 #services_banner .banner_info p{
 font-size: 24px;
@@ -605,11 +615,10 @@ color: var(--primary-colr);
  /*my all projects*/
  .my_projects{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-top: 30px;
-    height: 50vh;
+    height: auto;
  }
 
  
@@ -756,6 +765,7 @@ color: var(--primary-colr);
 display: flex;
 align-items: center;
 justify-content: space-around;
+transition: 0.6s;
  
  }
  .newsletters_img img {
@@ -841,7 +851,6 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-
    
 }
 
@@ -870,12 +879,12 @@ width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: aliceblue;
-    height: 70vh;
-    width: 60vw;
+    height: auto;
+    width: auto;
     border-radius: 12px;
-    margin-bottom: 40px;
-    margin-left: 20%;
-    margin-top: 100px;
+   
+    margin: 100px 10% 40px 10%;
+    padding: 40px;
 }
 
 /*contact card*/
@@ -1086,6 +1095,250 @@ width: 100%;
     background-color: white;
     transform: scale(1.03);
  }
+ 
 
 
 
+
+/*RESPONSIVE  MOBILE VERSION */
+
+ @media screen and (max-width: 477px) {
+    /*header*/
+    #header{
+        visibility: hidden;
+    }
+    /*home image*/
+    #home  .home_img img{
+       visibility: hidden;
+   }
+   /*home information*/
+    #home .home_info {
+     margin-left: 10px;
+     margin-top: 150px;
+     width: 100%;
+      
+    }
+    #home .home_info h1 {
+     font-size: 32px;
+     padding-top: 16px;
+    }
+    #home .home_info span {
+     font-size: 34px;
+    }
+    #home .home_info h2 {
+     padding-bottom: 12px;
+     font-size: 28px;
+    }
+    #home .home_info p {
+     padding-bottom: 12px;
+     font-size: 22px;
+     font-weight: bold;
+     color: aliceblue;
+     letter-spacing: 1px;
+     line-height: 30px;
+    }
+    #home .home_info span {
+   
+     font-size: 28px;
+     font-weight: bold;
+     color: rgb(4, 113, 97);
+    }
+    .home_info .social_icon{
+      text-align: center;
+    }
+   .experienc{
+    visibility: hidden;
+   }
+
+   /*about me section */
+   .about_me{
+    margin-top: 20px;
+    background-color: rgb(133, 137, 140);
+   }
+   .about_me h1{
+   text-align: center;
+   letter-spacing: 2px;
+   }
+    /*education*/
+   #Education .education_card{
+    width: 100%;
+    height: auto;
+    margin: 15px;
+    box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+   }
+   #Education_banner button{
+    bottom: 15px;
+   }
+   /*skills */
+   .skills_container{
+    flex-direction: column;
+   }
+   .tech_skills{
+    width: 350px;
+    box-shadow: 0 0  4px rgba(0, 0, 0, 0.4);
+   }
+    
+
+   /*Services*/
+   #services .services_card{
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+    box-shadow:  0 0 15px  rgba(6, 6, 6, 0.4);
+   }
+   #services .services_card .services_info{
+    box-shadow:  0 0 10px  rgba(6, 6, 6, 0.5);
+    border-radius: 14px;
+}
+
+/*services banner*/
+   #services_banner{
+  width: 100%;
+}
+
+#services_banner .Thanks_img img{
+   visibility: hidden;
+  }
+#services_banner .banner_info{
+   position: absolute;
+   margin-left: 15px;
+  }
+
+/*PROJECTS*/
+  .my_projects{
+    flex-direction: column;
+    
+  }
+  .project_info {
+    height: 300px;
+  }
+ /*WHATS NEXT PROJECT*/
+
+  #next_projects .whats_next .next_img img{
+   visibility: hidden;
+  }
+  .next_description{
+    position: absolute;
+    text-align: center;
+    margin-bottom: 20%;
+    
+  }
+ 
+  /*Whas next /Newsletter subscribe Form */
+  .Newsllater_sub:hover{
+   transform: scale(1.01);
+   
+  }
+  
+  .Newsllater_sub .newsletters_img img{
+    visibility: hidden;
+  }
+  .Newsllater_sub .news_form{
+    position: absolute;
+    width: 95%;
+    box-shadow:  0 10px 10px rgba(0, 0, 0 ,0.5);
+  }
+  .Newsllater_sub .news_form .news_input input {
+   
+    border-bottom: 1px solid black;
+    }
+
+    /*CONTACT*/
+    #contact{
+        width: 100%;
+    }
+    /*contact header*/
+    #contact .contact_header img{
+      visibility: hidden;
+    }
+    #contact .contact_header .contact-dis{
+      position: absolute;
+    }
+
+    /*contact zone*/
+    #contact .contact_area{
+        width: 300px;
+       margin: 20px;
+       padding: 20px;
+        align-items: center;
+        box-shadow:  0 0 15px  rgba(6, 6, 6, 0.7);
+    }
+    /*contact my information  card & contact form */
+    #contact .contact_area .contact_card{
+     margin-bottom: 30px;
+     align-items:start;
+    }
+    .contact_area .contact_card h2{
+    font-size: 30px;
+    }
+
+    /*FOOTER*/
+    #footer_info h1{
+        visibility: hidden;
+    }
+    #footer_info .pages {
+        position: absolute;
+    }
+    #footer_info .contact_us{
+        margin-top: 150px;
+    }
+    #footer_info .Newslatter{
+        margin-bottom: 40px;
+    }
+
+    
+    
+
+    /*MOBILE HEADER*/
+    #mobile{
+        opacity: 1;
+    }
+    /*mobile navbar*/
+   #mobile .navbar_mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background-color: rgb(53, 60, 60);
+    border-radius: 12px;
+    position: fixed;
+    z-index: 1;
+   }
+  .navbar_mobile .logo_mobile img{
+   width: 48px;
+   height: 48px;
+  }
+  .navbar_mobile .nav_mobile_icon a{
+    padding-left: 12px;
+    text-decoration: none;
+  }
+  .navbar_mobile .nav_mobile_icon i{
+    font-size: 30px;
+    color: black;
+    background-color: aliceblue;
+  border-radius: 12px;
+    padding: 4px;
+    margin-top: 5px;
+   
+  }
+  .navbar_mobile .nav_mobile_icon a img{
+   width: 30px;
+   height: 30px;
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 12px;
+  margin-top: 5px;
+  }
+  .navbar_mobile .nav_mobile_icon span{
+   padding-left: 15px;
+   transition: 0.4s;
+  }
+ 
+   .nav_mobile_icon  a span:hover,
+     a span.activ{
+  color: aliceblue;
+ 
+  }
+  
+    
+}

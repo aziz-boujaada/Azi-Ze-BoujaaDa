@@ -4,6 +4,7 @@
 <head>
     <!--meta-->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="this is my portfolio">
     <meta name="keywords" content="Aziz , boujaada , portfolio ,web-dev ,front-end ,back-end, project ">
     <meta name="author" content="Aiz Ze Boujaada">
@@ -22,8 +23,8 @@
 
 <body>
 
-    <!------Home section-------->
-    <section id="project_home">
+     <!------Home section-------->
+     <section id="project_home">
 
         <!--HEADER-->
         <header>
@@ -33,29 +34,29 @@
                     <div class="logo">
                         <img src="P_images/project details.png" alt="page logo">
                     </div>
-
+                      
                     <!--header list-->
                     <div class="list">
                         <ul>
-                            <a href="OutsidePAGE.html" class="active">
+                            <a href="OutsidePAGE.html" >
                                 <li>Projects</li>
                             </a>
                             <a href="technologies.html">
                                 <li>Technologies</li>
                             </a>
-                            <a href="FAQ.html">
+                            <a href="FAQ.html" class="active">
                                 <li>FAQ</li>
                             </a>
 
                         </ul>
                     </div>
-
+                     
                     <!--header search-->
                     <div class="search">
                         <input type="text" placeholder="Search">
                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
-
+ 
                     <!--header icon -->
                     <div class="github_icon">
                         <a href="https://github.com/aziz-boujaada/Azi-Ze-BoujaaDa.git" target="_blank">
@@ -65,68 +66,103 @@
             </section>
         </header>
 
-
-        <!--DESCRIPTION OF PROJECTS -->
         <section id="first_project_description">
-            <!--Left navbar-->
-            <div class="left_nav">
-
-               <div class="write">
-                    <a href="../index.html">
-                        <i class="fa-solid fa-house"></i>
-                        <span>Home</span>
-                    </a>
-                </div>
-
-                <div class="write">
-                    <a href="description.html">
-                        <i class="fa-solid fa-pen" id="active"></i>
-                        <span>Description</span>
-                    </a>
-                </div>
-
-                <div class="tool">
-                    <a href="tools.html">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span>Tools</span>
-                    </a>
-                </div>
-
-                <div class="gallery">
-                    <a href="Gallery.html">
-                        <i class="fa-solid fa-image"></i>
-                        <span>Gallery</span>
-                    </a>
-                </div>
-
-                <div class="questions">
-                    <a href="quoistion.html">
-                        <i class="fa-solid fa-question"></i>
-                        <span>questions</span>
-                    </a>
-                </div>
-            </div>
-
-            <!--Project description-->
+            
+             <!--section FAQ description/button/image-->
             <div class="description_project">
-                <h1> <span>Portfolio</span> Project Description</h1>
-                <p>This project is a personal page in which I presented myself.<br>
-                    By my personal information as my full name, my age, my city and my hobbies.<br>
-                    I was challenged from my educational from middle school until now.<br>
-                    I started in 2015 to 2024, and here I decided to learn programming<br>
-                    Because it was my passion from the beginning.<br>
-                    <br>
-                    And I also presented in this page my technical and social skills that I master.<br>
-                    I also provided some of the services that I can provide to you.
-                    You can see them on my personal page.<br>
-                    I added a section for the projects that I finished .<br>
-                    And also added the communication page to communicate with you and take your opinions</p><br>
+                <h1> Your<span> Questions ?</span> </h1>
+                <p>You can ask Me any question .<br>
+                    about my Project and anything You want .<br>
+                    I'm Here to answer Your questions .<br>
+                </p><br>
+
+                <button>Read More<i class="fa-solid fa-arrow-down"></i></button>
             </div>
 
             <div class="script_image">
-                <img src="p_images/write.png" alt="illustrator write description image ">
+                <img src="p_images/Questions.png" alt="illustrator questions image">
             </div>
+
         </section>
+    </section>
+
+     <!--FAQ SECTION-->
+    <!--Question FORM Part-->
+    <section id="FAQ">
+        <div class="faq_head">
+            <h2><span>FAQ</span></h2>
+            <p>some questions maybe you have about my project</p>
+        </div>
+
+        <div class="FAQ_question_part">
+            <div class="message">
+                <!--question  form-->
+                <div class="message_form">
+                    <h2>if have other questions send your question here </h2>
+
+                    <form action="" class="form">
+                        <div class="title">
+                            <h2>Questions Form</h2>
+                        </div>
+                        <div class="message_input">
+                            <div class="name">
+                                <div class="f_name">
+                                    <label for="first name">First Name</label><br>
+                                    <input type="text" placeholder="Enter Your First Name" required><br>
+                                </div>
+
+                                <div class="l_name">
+                                    <label for="last name">Last Name</label><br>
+                                    <input type="text" placeholder="Enter Your Last Name" required>
+                                </div>
+
+                            </div>
+
+                            <div class="message_area">
+                                <label for="text">Your question</label><br>
+                                <input type="text" placeholder="write your Question Here " required><br>
+                            </div>
+                        </div>
+
+                        <div class="send_btn">
+                            <button>Send </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!--faq /suggested questions-->
+            <div class="faq_container">
+                <div class="faq_question">
+
+                    <h2>suggested Questions</h2>
+                    <details>
+                        <summary><span>Do you give web-design services</span></summary>
+                        <p>Yes,I can crate for you a good website design</p>
+                    </details>
+
+
+                </div>
+                <div class="faq_question">
+                    <details>
+                        <summary><span>what is the tools you used</span></summary>
+                        <p>I used Figma to design, VScode editor ,&html css to create website</p>
+                    </details>
+
+
+                </div>
+                <div class="faq_question">
+                    <details>
+                        <summary><span>How can I contact You</span></summary>
+                        <p>You can contact me by my Email, phone-number or any social media </p>
+                    </details>
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--FOOTER-->

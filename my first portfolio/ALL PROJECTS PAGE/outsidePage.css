@@ -91,6 +91,12 @@ button:hover {
     color: var(--projects-color);
 }
 
+.nav_bar .list ul a:hover,
+.list ul a.active {
+    text-decoration: none;
+    color: black;
+}
+
 /*Search*/
 .search input {
     position: relative;
@@ -144,14 +150,15 @@ button:hover {
     height: 100vh;
 }
 
+/*home page content */
 .welcome {
 
     display: flex;
-
     align-items: center;
     justify-content: space-around;
 }
 
+/* welcome paragraph, img, btn*/
 .welcome .welcome_description {
     margin-left: 20px;
 }
@@ -188,7 +195,7 @@ button:hover {
     height: 100vh;
 }
 
-/*Projects */
+/*PROJECTS */
 #projects {
     background-color: var(--bg-color);
 }
@@ -209,7 +216,7 @@ button:hover {
     padding: 15px;
 }
 
-
+/*4 completed project*/
 .all_projects {
     display: flex;
     flex-wrap: wrap;
@@ -277,7 +284,12 @@ button:hover {
 
 }
 
+/*all technologies*/
 
+.technologies_head {
+    text-align: center;
+    margin-top: 60px;
+}
 
 /*FIRST PROJECT*/
 /*aside Nav BAR*/
@@ -288,12 +300,14 @@ button:hover {
 
 }
 
+/*description project page*/
 .script_image img {
     height: 90vh;
     width: 100%;
     margin-top: 60px;
 }
 
+/*left navbar*/
 .left_nav {
     display: flex;
     flex-direction: column;
@@ -307,7 +321,7 @@ button:hover {
     margin-top: 120px;
 }
 
-
+/*icon pen & home*/
 .write i {
     margin-top: 30px;
     padding: 6px;
@@ -316,6 +330,7 @@ button:hover {
 
 }
 
+/*icon Tools*/
 .tool i {
     margin-top: 30px;
     padding: 6px;
@@ -325,6 +340,7 @@ button:hover {
 
 }
 
+/*icon Gallery*/
 .gallery i {
     margin-top: 30px;
     padding: 6px;
@@ -333,6 +349,7 @@ button:hover {
 
 }
 
+/*icon questions*/
 .questions i {
     margin-top: 30px;
     padding: 6px;
@@ -341,6 +358,7 @@ button:hover {
 
 }
 
+/*Left navbar icons links */
 .left_nav a {
     text-decoration: none;
     letter-spacing: 2px;
@@ -357,6 +375,7 @@ a #active {
     text-align: center;
 }
 
+/*left navbar tooltip*/
 .left_nav a span {
     position: relative;
     bottom: 27px;
@@ -377,11 +396,9 @@ a #active {
     opacity: 1;
 }
 
-/*description content*/
+/*description of project content*/
 .description_project {
     margin-left: 200px;
-
-
 }
 
 .description_project h1 {
@@ -401,14 +418,15 @@ a #active {
     padding-left: 10px;
     transition: opacity 0.6S ease-in;
 }
+
 .description_project button:hover i {
     opacity: 1;
 }
 
 
 
-/*Tools*/
-#tools_part{
+/*TOOLs*/
+#tools_part {
     background-color: var(--bg-color);
     height: 60vh;
 }
@@ -429,7 +447,7 @@ a #active {
     letter-spacing: 3px;
 }
 
-
+/*Small navbar about show tools i used on project*/
 .tools_navigation {
     display: flex;
     align-items: center;
@@ -441,6 +459,7 @@ a #active {
     padding: 4px;
 }
 
+/*tool type (EDITOR ,CONTROL SYSTEM , LANGUAGES , DESIGN TOOL)*/
 .tool_type {
     border-bottom: 2px solid black;
     position: relative;
@@ -455,6 +474,7 @@ a #active {
     transform: translate(7px);
 }
 
+/*TOOL used*/
 .tool-used {
     display: flex;
     align-items: center;
@@ -469,16 +489,13 @@ a #active {
 }
 
 .tool_type:hover .tool-used {
-
     opacity: 1;
-
 }
 
 .tool_1 h4 {
     font-size: 18px;
     letter-spacing: 2px;
     align-items: center;
-
 }
 
 .tool_1 i {
@@ -491,36 +508,36 @@ a #active {
     font-size: 18px;
     letter-spacing: 2px;
     text-align: center;
-
 }
 
 .tool_2 i {
     font-size: 35px;
     color: blue;
     text-align: center;
-
-
 }
 
 .tools_navigation :nth-child(2),
- .tool-used :nth-child(1){
-  padding-right: 16px;
+.tool-used :nth-child(1) {
+    padding-right: 16px;
 }
 
 
 /*GALLERY*/
-#Gallery{
+#Gallery {
     background-color: var(--bg-color);
 }
-.head_gallery{
+
+.head_gallery {
     text-align: center;
     padding-top: 30px;
 }
-.head_gallery h2{
+
+.head_gallery h2 {
     font-size: 35px;
     letter-spacing: 7px;
 }
-.head_gallery P{
+
+.head_gallery P {
     font-size: 22px;
     font-weight: 600;
     line-height: 25px;
@@ -528,15 +545,16 @@ a #active {
 }
 
 /*gallery pictures*/
-.gallery_pictures{
+.gallery_pictures {
     display: grid;
-    grid-template-columns:repeat(auto-fill, minmax(600px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 10px;
-   overflow: hidden;
-    background-color:rgb(73, 73, 73);
-    
+    overflow: hidden;
+    background-color: rgb(73, 73, 73);
+
 }
-.picture img{
+
+.picture img {
     max-width: 500px;
     height: 250px;
     margin: 20px 0 30px 130px;
@@ -544,11 +562,12 @@ a #active {
     display: block;
     transition: 0.5s;
     cursor: pointer;
-    
+
 }
-.picture img:hover{
+
+.picture img:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0  10px var(--projects-color));
+    filter: drop-shadow(0 0 10px var(--projects-color));
 }
 
 
@@ -557,7 +576,7 @@ a #active {
 
 /*FAQ SECTION*/
 
-.FAQ_question_part{
+.FAQ_question_part {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -566,119 +585,131 @@ a #active {
 
 .faq_head {
     text-align: center;
-   }
-   .faq_head h2{
-     font-size: 35px;
-     letter-spacing: 5px;
-   }
-   .faq_head {
-     font-size: 25px;
-     letter-spacing: 3px;
-   }
-/* send questions  Form */
-.message{
+}
+
+.faq_head h2 {
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+.faq_head {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+/* send questions  Form & suggested questions */
+.message {
     display: flex;
     align-items: center;
     justify-content: space-around;
-     
-     }
-    
-    .message_form{
-        background-color: aliceblue;
-        box-shadow:  0 4px 6px var(--primary-colr);
-        border-radius: 12px;
-    }
-    .message_form h2{
-     text-align: center;
-     padding: 10px;
-     font-size: 20px;
-     letter-spacing: 2px;
-    }
-    .form h2{
-     text-align: center;
-     padding: 5px;
-     font-size: 22px;
-     font-weight: bold;
-     letter-spacing: 2px;
-     color: var(--primary-colr);
-    }
-    
-    
-    .message_input label {
+}
+
+/*1-message form*/
+.message_form {
+    background-color: aliceblue;
+    box-shadow: 0 4px 6px var(--primary-colr);
+    border-radius: 12px;
+}
+
+.message_form h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.form h2 {
+    text-align: center;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--primary-colr);
+}
+
+/*form inputs*/
+.message_input label {
     font-size: 18px;
     letter-spacing: 3px;
-    }
-    .message_input input {
+}
+
+.message_input input {
     border: none;
     outline: none;
     border-bottom: 1px solid var(--primary-colr);
     background-color: aliceblue;
     margin-top: 25px;
     width: 100%;
-    }
-    .message_input .name{
-       display: flex;
-       justify-content: space-between;
-       margin-top: 20px;
-       padding: 15px;
-    
-    }
-    .message_input .message_area{
-       margin-top: 20px;
-       padding: 15px;
-    }
-    
-    .send_btn{
-        text-align: center;
-    }
-    .send_btn button{
-        margin: 20px;
-        text-align: center;
-        width: 200px;
-        height: 35px;
-        background-color: var(--primary-colr);
-        color: aliceblue;
-        font-size: 20px;
-        border: none;
-        border-radius: 5px;
-        transition: 0.5S;
-        cursor: pointer;
-    }
-    .send_btn button:hover{
-    
-        border: 1px solid var(--primary-colr);
-        background-color: aliceblue;
-        color: var(--primary-colr);
-       
-    }
-
-/*suggested questions*/
-
-.faq_container{
-   background-color: var(--bg-color);
-   box-shadow:  0 4px 6px var(--primary-colr);
-   border-radius: 18px;
 }
-.faq_question{
+
+.message_input .name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.message_input .message_area {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+/*form button*/
+.send_btn {
+    text-align: center;
+}
+
+.send_btn button {
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    background-color: var(--primary-colr);
+    color: aliceblue;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5S;
+    cursor: pointer;
+}
+
+.send_btn button:hover {
+    border: 1px solid var(--primary-colr);
+    background-color: aliceblue;
+    color: var(--primary-colr);
+}
+
+/*2-suggested questions*/
+
+.faq_container {
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px var(--primary-colr);
+    border-radius: 18px;
+}
+
+.faq_question {
     padding: 30px;
 }
-.faq_question h2{
-   text-align: center;
-   font-size: 22px;
-   color: var(--primary-colr);
-   letter-spacing: 3px;
-   margin-bottom: 30px;
+
+.faq_question h2 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--primary-colr);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
 }
-.faq_question details{
+
+.faq_question details {
     width: 450px;
-    height: 40px; 
+    height: 40px;
     border-radius: 10px;
     font-size: 18px;
     letter-spacing: 2px;
     background-color: var(--bg-color);
     margin-bottom: 10px;
 }
-.faq_question details span{
+
+.faq_question details span {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -693,74 +724,84 @@ a #active {
 
 
 
-  /* FOOTER*/
- 
-  #footer_info{
+/* FOOTER*/
+
+#footer_info {
     display: flex;
     width: 100%;
     justify-content: space-around;
     background-color: rgb(208, 226, 217);
     flex-wrap: wrap;
 }
+
 /* pages part*/
-#footer_info h1{
+#footer_info h1 {
     margin-left: 12px;
 }
-#footer_info .pages h2{
-   margin-left: 35px; 
-   border-bottom: 2px solid black;
+
+#footer_info .pages h2 {
+    margin-left: 35px;
+    border-bottom: 2px solid black;
 }
-#footer_info .pages ul a{
+
+#footer_info .pages ul a {
     text-decoration: none;
     color: black;
 }
-#footer_info .pages ul  li{
+
+#footer_info .pages ul li {
     list-style: none;
     padding-top: 10px;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.4s; 
+    transition: 0.4s;
 }
-#footer_info .pages ul   li:hover{
-    color:var(--projects-color);
-    transform:translate(7px);
+
+#footer_info .pages ul li:hover {
+    color: var(--projects-color);
+    transform: translate(7px);
 }
 
 /*contact us part*/
-#footer_info .contact_us h2{
-    margin-left: 35px; 
+#footer_info .contact_us h2 {
+    margin-left: 35px;
     border-bottom: 2px solid black;
- }
- #footer_info .contact_us ul   li {
+}
+
+#footer_info .contact_us ul li {
     list-style: none;
     padding-top: 10px;
     font-size: 18px;
     cursor: pointer;
- }
- #footer_info .contact_us  li a  {
+}
+
+#footer_info .contact_us li a {
     color: black;
     text-decoration: none;
     padding-top: 10px;
-    transition: 0.4s;   
+    transition: 0.4s;
 }
 
-#footer_info .contact_us li   a:hover{
-    color:var(--projects-color);
+#footer_info .contact_us li a:hover {
+    color: var(--projects-color);
     transform: translate(7px);
 }
+
 /*Follow us part*/
-#footer_info .follow_us h2{
-    margin-left: 35px; 
+#footer_info .follow_us h2 {
+    margin-left: 35px;
     border-bottom: 2px solid black;
- }
- #footer_info .follow_us a{
+}
+
+#footer_info .follow_us a {
     color: black;
     margin-left: 30px;
     font-size: 22px;
     cursor: pointer;
-    transition: 0.5s; 
+    transition: 0.5s;
 }
-#footer_info .follow_us a:hover{
-    color:var(--projects-color);
+
+#footer_info .follow_us a:hover {
+    color: var(--projects-color);
     transform: translate(8px);
 }
