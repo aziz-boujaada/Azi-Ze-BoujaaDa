@@ -1,0 +1,451 @@
+:root {
+    --primary-color: #FEA116;
+    --header-color: rgb(2, 2, 42);
+    --button-color: rgb(231, 165, 10);
+    --btn-hover-color: rgb(226, 163, 17);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary-color);
+}
+
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+}
+
+button {
+    width: 180px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--button-color);
+    border-radius: 8px;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.section_head{
+    text-align: center;
+    padding-top: 40px;
+}
+
+/*HEADER*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+/*logo*/
+.logo i {
+    color: var(--primary-color);
+    font-size: 30px;
+    padding: 12px;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/*navbar list*/
+.nav_list ul {
+    display: flex;
+}
+
+.nav_list ul li {
+    list-style: none;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.nav_list ul a {
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+.nav_list a li:hover,
+a li.active {
+    color: var(--primary-color);
+}
+
+/*navbar button*/
+.nav_btn {
+    padding-right: 15px;
+}
+
+/*HOME SECTION*/
+#home {
+    background-image: linear-gradient(rgba(15, 23, 43, 0.4), rgba(15, 23, 43, 0.4)),
+        url(resto_images/resto-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-img img {
+    height: 80vh;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.home_info h1 {
+    color: aliceblue;
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+
+.home_info p {
+    color: aliceblue;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.home_info button {
+    height: 50px;
+    margin-top: 30px;
+}
+
+
+/*ABOUT PAGE*/
+/*about page/title*/
+#about_title {
+    background-image: linear-gradient(rgba(15, 23, 43, 0.5), rgba(15, 23, 43, 0.5)), url(resto_images/resto-background.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.title {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.title h1 {
+    font-size: 4rem;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+
+.title span {
+    color: aliceblue;
+}
+
+/*ABOUT CONTAINER (IMAGES / INFORMATION)*/
+#About_resto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*about_resto_images*/
+.about_resto_images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.about_resto_images img:nth-child(1) {
+    width: 300Px;
+    height: 300px;
+}
+
+.about_resto_images img:nth-child(2) {
+    width: 250Px;
+    height: 250px;
+    padding-top: 45px;
+}
+
+.about_resto_images img:nth-child(3) {
+    width: 250Px;
+    height: 250px;
+    padding-left: 45px;
+}
+
+.about_resto_images img:nth-child(4) {
+    width: 300Px;
+    height: 300px;
+}
+
+/*about_resto_information*/
+.about_resto_information .about-word {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Playwrite GB S", cursive;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.about_resto_information h1 {
+    padding-top: 24px;
+    font-size: 30px;
+
+}
+
+.about_resto_information h1 span {
+    color: var(--primary-color);
+}
+
+.about_resto_information p {
+    padding-top: 20px;
+    font-size: 18px;
+    color: rgb(34, 33, 33);
+}
+
+.resto_experience {
+    display: flex;
+    margin-top: 30px;
+}
+
+.resto_experience .experience_years {
+    padding-right: 8rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+.experience_years h1 {
+    padding: 15px;
+    color: var(--primary-color);
+}
+
+.experience_years h1 span {
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+}
+
+.resto_experience .master_chef {
+    padding-right: 45px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.master_chef h1 {
+    padding: 15px;
+    color: var(--primary-color);
+}
+
+.master_chef h1 span {
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+}
+
+.about_resto_information button{
+    border-radius: 0;
+    margin-top: 35px;
+    height: 50px;
+}
+
+
+/*RESTAURANT CHEFS MEMBERS*/
+#resto_members{
+    margin-top: 50px;
+    background-color: whitesmoke;
+}
+
+.section_head span{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Playwrite GB S", cursive;
+    border-bottom: 2px solid var(--primary-color);
+}
+.section_head h1{
+  padding-top: 15px;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.our_chefs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+   
+}
+
+.chef_card{
+    background-color:rgb(255, 250, 250);
+    margin-top: 70px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.chef_card:hover img{
+    transform: scale(1.06);
+   
+}
+.chef_card img{
+   width: 250px;
+   height: 250px;
+   padding: 30px;
+   border-radius: 50%;
+   transition: 0.6s;
+}
+
+.chef_card  h2{
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+}
+.chef_card  h3{
+   padding-top: 10px;
+   color: rgb(30, 29, 29);
+   font-size: 16px;
+   letter-spacing: 2px;
+}
+.chef_social_media{
+  opacity: 0;
+}
+.chef_social_media i{
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 14PX 14PX 0 0;
+    transition: 0.8s;
+}
+.chef_social_media i:hover{
+
+    background-color:rgb(255, 196, 87) ;
+   
+}
+.chef_card:hover .chef_social_media{
+    opacity: 1;
+}
+
+
+
+/*FOOTER*/
+#footer{
+    background-color: var(--header-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#footer h3{
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-family: "Playwrite GB S", cursive;
+}
+
+.company li{
+    margin-top: 20px;
+    padding-top: 10px;
+    color: aliceblue;
+    list-style:none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.company li:hover{
+  transform: translate(7px);
+}
+
+.contact_us i{
+    margin-top: 20px;
+    padding-top: 10px;
+    color: aliceblue;
+    font-size: 20px;
+}
+.contact_us  span{
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.contact_us .social_icons {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-color);
+   
+}
+ .social_icons i {
+    font-size: 18px;
+    padding: 10px;
+    background-color: var(--header-color);
+    border: 1px solid aliceblue;
+    border-radius : 50%;
+    transition: 0.5s;
+}
+ .social_icons i:hover {
+    font-size: 18px;
+    padding: 10px;
+    background-color: aliceblue;
+    color: var(--primary-color);
+    border: 1px solid aliceblue;
+    
+}
+
+.work_time h2{
+    margin-top: 20px;
+    padding-top:10px ;
+    color: aliceblue;
+}
+.work_time h4{
+    
+    color: aliceblue;
+}
+
+.newsletter p{
+    margin-top: 20px;
+    padding-top: 10px;
+    color: aliceblue;
+}
+.newsletter .news_input{
+   display: flex;
+   padding-top: 15px;
+}
+ .news_input input{
+  height: 40px;
+  width: 250px;
+  outline: none;
+  border: none;
+  padding-left: 12px;
+}
+ .news_input button{
+  height: 40px;
+  width: 100px;
+  border-radius: 0;
+  
+}
