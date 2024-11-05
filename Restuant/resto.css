@@ -18,6 +18,7 @@ html{
 
 body {
     box-sizing: border-box;
+   
 }
 
 h1 {
@@ -43,9 +44,24 @@ button:hover {
     background-color: var(--btn-hover-color);
 }
 
+/*head or title of sections parameter*/
 .section_head{
     text-align: center;
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.section_head span{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Playwrite GB S", cursive;
+    border-bottom: 2px solid var(--primary-color);
+}
+.section_head h1{
+  padding-top: 15px;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 /*HEADER*/
@@ -140,7 +156,7 @@ a li.active {
 
 /*ABOUT PAGE*/
 /*about page/title*/
-#about_title {
+#section_title {
     background-image: linear-gradient(rgba(15, 23, 43, 0.5), rgba(15, 23, 43, 0.5)), url(resto_images/resto-background.jpg);
 
     background-size: cover;
@@ -164,10 +180,14 @@ a li.active {
 .title span {
     color: aliceblue;
 }
+.title span .postition {
+    color: var(--primary-color);
+}
 
 /*ABOUT CONTAINER (IMAGES / INFORMATION)*/
 #About_resto {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -269,6 +289,11 @@ a li.active {
     margin-top: 35px;
     height: 50px;
 }
+.about_resto_information button{
+    border-radius: 0;
+    margin-top: 35px;
+    height: 50px;
+}
 
 
 /*RESTAURANT CHEFS MEMBERS*/
@@ -277,22 +302,11 @@ a li.active {
     background-color: whitesmoke;
 }
 
-.section_head span{
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 700;
-    font-family: "Playwrite GB S", cursive;
-    border-bottom: 2px solid var(--primary-color);
-}
-.section_head h1{
-  padding-top: 15px;
-  font-size: 35px;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
+
 
 .our_chefs{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     text-align: center;
@@ -350,6 +364,139 @@ a li.active {
     opacity: 1;
 }
 
+
+
+/*SERVICES*/
+/*Services Card*/
+
+.services{
+    background-color: whitesmoke;
+}
+.services_card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+    
+}
+.card{
+    background-color:white;
+    padding: 30px;
+}
+.card:hover {
+   background-color: var(--primary-color);
+   color: white;
+}
+.card:hover i {
+  
+   color: white;
+}
+.card i{
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.card h1{
+    padding-top: 1rem;
+    font-size: 20px;
+}
+.card p{
+    padding-top: 1rem;
+    line-height: 25px;
+}
+
+
+/*MENU*/
+.food_time{ 
+ text-align: center;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ padding-top: 40px;
+ border-bottom: 1px solid gray;
+ width: 50%;
+ margin-left: 25%;
+}
+.time:hover{ 
+    border-bottom: 1px solid var(--primary-color);
+    background-color: #FEA116;
+}
+.time:hover i{ 
+   color: white;
+}
+.time:hover span{ 
+   color: white;
+}
+.time i{ 
+ padding: 10px;
+ font-size: 24px;
+ color: var(--primary-color);
+}
+.time span{ 
+ font-size: 20px;
+ color: black;
+
+}
+
+#Menu{
+    padding-bottom: 40px;
+    background-color: whitesmoke;
+}
+.menu_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.food_type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.food_name{
+    padding-left: 12px;
+}
+.food_name p{
+    padding-top: 12px;
+}
+.name_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name_price h2{
+    padding-bottom: 10px;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 2px;
+}
+.name_price span{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+
+
+.book_table{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 200px;
+    margin-top: 10px;
+   
+    padding: 0;
+}
+.book-table_img img{
+   width: 80%;
+   height: 70vh;
+}
+.book-table_form  {
+    background-color: var(--header-color);
+}
 
 
 /*FOOTER*/
