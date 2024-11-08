@@ -57,13 +57,13 @@
                     <a href="restoServices.html">
                         <li>SERVICES</li>
                     </a>
-                    <a href="">
-                        <li class="active">MENU</li>
+                    <a href="restomenu.html">
+                        <li>MENU</li>
                     </a>
                     <a href="">
                         <li>PAGES</li>
                     </a>
-                    <a href="">
+                    <a href="restoContact.html">
                         <li>CONTACT</li>
                     </a>
                 </ul>
@@ -72,7 +72,7 @@
                 <button>BOOK A TABLE</button>
             </div>
     </section>
-    <!--MENU PAGE HEAD-->
+    <!--RESERVATION PAGE HEAD-->
     <section id="section_title">
         <div class="title">
             <h1>Reservation</h1>
@@ -81,8 +81,8 @@
     </section>
 
 
-    <!--MENU-->
-    <!--section services title-->
+    <!--BOOK A TABLE-->
+    <!--section reservation title-->
     <section id="Reservation">
 
         <div class="book_table">
@@ -94,31 +94,94 @@
                     <span>Reservation</span>
                     <h1>Book A Table Online </h1>
                 </div>
-                <form action="">
+                <form action="" class="form">
                     <div class="name_inputs">
                         <div class="first_name">
-                        <label for="Name"></label>
-                        <input type="text" placeholder="Enter Your First Name">
-                          </div>
-                          <div class="first_name">
-                        <label for="Name"></label>
-                        <input type="text" placeholder="Enter Your Last Name">
+                            <label for="Name">First Name</label><br>
+                            <input type="text" placeholder="Enter Your First Name" required>
+                        </div>
+                        <div class="first_name">
+                            <label for="Name">Last Name</label><br>
+                            <input type="text" placeholder="Enter Your Last Name" required>
+                        </div>
                     </div>
                     <div class="date_people">
                         <div class="date">
-                            <input type="date" placeholder="Enter Date">
+                            <label for="date">Date</label><br>
+                            <input type="date" placeholder="Enter Date" required>
                         </div>
-                        <div class="people">
-                            <label for="people"></label>
-                            <input type="text" placeholder="number of people">
+                        <div class="date">
+                            <label for="people">People Number</label><br>                         
+                            <input type="text" placeholder="number of people" required>  
                         </div>
                     </div>
                     <div class="message">
-                        <label for="message"></label>
-                        <textarea name="" id="" placeholder="write Your Message"></textarea>
+                        <label for="message">Message</label><br>
+                        <textarea name="" id="" placeholder="write Your Message" required></textarea>
                     </div>
 
+                    <div class="book_btn">
+                        <button type="submit">BOOK NOW</button>
                     </div>
+
+
                 </form>
             </div>
         </div>
+    </section>
+    <!--FOOTER-->
+    <section>
+        <footer id="footer">
+            <!--company part-->
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li> Contact Us </li>
+                    <li>Reservation</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+
+            <!--contact us part-->
+            <div class="contact_us">
+                <h3>Contact</h3>
+                <i class="fa-solid fa-location-dot"></i><span> 123street,Marrakech,Morocco</span><br>
+
+                <i class="fa-solid fa-phone"></i><span>+212 675490454</span><br>
+
+                <i class="fa-solid fa-envelope"></i><span>Restaurant78@gmail.com</span><br>
+                <div class="social_icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+            <!--work time part-->
+            <div class="work_time">
+                <h3>Opening</h>
+                    <h2>Monday-Saturday</h2>
+                    <h4>09AM - 09PM</h4>
+                    <br>
+                    <h2>Sunday</h2>
+                    <h4>10AM - 08PM</h4>
+            </div>
+
+            <!--newsletter part-->
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe on newsletter to get all the our news and offer</p>
+                <div class="news_input">
+                    <input type="text" placeholder="enter Your Email">
+                    <button>Sing up</button>
+                </div>
+
+            </div>
+
+        </footer>
+    </section>
+</body>
+
+</html>

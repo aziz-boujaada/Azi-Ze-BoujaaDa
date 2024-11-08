@@ -31,7 +31,7 @@ button {
     height: 40px;
     background-color: var(--primary-color);
     border: 1px solid var(--button-color);
-    border-radius: 8px;
+    
     font-size: 20px;
     color: aliceblue;
     font-weight: 600;
@@ -485,19 +485,148 @@ a li.active {
     align-items: center;
     justify-content: space-around;
     width: 80%;
-    margin: 200px;
+    margin: 150px;
     margin-top: 10px;
-   
-    padding: 0;
+    background-color: var(--header-color);
+    padding: 10px;
 }
 .book-table_img img{
-   width: 80%;
-   height: 70vh;
+   width: 100%;
+   height: 80vh;
+
+  
 }
 .book-table_form  {
-    background-color: var(--header-color);
+    width: 100%;
+    margin-bottom: 55px;
 }
 
+.form_head {
+    padding: 60px 25px;
+}
+.form_head span{
+   
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Playwrite GB S", cursive;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.form_head h1{
+  
+  color: aliceblue;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.form{
+    padding: 60px 25px;  
+}
+.name_inputs{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+}
+.name_inputs .first_name label{
+   color: aliceblue;
+   letter-spacing: 2px;
+   font-size: 20px;
+}
+.name_inputs .first_name input{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.date_people{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   padding-top: 30px;
+}
+.date_people .date label{
+   color: aliceblue;
+   letter-spacing: 2px;
+   font-size: 20px;
+}
+.date_people .date input{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.message{
+   width: 100%;
+   padding-top: 30px;
+   padding-left: 12px;
+   
+}
+.message label{
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.message textarea{
+    width: 95%;
+    height: 100px;
+    margin-top: 10px;
+    resize: none;
+    padding: 10px;
+}
+.book_btn {
+   padding-left: 12px;
+}
+.book_btn button{
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+    border-radius: 0;
+}
+
+
+
+.contact_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.map iframe{
+ background-color: black;
+}
+
+  .contact_form .Contact_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.Contact_inputs .email_name label{
+    color: black;
+    letter-spacing: 2px;
+    font-size: 20px;
+ }
+ .Contact_inputs .email_name input{
+     border: 1px solid black;
+     outline: none;
+     width: 300px;
+     height: 40px;
+     padding-left: 10px;
+     margin-top: 10px;
+ }
 
 /*FOOTER*/
 #footer{
