@@ -110,9 +110,46 @@ a li.active {
     color: var(--primary-color);
 }
 
+.drop a{
+ color: aliceblue;
+ font-size: 18px;
+ padding-right: 15px;
+}
+.drop a:hover{
+color: var(--primary-color);
+}
+
 /*navbar button*/
 .nav_btn {
     padding-right: 15px;
+}
+
+/*navbar pages dropDown*/
+.drop_down{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 65%;
+    background-color: white;
+    width: 200px;
+    z-index: 1;
+   
+}
+.drop_down h3{
+   padding: 10px;
+   color: black;
+   font-size: 18px;
+   font-weight: 400;
+  
+   
+}
+.drop_down h3:hover{
+   background-color: rgba(109, 109, 109, 0.4);
+  
+}
+
+.drop:hover .drop_down{
+   display: block;
 }
 
 /*HOME SECTION*/
@@ -565,18 +602,18 @@ a li.active {
     margin-top: 10px;
 }
 
-.message{
+.request{
    width: 100%;
    padding-top: 30px;
    padding-left: 12px;
    
 }
-.message label{
+.request label{
     color: aliceblue;
     letter-spacing: 2px;
     font-size: 20px;
 }
-.message textarea{
+.request textarea{
     width: 95%;
     height: 100px;
     margin-top: 10px;
@@ -600,33 +637,93 @@ a li.active {
     align-items: center;
     justify-content: space-around;
     padding: 40px;
-}
-
-.map iframe{
- background-color: black;
-}
-
-  .contact_form .Contact_inputs {
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    
+}
+
+.Contact_inputs{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+  
 }
 .Contact_inputs .email_name label{
-    color: black;
-    letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.Contact_inputs .email_name  input{
+   width: 280px;
+   height: 50px;
+   outline: none;
+   padding-left: 12px;
+   margin-top: 12px;
+   
+}
+.Contact_inputs .email_name  input:hover{
+   border:  2px solid var(--primary-color);
+   box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
+}
+.subject {
+    padding-top: 30px;
+}
+.subject label {
     font-size: 20px;
+  letter-spacing: 2px; 
+}
+.subject input  {
+    width: 100%;
+   height: 50px;
+   outline: none;
+   padding-left: 12px;
+   margin-top: 12px;
+}
+
+.subject input:hover{
+    border:  2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
  }
- .Contact_inputs .email_name input{
-     border: 1px solid black;
-     outline: none;
-     width: 300px;
-     height: 40px;
-     padding-left: 10px;
-     margin-top: 10px;
+
+.message {
+    padding-top: 30px;
+}
+.message label {
+    font-size: 20px;
+  letter-spacing: 2px; 
+}
+.message textarea {
+    width: 100%;
+   height: 70px;
+   outline: none;
+   margin-top: 12px;
+   resize: none;
+   padding: 12px 0 0 12px;
+}
+
+.message textarea:hover{
+    border:  2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
  }
+
+.message_btn{
+   padding-top: 15px;
+}
+.message_btn button{
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+}
+.message_btn button:hover{
+   background-color: white;
+   border: 1px solid var(--primary-color);
+   color: var(--primary-color);
+   box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
+}
+
+
+
+
+
+
 
 /*FOOTER*/
 #footer{
