@@ -74,7 +74,7 @@
                                 <h3>Our Team</h3>
                             </a>
 
-                            <a href="">
+                            <a href="testimoniam.html">
                                 <h3>Testimonial</h3>
                             </a>
 
@@ -106,6 +106,9 @@
 
 
     <!--ABOUT RESTAURANT-->
+    
+
+   
     <section id="About_resto">
         <!--restaurant images-->
         <div class="about_resto_images">
@@ -134,7 +137,7 @@
                 </div>
 
             </div>
-            <button>READ MORE</button>
+            <button onclick="scrollIntoBottom()">READ MORE</button>
         </div>
     </section>
 
@@ -197,8 +200,6 @@
 
         </div>
     </section>
-
-
 
 
     <!--SERVICES-->
@@ -459,6 +460,57 @@
         </div>
     </section>
 
+   <!--CONTACT -->
+
+    <section id="CONTACT">
+        <div class="section_head">
+            <span>Contact Us </span>
+            <h1>Contact For Any Query </h1>
+        </div>
+             <div class="contact_area">
+                 <div class="map">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13588.234530091737!2d-8.023238193985378!3d31.632244986603492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d931f3209%3A0x96ce34d39325c762!2sGu%C3%A9liz%2C%20Marrakech%2040000!5e0!3m2!1sfr!2sma!4v1731091671101!5m2!1sfr!2sma" width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+
+                 <form action="" class="form">
+                 <div class="contact_form">
+                    
+                        <div class="Contact_inputs">
+                            <div class="email_name">
+                                <label for="Name">Your Name</label><br>
+                                <input type="text" placeholder="Enter Your First Name" required>
+                            </div>
+
+                            <div class="email_name">
+                                <label for="Name">Email</label><br>
+                                <input type="text" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
+                     
+                           
+                            <div class="subject">
+                                <label for="subject">subject</label><br>                         
+                                <input type="text" placeholder="Your Subject" required>  
+                            </div>
+
+                            <div class="message">
+                                <label for="message">Message</label><br>                         
+                               <textarea name="" id=""  placeholder="Your message" required></textarea> 
+                            </div>
+                        
+                       
+    
+                        <div class="message_btn">
+                            <button type="submit">SEND MESSAGE</button>
+                        </div>
+    
+    
+                    </div>
+                </form>
+                
+             </div>
+    </section>
+
     <!--FOOTER-->
     <section>
         <footer id="footer">
@@ -512,7 +564,10 @@
 
         </footer>
     </section>
+ 
 
+
+    <script src="script.js"></script>
 </body>
 
 </html>
