@@ -807,10 +807,10 @@ a li.active {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1000;
+    z-index: 10;
 
 }
 
@@ -826,39 +826,43 @@ a li.active {
     display: none;
 }
 
-.card {
-    background-color: white;
-    padding: 30px;
-}
 
-.card:hover {
+
+.cards:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-.card:hover i {
+.cards:hover i {
 
     color: white;
 }
 
-.card i {
+.cards i {
     font-size: 3rem;
     color: var(--primary-color);
 }
 
-.card h1 {
+.cards h1 {
     padding-top: 1rem;
     font-size: 20px;
 }
 
-.card p {
+.cards p {
     padding-top: 1rem;
     line-height: 25px;
 }
 
 
 
-
+.cards.center{
+    background-color: var(--primary-color);
+    color: white;
+}
+.cards.center i{
+   
+    color: white;
+}
 .cards {
     box-shadow: 0 0 10px rgba(109, 109, 109, 0.4);
     margin: 10px;
@@ -866,6 +870,8 @@ a li.active {
     background-color: white;
     padding: 30px;
     flex: 0 0 350px;
+    cursor:grab;
+    position: relative;
 }
 
 
