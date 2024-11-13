@@ -38,55 +38,50 @@
 
 <body>
 
-    <!--HEADER-->
-    <section>
+     <!--HEADER-->
+     <section>
         <header id="header">
             <div class="logo">
                 <i class="fa-solid fa-utensils"></i><span>Restaurant</span>
             </div>
             <div class="nav_list">
                 <ul>
-                    <a href="resto.html">
-                        <li class="active">HOME</li>
-                    </a>
-                    <a href="aboutResto.html">
-                        <li>ABOUT</li>
-                    </a>
-                    <a href="restoServices.html">
-                        <li>SERVICES</li>
-                    </a>
-                    <a href="restomenu.html">
-                        <li>MENU</li>
-                    </a>
-                    <a href="restoContact.html">
-                        <li>CONTACT</li>
-                    </a>
-                    <a href="">
-                        <li class="drop">PAGES <span><i class="fa-solid fa-caret-down"></i></span>
-
-                        <div class="drop_down">
-
+                    <li ><a href="resto.html" class="active" >HOME</a></li>
+                    <li><a href="aboutResto.html">ABOUT</a> </li>
+                    <li><a href="restoServices.html" >SERVICES</a></li>
+                    <li><a href="restomenu.html">MENU</a></li>
+                    <li><a href="restoContact.html" >CONTACT</a></li>
+    
+    
+                    <li class="drop" id="toggleDrop"  >
+                        <a href="#">PAGES <span><i class="fa-solid fa-caret-down"></i></span></a>
+                         
+    
+                        <div class="drop_down hidden">
+    
                             <a href="booktable.html">
                                 <h3>Booking</h3>
                             </a>
-
+    
                             <a href="aboutResto.html">
                                 <h3>Our Team</h3>
                             </a>
-
+    
                             <a href="testimoniam.html">
                                 <h3>Testimonial</h3>
                             </a>
-
-
+    
+    
+    
                         </div>
-                       </li>
-                    </a>
+                    </li>
+    
                 </ul>
             </div>
             <div class="nav_btn">
                 <a href="booktable.html"> <button>BOOK A TABLE</button></a>
             </div>
+        </header>
     </section>
     <!--HOME SECTION-->
     <section id="home">
@@ -95,7 +90,7 @@
             <p>Welcome to our restaurant, Here you can find the most delicious dishes & Fast Food<br>
                 We offer To you quality and taste and we provide comfortable places to make you happy always<br>
                 We wish you a good appetite </p>
-            <button>BOOK A TABLE</button>
+            <a href="booktable.html"><button>BOOK A TABLE</button></a>
         </div>
         <div class="home-img">
             <img src="resto_images/home-img.png" alt="home image food">
@@ -104,11 +99,155 @@
 
 
 
+        <!--MENU-->
+        <!--section services title-->
+        <section id="Menu">
+            <div class="section_head">
+                <span>Our Menu Food</span>
+                <h1>Explore Our Menu Food </h1>
+            </div>
+
+            <div class="food_time">
+                <div class="time" class="time_active">
+                    <i class="fa-solid fa-mug-saucer"></i><br>
+                    <span>Breakfast</span>
+                </div>
+
+                <div class="time">
+                    <i class="fa-solid fa-burger"></i><br>
+                    <span>Lunch</span>
+                </div>
+
+                <div class="time">
+                    <i class="fa-solid fa-utensils"></i><br>
+                    <span>Dinner</span>
+                </div>
+
+            </div>
+
+            <div class="menu_list">
+                <div class="menu_first_page">
+
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/pizza.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-1.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-2.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-4.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu_first_page">
+
+
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-5.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-6.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-7.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+                    <div class="food_type">
+                        <div class="food_img">
+                            <img src="resto_images/menu-8.jpg" alt="">
+                        </div>
+                        <div class="food_name">
+                            <div class="name_price">
+                                <h2>Pizza Royal</h2>
+                                <span>11$</span>
+                            </div>
+                            <hr>
+                            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
     <!--ABOUT RESTAURANT-->
-    
 
-   
+
+
     <section id="About_resto">
         <!--restaurant images-->
         <div class="about_resto_images">
@@ -142,15 +281,15 @@
     </section>
 
     <!--RESTAURANT MEMBERS-->
-    <section id="resto_members" >
+    <section id="resto_members">
         <div class="section_head">
             <span>Team Members</span>
             <h1>Our Master Chefs</h1>
         </div>
 
         <!--our chefs cards-->
-        <div class="our_chefs" >
-            <div class="chef_card" >
+        <div class="our_chefs">
+            <div class="chef_card">
                 <!--chef 1-->
                 <img src="resto_images/chef-1.jpg" alt="chef-1">
                 <h2>Aziz BoujaaDa</h2>
@@ -269,317 +408,176 @@
     <section id="testimonial">
         <div class="section_head">
             <span>Testimonial</span>
-            <h1>What  Our Client say!!!</h1>
+            <h1>What Our Client say!!!</h1>
         </div>
 
-    <div class="client_say">
-           
-        <button class="left" onclick="scrollRight()" >→</button>
-        <div   id="client_cards">
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-1.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+        <div class="client_say">
 
-                     <h3>Azize Boujaada</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+            <button class="left" onclick="scrollRight()">→</button>
+            <div id="client_cards">
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-1.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-2.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+                            <h3>Azize Boujaada</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-                     <h3>Azize BoujaaDa</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+                </div>
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-2.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-4.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+                            <h3>Azize BoujaaDa</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-                     <h3>Azize Boujaada</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+                </div>
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-4.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-3.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+                            <h3>Azize Boujaada</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-                     <h3>Azize BoujaaDa</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+                </div>
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-3.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-1.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+                            <h3>Azize BoujaaDa</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-                     <h3>Azize Boujaada</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+                </div>
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-1.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-         <div class="cards">
-             <i class="fa-solid fa-quote-left"></i>
-             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-             <div class="client_profile">
-                 <div class="client_img">
-                     <img src="resto_images/testimonial-2.jpg" alt="client 1 profile img">
-                 </div>
-                 <div class="client_name">
+                            <h3>Azize Boujaada</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-                     <h3>Azize BoujaaDa</h3>
-                     <h5>Student</h5>
-                 </div>
-             </div>
+                </div>
+                <div class="cards">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    <div class="client_profile">
+                        <div class="client_img">
+                            <img src="resto_images/testimonial-2.jpg" alt="client 1 profile img">
+                        </div>
+                        <div class="client_name">
 
-         </div>
-     </div>
-     <button class="right"  onclick="scrollToLeft()" >←</button>
-    </div>
+                            <h3>Azize BoujaaDa</h3>
+                            <h5>Student</h5>
+                        </div>
+                    </div>
 
-
-    <!--MENU-->
-    <!--section services title-->
-    <section id="Menu">
-        <div class="section_head">
-            <span>Our Menu Food</span>
-            <h1>Explore Our Menu Food </h1>
+                </div>
+            </div>
+            <button class="right" onclick="scrollToLeft()">←</button>
         </div>
 
-        <div class="food_time">
-            <div class="time" class="time_active">
-                <i class="fa-solid fa-mug-saucer"></i><br>
-                <span>Breakfast</span>
-            </div>
 
-            <div class="time">
-                <i class="fa-solid fa-burger"></i><br>
-                <span>Lunch</span>
-            </div>
 
-            <div class="time">
-                <i class="fa-solid fa-utensils"></i><br>
-                <span>Dinner</span>
-            </div>
+        <!--BOOK A TABLE-->
+        <!--section reservation title-->
+        <section id="Reservation">
 
-        </div>
-
-        <div class="menu_list">
-            <div class="menu_first_page">
-
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/pizza.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
-                        </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
+            <div class="book_table">
+                <div class="book-table_img">
+                    <img src="resto_images/book a table.jpeg" alt="">
                 </div>
-
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-1.jpg" alt="">
+                <div class="book-table_form">
+                    <div class="form_head">
+                        <span>Reservation</span>
+                        <h1>Book A Table Online </h1>
                     </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
+                    <form action="" class="form">
+                        <div class="name_inputs">
+                            <div class="first_name">
+                                <label for="Name">First Name</label><br>
+                                <input type="text" placeholder="Enter Your First Name" required>
+                            </div>
+                            <div class="first_name">
+                                <label for="Name">Last Name</label><br>
+                                <input type="text" placeholder="Enter Your Last Name" required>
+                            </div>
                         </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
-
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-2.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
+                        <div class="date_people">
+                            <div class="date">
+                                <label for="date">Date</label><br>
+                                <input type="date" placeholder="Enter Date" required>
+                            </div>
+                            <div class="date">
+                                <label for="people">People Number</label><br>
+                                <input type="text" placeholder="number of people" required>
+                            </div>
                         </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-4.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
+                        <div class="request">
+                            <label for="request">Request</label><br>
+                            <textarea name="" id="" placeholder="special request" required></textarea>
                         </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
 
-            </div>
-            <div class="menu_first_page">
+                        <div class="book_btn">
+                            <button type="submit">BOOK NOW</button>
+                        </div>
 
 
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-5.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
-                        </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-6.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
-                        </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-7.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
-                        </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
-                </div>
-                <div class="food_type">
-                    <div class="food_img">
-                        <img src="resto_images/menu-8.jpg" alt="">
-                    </div>
-                    <div class="food_name">
-                        <div class="name_price">
-                            <h2>Pizza Royal</h2>
-                            <span>11$</span>
-                        </div>
-                        <hr>
-                        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
-                    </div>
+                    </form>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!--CONTACT -->
 
-      <!--BOOK A TABLE-->
-    <!--section reservation title-->
-    <section id="Reservation">
-
-        <div class="book_table">
-            <div class="book-table_img">
-                <img src="resto_images/book a table.jpeg" alt="">
+        <section id="CONTACT">
+            <div class="section_head">
+                <span>Contact Us </span>
+                <h1>Contact For Any Query </h1>
             </div>
-            <div class="book-table_form">
-                <div class="form_head">
-                    <span>Reservation</span>
-                    <h1>Book A Table Online </h1>
+            <div class="contact_area">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13588.234530091737!2d-8.023238193985378!3d31.632244986603492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d931f3209%3A0x96ce34d39325c762!2sGu%C3%A9liz%2C%20Marrakech%2040000!5e0!3m2!1sfr!2sma!4v1731091671101!5m2!1sfr!2sma"
+                        width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
                 <form action="" class="form">
-                    <div class="name_inputs">
-                        <div class="first_name">
-                            <label for="Name">First Name</label><br>
-                            <input type="text" placeholder="Enter Your First Name" required>
-                        </div>
-                        <div class="first_name">
-                            <label for="Name">Last Name</label><br>
-                            <input type="text" placeholder="Enter Your Last Name" required>
-                        </div>
-                    </div>
-                    <div class="date_people">
-                        <div class="date">
-                            <label for="date">Date</label><br>
-                            <input type="date" placeholder="Enter Date" required>
-                        </div>
-                        <div class="date">
-                            <label for="people">People Number</label><br>                         
-                            <input type="text" placeholder="number of people" required>  
-                        </div>
-                    </div>
-                    <div class="request">
-                        <label for="request">Request</label><br>
-                        <textarea name="" id="" placeholder="special request" required></textarea>
-                    </div>
+                    <div class="contact_form">
 
-                    <div class="book_btn">
-                        <button type="submit">BOOK NOW</button>
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
-    </section>
-
-   <!--CONTACT -->
-
-    <section id="CONTACT">
-        <div class="section_head">
-            <span>Contact Us </span>
-            <h1>Contact For Any Query </h1>
-        </div>
-             <div class="contact_area">
-                 <div class="map">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13588.234530091737!2d-8.023238193985378!3d31.632244986603492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d931f3209%3A0x96ce34d39325c762!2sGu%C3%A9liz%2C%20Marrakech%2040000!5e0!3m2!1sfr!2sma!4v1731091671101!5m2!1sfr!2sma" width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                 </div>
-
-                 <form action="" class="form">
-                 <div class="contact_form">
-                    
                         <div class="Contact_inputs">
                             <div class="email_name">
                                 <label for="Name">Your Name</label><br>
@@ -591,36 +589,36 @@
                                 <input type="text" placeholder="Enter Your Email" required>
                             </div>
                         </div>
-                     
-                           
-                            <div class="subject">
-                                <label for="subject">subject</label><br>                         
-                                <input type="text" placeholder="Your Subject" required>  
-                            </div>
 
-                            <div class="message">
-                                <label for="message">Message</label><br>                         
-                               <textarea name="" id=""  placeholder="Your message" required></textarea> 
-                            </div>
-                        
-                       
-    
+
+                        <div class="subject">
+                            <label for="subject">subject</label><br>
+                            <input type="text" placeholder="Your Subject" required>
+                        </div>
+
+                        <div class="message">
+                            <label for="message">Message</label><br>
+                            <textarea name="" id="" placeholder="Your message" required></textarea>
+                        </div>
+
+
+
                         <div class="message_btn">
                             <button type="submit">SEND MESSAGE</button>
                         </div>
-    
-    
+
+
                     </div>
                 </form>
-                
-             </div>
+
+            </div>
+        </section>
+
+
+
+
+
     </section>
-
-
-
-  
-
- </section>
 
     <!--FOOTER-->
     <section>
@@ -675,7 +673,7 @@
 
         </footer>
     </section>
- 
+
 
 
     <script src="script.js"></script>

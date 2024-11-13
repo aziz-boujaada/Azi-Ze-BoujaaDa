@@ -103,13 +103,14 @@ button:hover {
     font-size: 18px;
 }
 
-.nav_list ul a {
+.nav_list  li a {
     text-decoration: none;
     padding-left: 40px;
+    color: aliceblue;
 }
 
-.nav_list a li:hover,
-a li.active {
+.nav_list li a:hover,
+li a.active {
     color: var(--primary-color);
 }
 
@@ -129,16 +130,19 @@ a li.active {
 }
 
 /*navbar pages dropDown*/
-.drop_down {
-
-    position: absolute;
+.hidden {
     opacity: 0;
+    pointer-events: none;
+}
+.drop_down {
+    position: absolute;
     top: 60px;
     left: 65%;
     background-color: white;
     width: 200px;
     z-index: 1;
-
+    opacity: 0;
+    pointer-events: none;
 }
 
 .drop_down h3 {
@@ -155,8 +159,9 @@ a li.active {
 
 }
 
-.drop:hover .drop_down {
+ .drop_down:not(.hidden) {
     opacity: 1;
+    pointer-events:auto;
 }
 
 /*HOME SECTION*/
@@ -469,6 +474,20 @@ a li.active {
 
 
 /*MENU*/
+.time.active_time{
+    background-color: var(--primary-color);
+}
+.time.active_time i{
+color: white;
+
+}
+.time.active_time span{
+color: white;
+
+}
+.food_time a{
+ text-decoration: none;
+}
 .food_time {
     text-align: center;
     display: grid;
@@ -477,6 +496,7 @@ a li.active {
     border-bottom: 1px solid gray;
     width: 50%;
     margin-left: 25%;
+    cursor: pointer;
 }
 
 .time:hover {
