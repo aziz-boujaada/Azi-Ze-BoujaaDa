@@ -1,0 +1,192 @@
+@media screen and (max-width: 600px) {
+
+    .nav_list ul {
+        flex-direction: column;
+        margin-top: 350px;
+        background-color: rgba(4, 2, 38, 0.9);
+        width: 180px;
+    }
+
+    
+    .nav_list  {
+        display: none;
+    }
+    .nav_list.show  {
+        display: block;
+    }
+    
+   
+
+    .nav_list ul li {
+        padding: 20px;
+    }
+    .nav_list ul li {
+        padding: 20px;
+    }
+
+    .nav_btn {
+        display: none;
+    }
+
+   
+    .mobile_nav{
+        display: block; 
+     }
+
+    #button_show i{
+        color: var(--primary-color);
+        font-size: 20px;
+        padding-left: 55px;
+       
+    }
+    
+    #mobile_Xmark i{
+        color: aliceblue;
+        padding-top: 20px;
+        padding-left: 30px;
+        font-size: 25px; 
+    }
+
+    #home {
+        height: 120vh;
+    }
+
+    .home_info {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .home_info h1 {
+        font-size: 40px;
+    }
+
+    .home_info p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .home-img img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 80px;
+    }
+
+    .menu_list .food_type {
+        width: 90%;
+    }
+
+
+
+
+    .about_resto_images {
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .about_resto_images img:nth-child(1) {
+        width: 180Px;
+        height: 180px;
+    }
+
+    .about_resto_images img:nth-child(2) {
+        width: 130Px;
+        height: 130px;
+        padding-top: 45px;
+    }
+
+    .about_resto_images img:nth-child(3) {
+        width: 130Px;
+        height: 130px;
+        padding-left: 45px;
+    }
+
+    .about_resto_images img:nth-child(4) {
+        width: 180Px;
+        height: 180px;
+    }
+
+    .about_resto_information {
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+
+    .resto_experience {
+        gap: 20px;
+    }
+    .chef_card{
+        margin-top: 5px;
+    }
+
+
+    .services_card{
+        grid-template-columns: repeat( 1 ,1fr);
+    }
+
+    /*left & right button to switch between clients cards*/
+    .cards {
+        box-shadow: 0 0 10px rgba(109, 109, 109, 0.4);
+        padding: 20px;
+        flex: 0 0 300px;
+        
+      
+    }
+.client_say button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    transform: translateY(50%);
+    z-index: 1000;
+
+}
+
+.client_say button.left {
+    left: 10px;
+}
+
+.client_say button.right {
+    right: 10px;
+}
+
+
+    .book_table {
+       flex-direction: column;
+        width: 90%;
+        margin: 10px;
+      
+    }
+    .book-table_img img{
+        height: 300px;
+    }
+
+    .contact_area {
+        width: 80%;
+        margin: 0;
+        padding: 20px;
+    }
+    .contact_area .map iframe {
+        width: 350px;
+    }
+
+    #footer{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .contact_us{
+        padding-top: 20px;
+    }
+    
+    .work_time{
+        padding-top: 20px;
+    }
+    .newsletter{
+        padding-top: 20px;
+    }
+    .copyright{
+        padding-top: 20px;
+    }
+}
