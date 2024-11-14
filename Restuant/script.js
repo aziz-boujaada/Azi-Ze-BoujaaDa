@@ -1,3 +1,23 @@
+
+/* FUNCTION TO HIDDEN AND VISIBLE NAVBAR IN MOBILE VERSION */
+const BarEffect=document.getElementById("bar_effect");
+const mobileXmark=document.getElementById("mobile_Xmark");
+const buttonshow=document.getElementById("button_show");
+
+function showMobileNavBar(){
+    console.log("nav bar visible");
+    BarEffect.classList.add("show");
+    buttonshow.style.display="none";
+}
+function MobileNavBarHide(){
+   console.log("nav bar hide");
+   BarEffect.classList.remove("show");
+   buttonshow.style.display="block";
+}
+ buttonshow.addEventListener("click",showMobileNavBar);
+ mobileXmark.addEventListener("click" ,MobileNavBarHide);
+
+
 /* FUNCTION TO VISIBLE AND HIDDEN A DROPDOWN LIST IN HEADER (PART PAGES) */
 const drop_down= document.querySelector(".drop_down");
 const toggleDrop = document.getElementById("toggleDrop")
@@ -70,7 +90,7 @@ switchMenu();
 
   /*TWO FUNCTIONS TO SCROLL THE TESTIMONIAL TO LEFT & RIGHT AND CHANGE COLOR OF THE ACTIVE CARDS */
   /*change testimonial active card color  */
-let activeCard=1;
+let activeCard=0;
 const cards= document.querySelectorAll(".cards");
 function cardColor(){
   cards.forEach((cards ,index) => {
@@ -89,7 +109,7 @@ function scrollRight() {
         activeCard++;
     }
     container.scrollBy({
-        left: 450,
+        left: 400,
         behavior: "smooth"
     });
 
@@ -102,7 +122,7 @@ function scrollToLeft(){
         activeCard--;
     }
     container.scrollBy({
-        left: -450,
+        left: -400,
         behavior:"smooth"
     }); 
 

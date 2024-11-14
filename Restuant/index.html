@@ -14,6 +14,7 @@
     <!--link HTML with CSS-->
 
     <link rel="stylesheet" href="resto.css">
+    <link rel="stylesheet" href="ResponsiveVERSION.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--link with cdnjs for icons -->
@@ -44,15 +45,27 @@
             <div class="logo">
                 <i class="fa-solid fa-utensils"></i><span>Restaurant</span>
             </div>
-            <div class="nav_list">
-                <ul>
-                    <li ><a href="resto.html" class="active" >HOME</a></li>
+
+            <div class="mobile_nav">
+                <div id="button_show">
+                    <i class="fa-solid fa-bars" ></i>
+                </div>
+            </div>
+            <div class="nav_list show" id="bar_effect">
+                <ul> 
+                    <div class="mobile_nav " >
+                    <div id="mobile_Xmark">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+
+                    <li ><a href="index.html" class="active" >HOME</a></li>
                     <li><a href="aboutResto.html">ABOUT</a> </li>
                     <li><a href="restoServices.html" >SERVICES</a></li>
                     <li><a href="restomenu.html">MENU</a></li>
                     <li><a href="restoContact.html" >CONTACT</a></li>
     
-    
+                     
                     <li class="drop" id="toggleDrop"  >
                         <a href="#">PAGES <span><i class="fa-solid fa-caret-down"></i></span></a>
                          
@@ -75,12 +88,15 @@
     
                         </div>
                     </li>
+                  
     
                 </ul>
             </div>
             <div class="nav_btn">
                 <a href="booktable.html"> <button>BOOK A TABLE</button></a>
             </div>
+            
+           
         </header>
     </section>
     <!--HOME SECTION-->
@@ -404,17 +420,19 @@
 
 
 
-
+     <!--TESTIMONIAL-->
+     <!--section Testimonial title-->
     <section id="testimonial">
         <div class="section_head">
             <span>Testimonial</span>
             <h1>What Our Client say!!!</h1>
         </div>
 
+        <!-- clients say cards -->
         <div class="client_say">
-
             <button class="left" onclick="scrollRight()">→</button>
             <div id="client_cards">
+                <!--card 1-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -430,6 +448,8 @@
                     </div>
 
                 </div>
+
+                <!--card 2-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -443,8 +463,9 @@
                             <h5>Student</h5>
                         </div>
                     </div>
-
                 </div>
+
+                <!--card 3-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -458,8 +479,9 @@
                             <h5>Student</h5>
                         </div>
                     </div>
-
                 </div>
+
+                <!--card 4-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -473,8 +495,9 @@
                             <h5>Student</h5>
                         </div>
                     </div>
-
                 </div>
+
+                <!--card 5-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -488,8 +511,9 @@
                             <h5>Student</h5>
                         </div>
                     </div>
-
                 </div>
+
+                <!--card 6-->
                 <div class="cards">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
@@ -519,11 +543,14 @@
                 <div class="book-table_img">
                     <img src="resto_images/book a table.jpeg" alt="">
                 </div>
+
+                <!--book a table form-->
                 <div class="book-table_form">
                     <div class="form_head">
                         <span>Reservation</span>
                         <h1>Book A Table Online </h1>
                     </div>
+
                     <form action="" class="form">
                         <div class="name_inputs">
                             <div class="first_name">
@@ -567,14 +594,17 @@
                 <span>Contact Us </span>
                 <h1>Contact For Any Query </h1>
             </div>
+
+            <!--Contact area MAP & CONTACT FORM-->
             <div class="contact_area">
+                <!--map-->
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13588.234530091737!2d-8.023238193985378!3d31.632244986603492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d931f3209%3A0x96ce34d39325c762!2sGu%C3%A9liz%2C%20Marrakech%2040000!5e0!3m2!1sfr!2sma!4v1731091671101!5m2!1sfr!2sma"
                         width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-
+                 <!--form-->
                 <form action="" class="form">
                     <div class="contact_form">
 
@@ -671,7 +701,11 @@
 
             </div>
 
+           
+            
+            
         </footer>
+        <p class="copyright">copyright &copy; 2024 AZi Ze BouJaaDa .All rights reserved</p>
     </section>
 
 

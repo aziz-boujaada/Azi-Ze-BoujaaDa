@@ -19,7 +19,10 @@ html {
 
 body {
     box-sizing: border-box;
+}
 
+body::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
@@ -76,7 +79,7 @@ button:hover {
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: auto;
+    height: 60px;
 }
 
 /*logo*/
@@ -103,7 +106,7 @@ button:hover {
     font-size: 18px;
 }
 
-.nav_list  li a {
+.nav_list li a {
     text-decoration: none;
     padding-left: 40px;
     color: aliceblue;
@@ -129,11 +132,12 @@ li a.active {
     padding-right: 15px;
 }
 
-/*navbar pages dropDown*/
+/*navbar pages dropDown  (class "hidden to use in JS"*/
 .hidden {
     opacity: 0;
     pointer-events: none;
 }
+
 .drop_down {
     position: absolute;
     top: 60px;
@@ -150,19 +154,23 @@ li a.active {
     color: black;
     font-size: 18px;
     font-weight: 400;
-
-
 }
 
 .drop_down h3:hover {
     background-color: rgba(109, 109, 109, 0.4);
-
 }
 
- .drop_down:not(.hidden) {
+.drop_down:not(.hidden) {
     opacity: 1;
-    pointer-events:auto;
+    pointer-events: auto;
 }
+
+/*MOBILE VERSION LIST HIDDEN*/
+.mobile_nav{
+   display: none; 
+}
+
+
 
 /*HOME SECTION*/
 #home {
@@ -182,6 +190,20 @@ li a.active {
     height: 80vh;
     width: 100%;
     margin-top: 80px;
+    animation: rotate-effect 10s linear infinite;
+
+}
+
+/*Home image rotate infinite effect*/
+@keyframes rotate-effect {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
 }
 
 .home_info h1 {
@@ -241,7 +263,7 @@ li a.active {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    max-height: 600px;
+    max-height: auto;
 }
 
 /*about_resto_images*/
@@ -299,6 +321,8 @@ li a.active {
     color: rgb(34, 33, 33);
 }
 
+
+/*experience of resto*/
 .resto_experience {
     display: flex;
     flex-wrap: wrap;
@@ -352,7 +376,7 @@ li a.active {
 
 /*RESTAURANT CHEFS MEMBERS*/
 #resto_members {
-    margin-top: 50px;
+    margin-top: 100px;
     background-color: whitesmoke;
 }
 
@@ -474,20 +498,27 @@ li a.active {
 
 
 /*MENU*/
-.time.active_time{
+
+/*add class ("active_time") to using in javaScript*/
+.time.active_time {
     background-color: var(--primary-color);
 }
-.time.active_time i{
-color: white;
+
+.time.active_time i {
+    color: white;
 
 }
-.time.active_time span{
-color: white;
+
+.time.active_time span {
+    color: white;
 
 }
-.food_time a{
- text-decoration: none;
+
+.food_time a {
+    text-decoration: none;
 }
+
+/*food time (breakfast-lunch-dinner)*/
 .food_time {
     text-align: center;
     display: grid;
@@ -524,11 +555,13 @@ color: white;
 
 }
 
+/*menu container */
 #Menu {
     padding-bottom: 40px;
     background-color: whitesmoke;
 }
 
+/*add two menu list 1 in left & 1 in right  like a book */
 .menu_list {
     display: flex;
     flex-wrap: wrap;
@@ -574,10 +607,9 @@ color: white;
 
 
 
-
+/*BOOK TABLE SECTION => RESERVATION*/
 .book_table {
     display: flex;
-
     align-items: center;
     justify-content: space-around;
     width: 80%;
@@ -624,6 +656,7 @@ color: white;
     padding: 60px 25px;
 }
 
+/*full name*/
 .name_inputs {
     display: flex;
     flex-wrap: wrap;
@@ -646,7 +679,7 @@ color: white;
     margin-top: 10px;
 }
 
-
+/*Date & people numbers*/
 .date_people {
     display: flex;
     flex-wrap: wrap;
@@ -670,6 +703,7 @@ color: white;
     margin-top: 10px;
 }
 
+/*text area to put request*/
 .request {
     width: 100%;
     padding-top: 30px;
@@ -703,7 +737,7 @@ color: white;
 }
 
 
-
+/* CONTACT SECTION*/
 .contact_area {
     display: flex;
     align-items: center;
@@ -720,6 +754,7 @@ color: white;
 
 }
 
+/*name & email */
 .Contact_inputs .email_name label {
     font-size: 20px;
     letter-spacing: 2px;
@@ -739,6 +774,7 @@ color: white;
     box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
 }
 
+/*subject*/
 .subject {
     padding-top: 30px;
 }
@@ -761,6 +797,7 @@ color: white;
     box-shadow: 0 0 10px rgba(15, 23, 43, 0.4);
 }
 
+/*message*/
 .message {
     padding-top: 30px;
 }
@@ -802,7 +839,7 @@ color: white;
 }
 
 
-
+/*TESTIMONIAL SECTION */
 #testimonial {
     background-color: whitesmoke;
 
@@ -823,6 +860,7 @@ color: white;
     position: relative;
 }
 
+/*left & right button to switch between clients cards*/
 .client_say button {
     width: 60px;
     height: 60px;
@@ -847,7 +885,7 @@ color: white;
 }
 
 
-
+/*cards*/
 .cards:hover {
     background-color: var(--primary-color);
     color: white;
@@ -874,15 +912,17 @@ color: white;
 }
 
 
-
-.cards.center{
+/* use "center" class to add scrolling effect and add color to active card  in javaScript */
+.cards.center {
     background-color: var(--primary-color);
     color: white;
 }
-.cards.center i{
-   
+
+.cards.center i {
+
     color: white;
 }
+
 .cards {
     box-shadow: 0 0 10px rgba(109, 109, 109, 0.4);
     margin: 10px;
@@ -890,7 +930,7 @@ color: white;
     background-color: white;
     padding: 30px;
     flex: 0 0 350px;
-    cursor:grab;
+    cursor: grab;
     position: relative;
 }
 
@@ -917,6 +957,7 @@ color: white;
     line-height: 25px;
 }
 
+/*profile image and client name */
 .client_profile {
     display: flex;
     align-items: center;
@@ -963,6 +1004,7 @@ color: white;
     font-family: "Playwrite GB S", cursive;
 }
 
+/*Company part*/
 .company li {
     margin-top: 20px;
     padding-top: 10px;
@@ -977,6 +1019,8 @@ color: white;
     transform: translate(7px);
 }
 
+
+/*Contact us part*/
 .contact_us i {
     margin-top: 20px;
     padding-top: 10px;
@@ -1017,6 +1061,7 @@ color: white;
 
 }
 
+/*work time(opening) part*/
 .work_time h2 {
     margin-top: 20px;
     padding-top: 10px;
@@ -1028,6 +1073,7 @@ color: white;
     color: aliceblue;
 }
 
+/*Newsletter part*/
 .newsletter p {
     margin-top: 20px;
     padding-top: 10px;
@@ -1053,3 +1099,14 @@ color: white;
     border-radius: 0;
 
 }
+
+/*copyright*/
+.copyright{
+    background-color: var(--header-color);
+    text-align: center;
+    color: aliceblue;
+    padding-bottom: 12px;
+}
+
+
+
