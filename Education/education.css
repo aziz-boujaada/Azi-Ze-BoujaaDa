@@ -1,0 +1,171 @@
+:root {
+    --primary-color: rgb(21, 21, 180);
+    --header-color: rgb(177, 177, 182);
+    --footer-color: rgb(5, 5, 33);
+    --bg-color1: rgb(255, 251, 251);
+    --font-color-btn: rgb(255, 251, 251);
+    --button-color: rgb(9, 9, 136);
+    --hover-color: rgb(35, 35, 181);
+    --font-family: "Roboto", "Open+Sans", "Lato" , "Ubuntu";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family), sans-serif;
+}
+
+h1 {
+    font-family: "Roboto";
+    font-size: 40px;
+    color: rgb(50, 50, 255);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--font-color-btn);
+    font-size: 20px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-color1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+/*HEADER SECTION*/
+#header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--header-color);
+    height: 70px;
+    width: 100%;
+}
+
+/*logo img*/
+.logo img {
+    width: 160px;
+}
+
+/*navigation list */
+.nav_list ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav_list li a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.nav_list li a:hover,
+.nav_list li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/*navigation button*/
+.nav_btn button {
+    margin-right: 20px;
+}
+
+/*HOME PAGE SECTION*/
+#home_page {
+    background-image: linear-gradient(rgba(3, 3, 48, 0.8), rgba(40, 13, 163, 0.8)),
+        url(Education-images/home-education-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 70px;
+    height: 100vh;
+
+}
+
+/*home information*/
+
+.home_info h1 {
+    font-size: 48px;
+    color: rgb(50, 50, 255);
+    font-family: "Ubuntu";
+}
+
+.home_info h2 {
+    font-size: 30px;
+    color: rgb(219, 218, 218);
+    padding-top: 20px;
+}
+
+.home_info p {
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+ 
+/*home buttons*/
+.home_info .btn1  button {
+    width: 180px;
+    height: 50px;
+    margin-top: 40px;
+    background-color: rgb(50, 50, 255);
+    border-radius: 0;
+    transition: 0.4s;
+}
+.home_info .btn1  button:hover {
+    
+    background-color: var(--bg-color1);
+    border: 1px solid  rgb(50, 50, 255);
+}
+.home_info .btn2  button {
+    width: 180px;
+    height: 50px;
+    margin-top: 40px;
+    color:var(--primary-color);
+    background-color: var(--bg-color1);
+    border-radius: 0;
+    transition: 0.4s;
+}
+.home_info .btn2  button:hover {
+    background-color: rgb(50, 50, 255); 
+    color: white;
+}
+
+/*home image*/
+.home-img img {
+    width: 80%;
+    height: 80vh;
+}
