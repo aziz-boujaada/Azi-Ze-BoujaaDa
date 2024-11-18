@@ -6,7 +6,7 @@
     --font-color-btn: rgb(255, 251, 251);
     --button-color: rgb(9, 9, 136);
     --hover-color: rgb(35, 35, 181);
-    --font-family: "Roboto", "Open+Sans", "Lato" , "Ubuntu";
+    --font-family: "Roboto", "Open+Sans", "Lato", "Ubuntu";
 }
 
 * {
@@ -17,10 +17,26 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
     font-family: var(--font-family), sans-serif;
+}
+
+/*parameter of all head section's*/
+.section_head{
+    text-align: center;
+    padding-top: 50px;
+}
+.section_head{
+    text-align: center;
+    padding-top: 50px;
+}
+.section_head p{
+   font-size: 20px;
+   padding-top: 20px;
+   font-weight: 500;
 }
 
 h1 {
@@ -31,6 +47,7 @@ h1 {
 
 a {
     text-decoration: none;
+    color: black;
     cursor: pointer;
 }
 
@@ -67,6 +84,7 @@ button:hover {
     background-color: var(--header-color);
     height: 70px;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 /*logo img*/
@@ -92,6 +110,7 @@ button:hover {
 .nav_list li a.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
+
 }
 
 /*navigation button*/
@@ -131,36 +150,69 @@ button:hover {
 .home_info p {
     font-size: 20px;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
     line-height: 25px;
     letter-spacing: 2px;
 }
- 
+
+/*courses category's*/
+.home_category {
+    display: flex;
+    gap: 30px;
+    padding-top: 40px;
+}
+
+.category {
+    border-left: 2px solid white;
+    line-height: 25px;
+}
+
+.category h4 {
+    padding-left: 12px;
+    font-size: 20px;
+    color: rgb(50, 50, 255);
+}
+
+.category span {
+    padding-left: 12px;
+    font-size: 16px;
+    color: rgb(192, 191, 191);
+}
+
 /*home buttons*/
-.home_info .btn1  button {
+.home_buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.home_info .btn1 button {
     width: 180px;
     height: 50px;
-    margin-top: 40px;
+    margin-top: 45px;
     background-color: rgb(50, 50, 255);
     border-radius: 0;
     transition: 0.4s;
 }
-.home_info .btn1  button:hover {
-    
+
+.home_info .btn1 button:hover {
+
     background-color: var(--bg-color1);
-    border: 1px solid  rgb(50, 50, 255);
+    border: 1px solid rgb(50, 50, 255);
 }
-.home_info .btn2  button {
+
+.home_info .btn2 button {
     width: 180px;
     height: 50px;
     margin-top: 40px;
-    color:var(--primary-color);
+    color: var(--primary-color);
     background-color: var(--bg-color1);
     border-radius: 0;
     transition: 0.4s;
 }
-.home_info .btn2  button:hover {
-    background-color: rgb(50, 50, 255); 
+
+.home_info .btn2 button:hover {
+    background-color: rgb(50, 50, 255);
     color: white;
 }
 
@@ -169,3 +221,99 @@ button:hover {
     width: 80%;
     height: 80vh;
 }
+
+/*COURSES SECTION*/
+/*courses  welcome page*/
+#courses {
+    background-image: linear-gradient(rgba(3, 3, 48, 0.8), rgba(61, 34, 168, 0.8)),
+        url(Education-images/home-education-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    padding-top: 70px;
+
+}
+
+.courses_welcome h1 {
+    font-size: 3rem;
+    font-family: "Ubuntu";
+}
+
+.courses_welcome h3 {
+    padding-top: 30px;
+    font-size: 24px;
+    font-family: "Lato";
+    color: white;
+}
+
+.courses_welcome p {
+    padding-top: 40px;
+    font-size: 20px;
+    font-family: "Open+Sans";
+    color: white;
+    line-height: 30px;
+    letter-spacing: 1px;
+   
+}
+
+.courses_welcome p span,
+q {
+    font-weight: 600;
+    color: rgb(50, 50, 255);
+}
+
+
+.Welcome_img img {
+    width: 80%;
+    height: 80vh;
+}
+
+.read_btn button {
+    width: 180px;
+    height: 50px;
+    margin-top: 45px;
+    background-color: rgb(50, 50, 255);
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.read_btn button:hover {
+
+    background-color: var(--bg-color1);
+    border: 1px solid rgb(50, 50, 255);
+    box-shadow:  0 4px 6px rgba(5, 5, 33 ,0.5);
+}
+
+/*COURSES CONTENT*/
+/*courses type (category)*/
+.courses_type{
+    text-align: center;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.type{
+    border-bottom: 1px solid gray;
+    padding-bottom: 4px;
+}
+.type:hover,
+.active{
+    color: var(--primary-color);
+    border-bottom: 2px solid    rgb(50, 50, 255) ;
+}
+.type a h5{
+    font-size: 16px;
+    font-weight: 600;
+}
+.type a h5:hover,
+.active{
+   color:  rgb(50, 50, 255);
+   border: none;
+}
+
