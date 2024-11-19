@@ -6,6 +6,7 @@
     --font-color-btn: rgb(255, 251, 251);
     --button-color: rgb(9, 9, 136);
     --hover-color: rgb(35, 35, 181);
+    --favorite-blue : rgb(50, 50, 255);
     --font-family: "Roboto", "Open+Sans", "Lato", "Ubuntu";
 }
 
@@ -137,7 +138,7 @@ button:hover {
 
 .home_info h1 {
     font-size: 48px;
-    color: rgb(50, 50, 255);
+    color: var(--favorite-blue);
     font-family: "Ubuntu";
 }
 
@@ -170,7 +171,7 @@ button:hover {
 .category h4 {
     padding-left: 12px;
     font-size: 20px;
-    color: rgb(50, 50, 255);
+    color: var(--favorite-blue);
 }
 
 .category span {
@@ -190,7 +191,7 @@ button:hover {
     width: 180px;
     height: 50px;
     margin-top: 45px;
-    background-color: rgb(50, 50, 255);
+    background-color: var(--favorite-blue);
     border-radius: 0;
     transition: 0.4s;
 }
@@ -198,7 +199,7 @@ button:hover {
 .home_info .btn1 button:hover {
 
     background-color: var(--bg-color1);
-    border: 1px solid rgb(50, 50, 255);
+    border: 1px solid var(--favorite-blue);
 }
 
 .home_info .btn2 button {
@@ -212,7 +213,7 @@ button:hover {
 }
 
 .home_info .btn2 button:hover {
-    background-color: rgb(50, 50, 255);
+    background-color: var(--favorite-blue);
     color: white;
 }
 
@@ -262,8 +263,9 @@ button:hover {
 
 .courses_welcome p span,
 q {
+    font-size: 20px;
     font-weight: 600;
-    color: rgb(50, 50, 255);
+    color: var(--favorite-blue);
 }
 
 
@@ -276,7 +278,7 @@ q {
     width: 180px;
     height: 50px;
     margin-top: 45px;
-    background-color: rgb(50, 50, 255);
+    background-color: var(--favorite-blue);
     border-radius: 0;
     transition: 0.4s;
 }
@@ -316,4 +318,236 @@ q {
    color:  rgb(50, 50, 255);
    border: none;
 }
+
+/*COURSES CARDS SECTION */
+#courses_card{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 40px;
+    margin: 30px;
+    gap: 20px;
+    margin-top: 60px;
+    background-color: whitesmoke; 
+}
+/*cards*/
+.card{
+  margin: 30px;
+  padding: 20px;
+  background-color:white;
+  border-radius: 10px;
+  width: 340px;
+  height: auto;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(3, 3, 48, 0.4);
+  transition: .3s;
+  cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(22, 22, 133, 0.6);
+    background-color: azure;
+}
+
+/*cards content*/
+
+/*free on head of card*/
+.free {
+background-color: rgb(46, 45, 45);
+border-radius:  12px 0  12px 0;
+width: 70px;
+padding: 10px;
+margin-bottom: 10px;
+
+}
+.free span{
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+}
+/*course image*/
+.course_img img{
+   
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(11, 11, 94, 0.6);
+} 
+/*author of course profile*/
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile_img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 10px;
+}
+.profile_name h5{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/*course name*/
+.course_name h5{
+    padding-top: 20px;
+    color: var(--favorite-blue);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "open+sans";
+
+}
+/*what course provide */
+.cours_skills h5{
+    padding-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "open+sans";
+}
+.cours_skills h5 span{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: rgb(37, 37, 37);
+}
+
+/*rating & number of views */
+.rating_views{
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.rating_views i{
+    color: goldenrod;
+    font-size: 14px; 
+}
+   
+
+.rating_views  span ,span{
+   font-size: 14px;
+   color: black; 
+   padding-left: 8px;
+}
+
+/*Level & course  duration */
+.level_duration{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.level_duration i{
+  
+    font-size: 16px;
+}
+.level_duration h6{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*Enrol course for free button*/
+.enrol_btn button{
+    width: 100%;
+    margin-top: 30px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    transform: translateY(20px);
+}
+.card:hover .enrol_btn button{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.explore_more_btn button{
+    position: absolute;
+    left: 50%;
+    margin-bottom: 6px;
+    transform: translateX(-55%);
+    width: 250px;
+}
+
+
+
+
+/*COURSES DETAILS*/
+#course_presentation{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 90px 30px;
+    background-color: azure;
+    position: relative;
+}
+
+.course_information img{
+    width:140px ;
+    border-left: 2px solid var(--favorite-blue);
+    
+}
+.course_information h1{
+   font-size: 40px;
+   padding-top: 20px;
+   font-family: "Ubuntu";
+   color: black;
+}
+.course_information button{
+    margin-top: 30px;
+    border-radius: 0;
+}
+.course_image img{
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+}
+
+.course_details_btn{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#course_banner{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(3, 3, 48, 0.8);
+    padding: 30px;
+    margin-left:20%;
+    border-radius: 8px;
+    position: absolute;
+    top: 58%;
+    
+    
+   
+}
+
+.course_title ,.course_level , .course_duration{
+    border-left:2px solid gray ;
+    padding-left: 10px;
+}
+.course_title h2{
+    font-size: 18px;
+}
+.course_title p{
+    padding-top: 6px;
+}
+.course_level h2{
+    font-size: 18px;
+}
+.course_level p{
+    padding-top: 6px;
+}
+.course_duration h2{
+    font-size: 18px;
+}
+.course_duration p{
+    padding-top: 6px;
+}
+
 
