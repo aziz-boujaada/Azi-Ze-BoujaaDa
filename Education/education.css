@@ -511,43 +511,215 @@ margin-bottom: 10px;
 
 #course_banner{
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: space-between;
     gap: 30px;
+    width: 80%;
     background-color: white;
     box-shadow: 0 4px 6px rgba(3, 3, 48, 0.8);
     padding: 30px;
-    margin-left:20%;
+    margin-left:10%;
     border-radius: 8px;
     position: absolute;
-    top: 58%;
-    
-    
-   
+    top: 60%;
+
 }
 
 .course_title ,.course_level , .course_duration{
     border-left:2px solid gray ;
     padding-left: 10px;
 }
-.course_title h2{
+.course_title i , .course_level i,.course_duration i{
     font-size: 18px;
+    font-weight: 600;
+    color: var(--favorite-blue);
 }
-.course_title p{
-    padding-top: 6px;
-}
-.course_level h2{
+.course_title span , .course_level span, .course_duration span{
     font-size: 18px;
+    font-weight: 600;
+
 }
-.course_level p{
-    padding-top: 6px;
-}
-.course_duration h2{
-    font-size: 18px;
-}
-.course_duration p{
+.course_title p ,.course_level p,.course_duration p {
     padding-top: 6px;
 }
 
+/*ABOUT COURSE SECTION*/
+#about_course{
+    margin-top: 120px;
+    margin-left: 10%;
+}
+/*small tabs to switch between course details*/
+.small_tabs{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(213, 238, 248);
+    width: 50%;
+}
+.small_tabs h5{
+    font-size: 16px;
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.small_tabs h5:hover{
+   color: var(--favorite-blue);
+   background-color: rgba(211, 220, 226,0.5);
+}
 
+/*Course Objective*/
+.course_objectives{
+    padding-top:50px ;
+}
+.objective_title h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.objectives{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    gap: 30px;
+    padding-top: 20px;
+}
+.object{
+    padding-top: 12px;
+}
+.object i{
+  font-size: 22px;
+  color: var(--favorite-blue);
+}
+.object span{
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(62, 60, 60);
+}
+
+/*skills yuo'll gain in course*/
+.course_skills{
+    padding-top: 50px;
+}
+.skills_title h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.skills_name{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+}
+.skills h4{
+  
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(204, 222, 238);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+/*course description*/
+.course_description{
+    padding-top: 50px;
+}
+.description_title h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.description p{
+    
+    padding-top: 20px;
+    line-height: 25px;
+    color: rgb(62, 60, 60);
+   
+}
+
+/*course plan*/
+#course_paln{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.plan {
+   border: 2px solid rgb(119, 191, 253);
+   border-radius: 8px;
+   padding: 30px;
+}
+.plan h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.plan h5{
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(37, 37, 37);
+}
+.plan ul{
+    padding-top: 30px;
+   
+}
+.plan ul li{
+    padding-top: 10px;
+    color: rgb(62, 60, 60);
+}
+.plan ul  li span {
+    font-weight: 600;
+    color: var(--favorite-blue);
+}
+
+/*course owner*/
+.course_owner{
+    margin-right: 50px;
+    border: 2px solid rgb(119, 191, 253);
+    border-radius: 8px;
+    padding: 30px;
+    height: 160px;
+    width: 350px;
+}
+
+.course_owner h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.owner_profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+.owner_img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.owner_name a h4{
+  letter-spacing: 2px;
+  text-decoration: underline;
+  transition: all 0.4s;
+}
+.owner_name a h4:hover{
+  transform: translateX(4px);
+  text-decoration: none;
+}
+.owner_name a h5{
+    padding-top: 8px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: var(--favorite-blue);
+  transition: all 0.4s;
+}
+.owner_name a h5:hover{
+  color: rgb(11, 11, 204);
+  transform: translateX(4px);
+}
