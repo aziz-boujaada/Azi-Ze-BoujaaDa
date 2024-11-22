@@ -111,6 +111,7 @@ button:hover {
 .nav_list li a.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
+    transform: translateY(-8px);
 
 }
 
@@ -722,4 +723,211 @@ margin-bottom: 10px;
 .owner_name a h5:hover{
   color: rgb(11, 11, 204);
   transform: translateX(4px);
+}
+
+
+/*TESTIMONIAL SECTION*/
+.course_testimonial{
+  margin-top: 100px;
+}
+.testimonial_title h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+.testimonial_title h3 span{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--favorite-blue);
+}
+
+.testimonial_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top:20px ;
+    margin-right: 20px;
+}
+.student_card{
+    border: 2px solid rgb(203, 231, 255);
+    border-radius: 12px;
+    padding: 12px;
+    width: 350px;
+    height: 250px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.student_card:hover{
+    box-shadow:  0 6px 8px rgba(24, 32, 39, 0.4);
+    transform: translateY(-5px);
+}
+.student_profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.student_img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 8px;
+}
+.student_name h4{
+    font-size: 16px;
+}
+.student_name h5{
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 8px;
+    color:rgb(62, 60, 60) ;
+}
+.student_say p i{
+    font-size: 24px;
+    color: var(--favorite-blue);
+    padding-right: 6px;
+}
+.student_say p {
+    line-height: 22px;
+    color:rgb(62, 60, 60) ;
+
+}
+
+
+/*COURSE CONTENT / LESSON*/
+#course_content{
+    display: flex;
+   justify-content: space-between;
+    padding-top: 100px;
+   
+}
+
+.course_info {
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+  
+}
+.course_info img{
+   width: 160px;
+   border-left: 3px solid var(--favorite-blue);
+
+}
+.course_info h3{
+    font-size: 18px;
+    font-family: "ubuntu";
+    padding-top: 15px;
+    line-height: 22px;
+
+}
+.course_info h5{
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 15px;
+    color: rgb(62, 60, 60);
+
+}
+
+.course_lessons{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    width: 70%;
+}
+.lesson_intro h3{
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.lesson_intro p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-top: 15px;
+    color: rgb(62, 60, 60);
+}
+.lesson_intro h4{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    padding-top: 25px;
+}
+.lesson_intro ul{
+   padding-left: 35px;
+    padding-bottom: 15px;
+}
+.lesson_intro ul li{
+    padding-top: 10px;
+    list-style:disc;
+    color: rgb(62, 60, 60);
+}
+
+.lesson_parts{
+    padding-top: 30px;
+}
+.part{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+
+
+
+
+
+.lesson_drop_down h3{
+    padding: 12px 0;
+
+}
+.lesson_drop_down  h3 span{
+    padding-right: 12px ;
+    font-size: 18px;
+
+}
+
+.lesson_name_text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.name_lesson h4   {
+    padding-right: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+}
+.name_lesson h4 .book_icon  {
+    padding-right: 12px;
+    font-size: 16px;
+    color: var(--favorite-blue);
+    cursor: pointer;
+
+}
+.lesson_time h4{
+    color: rgb(62, 60, 60);
+}
+.lesson_p p{
+    padding-top: 20px;
+    line-height: 22px;
+    color: rgb(62, 60, 60);
+    
+}
+.hidden{
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.lesson_p {
+    border: 1px solid var(--favorite-blue);
+    border-radius: 10px;
+    margin: 12px;
+    padding: 12px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
