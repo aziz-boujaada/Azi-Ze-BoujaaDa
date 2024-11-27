@@ -34,7 +34,7 @@
                 <!--navigation list-->
                 <div class="nav_list">
                     <ul>
-                        <li><a href="education.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="courses.html" class="active">Courses</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Pages</a></li>
@@ -69,7 +69,7 @@
             </div>
         </section>
         <!--about course small banner-->
-        <section id="course_banner">
+         <section id="course_banner">
             <div class="course_title">
                 <i class="fa-solid fa-code"></i><span>Front-End</span>
                 <p>You will learn the basics of front-end development <br> through many lessons and practice</p>
@@ -94,12 +94,12 @@
                     </a>
                 </div>
                 <div>
-                    <a href="#">
-                        <h5>Course Details</h5>
+                    <a href="#"  onclick=" scrollIntoDetials()">
+                        <h5 id="GoTo_detials">Course Details</h5>
                     </a>
                 </div>
                 <div>
-                    <a href="#">
+                    <a href="#" onclick="scrollIntoTestImonial()">
                         <h5>Testimonial</h5>
                     </a>
                 </div>
@@ -138,30 +138,7 @@
                 </div>
             </div>
 
-            <!--skills yuo'll gain in course-->
-            <div class="course_skills">
-                <div class="skills_title">
-                    <h3>Skills you'll gain</h3>
-                </div>
-                <div class="skills_name">
-                    <div class="skills">
-                        <h4>HTML & CSS</h4>
-                    </div>
-                    <div class="skills">
-                        <h4>JavaScript</h4>
-                    </div>
-                    <div class="skills">
-                        <h4>Web Design</h4>
-                    </div>
-                    <div class="skills">
-                        <h4>Responsive Web Design</h4>
-                    </div>
-                    <div class="skills">
-                        <h4>Front-End Development</h4>
-                    </div>
-                </div>
-            </div>
-
+            
             <!--Course description-->
             <div class="course_description">
                 <div class="description_title">
@@ -186,7 +163,30 @@
                     </p>
                 </div>
             </div>
-
+            
+            <!--skills yuo'll gain in course-->
+            <div class="course_skills">
+                <div class="skills_title">
+                    <h3>Skills you'll gain</h3>
+                </div>
+                <div class="skills_name">
+                    <div class="skills">
+                        <h4>HTML & CSS</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Web Design</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Responsive Web Design</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Front-End Development</h4>
+                    </div>
+                </div>
+            </div>
             <!--Course Plan-->
             <div id="course_paln">
                 <div class="plan">
@@ -332,6 +332,9 @@
         </section>
 
     </main>
+
+
+    <script src="education.js" defer></script>
 </body>
 
 </html>

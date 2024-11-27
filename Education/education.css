@@ -85,7 +85,7 @@ button:hover {
     background-color: var(--header-color);
     height: 70px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 /*logo img*/
@@ -122,23 +122,25 @@ button:hover {
 
 /*HOME PAGE SECTION*/
 #home_page {
-    background-image: linear-gradient(rgba(3, 3, 48, 0.8), rgba(40, 13, 163, 0.8)),
-        url(Education-images/home-education-bg.jpg);
+    background-image: linear-gradient(rgba(3, 3, 48, 0.3), rgba(40, 13, 163, 0.8)),
+        url(Education-images/education_bg3.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 70px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 170px;
+    padding-left: 70px;
     height: 100vh;
+   
 
 }
 
 /*home information*/
 
 .home_info h1 {
-    font-size: 48px;
+    font-size: 5rem;
     color: var(--favorite-blue);
     font-family: "Ubuntu";
 }
@@ -227,19 +229,23 @@ button:hover {
 /*COURSES SECTION*/
 /*courses  welcome page*/
 #courses {
-    background-image: linear-gradient(rgba(3, 3, 48, 0.8), rgba(61, 34, 168, 0.8)),
-        url(Education-images/home-education-bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+    url(Education-images/eductaion_bg2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100vh;
     padding-top: 70px;
-
+    border-bottom: 2px solid var(--favorite-blue);
+   
 }
 
+.courses_welcome  {
+   padding-left: 50px;
+}
 .courses_welcome h1 {
     font-size: 3rem;
     font-family: "Ubuntu";
@@ -247,14 +253,14 @@ button:hover {
 
 .courses_welcome h3 {
     padding-top: 30px;
-    font-size: 24px;
+    font-size: 1.4rem;
     font-family: "Lato";
     color: white;
 }
 
 .courses_welcome p {
     padding-top: 40px;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-family: "Open+Sans";
     color: white;
     line-height: 30px;
@@ -264,15 +270,16 @@ button:hover {
 
 .courses_welcome p span,
 q {
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: var(--favorite-blue);
+    color:rgb(167, 167, 167);
 }
 
 
 .Welcome_img img {
     width: 80%;
     height: 80vh;
+   
 }
 
 .read_btn button {
@@ -898,8 +905,8 @@ margin-bottom: 10px;
 .name_lesson h4   {
     padding-right: 12px;
     font-size: 16px;
-    font-weight: 600;
-    color: rgb(35, 35, 35);
+    font-weight: 500;
+    color: rgb(53, 52, 52);
     cursor: pointer;
 }
 .name_lesson h4 .book_icon  {
@@ -930,4 +937,50 @@ margin-bottom: 10px;
     margin: 12px;
     padding: 12px;
     transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/*QUIZ PART*/
+.question{
+    padding: 12px;
+
+
+}
+.question h4{
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.answers_list{
+  padding-top: 10px ;
+  padding-left: 12px;
+}
+.answers_list label{
+  font-size: 16px ;
+  color:rgb(62, 60, 60) ;
+  padding-left: 8px;
+}
+.answers_list input[type="radio"]{
+ width: 14px;
+ height: 14px;
+ accent-color: var(--favorite-blue);
+}
+
+#submit_quiz{
+    margin-top: 20px;
+    
+}
+#quizResult{
+    background-color: green;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    
+}
+.hide{
+    display: none;
 }
