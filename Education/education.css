@@ -82,9 +82,6 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    z-index: 1;
-    background-color: var(--header-color);
     height: 70px;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
@@ -105,7 +102,7 @@ button:hover {
 .nav_list li a {
     color: black;
     font-size: 18px;
-    font-weight: 500;
+   
 
 }
 
@@ -287,8 +284,8 @@ button:hover {
 #courses {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
         url(Education-images/education_course_page.jpg);
-    background-position:calc(100-80);
-    background-size:cover;
+    background-position: calc(100-80);
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -594,6 +591,7 @@ span {
     align-items: center;
     gap: 30px;
 }
+
 /*courses banner */
 #course_banner {
     display: flex;
@@ -606,7 +604,7 @@ span {
     margin-left: 10%;
     border-radius: 8px;
     position: absolute;
-    top: 60%;
+    top: 70%;
 
 }
 
@@ -868,8 +866,7 @@ span {
     align-items: center;
     justify-content: space-around;
     gap: 30px;
-    margin-top: 20px;
-    margin-right: 20px;
+   margin: 40px;
 }
 
 .student_card {
@@ -941,6 +938,7 @@ span {
     height: 350px;
 
 }
+
 /*left small card */
 .course_info img {
     width: 160px;
@@ -963,6 +961,7 @@ span {
     color: rgb(62, 60, 60);
 
 }
+
 /*lessons */
 .course_lessons {
     border: 1px solid black;
@@ -971,6 +970,7 @@ span {
     padding: 20px;
     width: 70%;
 }
+
 /*introduction to lessons*/
 .lesson_intro h3 {
     font-size: 22px;
@@ -1003,6 +1003,7 @@ span {
     list-style: disc;
     color: rgb(62, 60, 60);
 }
+
 /*4 parts of course*/
 .lesson_parts {
     padding-top: 30px;
@@ -1105,6 +1106,7 @@ span {
     margin-top: 20px;
 
 }
+
 /*div to show quiz result and grad*/
 .user_result {
     display: flex;
@@ -1139,6 +1141,235 @@ span {
 .hide {
     display: none;
 }
+
 .show {
     display: none;
+}
+
+
+/*ABOUT PAGE*/
+#about {
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 0 0 90px 0;
+}
+
+/*about head*/
+.about_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about_head h1 {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+.about_head span {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+.about_head p {
+    font-size: 20px;
+    line-height: 35px;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+/*about our story*/
+#our_story {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.platform_owner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.owner1_photo img {
+    width: 240px;
+    height: 280px;
+    border-radius: 6px;
+}
+
+.owner1_photo h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(62, 60, 60);
+}
+
+.owner2_photo img {
+    width: 300px;
+    height: 280px;
+    border-radius: 6px;
+    margin: 8px 0 0 120px;
+}
+
+.owner2_photo h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(62, 60, 60);
+    margin: 8px 0 10px 120px;
+}
+
+.story {
+    margin-left: 30px;
+    padding: 25px;
+    width: 50%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgb(192, 191, 191);
+    transition: all 0.5s;
+}
+
+.story:hover {
+    transform: translateX(-6px);
+    box-shadow: 0 4px 6px var(--favorite-blue);
+}
+
+.story h2 {
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+.story p {
+    padding-top: 40px;
+    font-size: 18px;
+    line-height: 1.7rem;
+    color: rgb(62, 60, 60);
+}
+
+/*Instructors*/
+#Instructors {
+    margin-top: 120px;
+}
+
+.Instructors_head h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.our_Instructors {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 30px;
+}
+
+.Instructors_card {
+    box-shadow: 0 4px 10px rgb(177, 177, 182);
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Instructors_card:hover {
+    box-shadow: 0 4px 10px var(--favorite-blue);
+    transform: translateY(-7px);
+}
+
+.Instructors_profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Instructors_img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.Instructors_name h4 {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: rgb(62, 60, 60);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.Instructors_role p {
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(62, 60, 60);
+}
+
+.Instructors_social_media {
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.Instructors_social_media i {
+    font-size: 20px;
+    color: var(--favorite-blue);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.Instructors_social_media i:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+
+/*Numbers speak section*/
+#Numbers_speak {
+    margin: 100px;
+    padding-top: 120px ;
+    background-color: whitesmoke;
+    height: 50vh;
+} 
+
+.numbers_speak_head h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.numbers {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.number h2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--favorite-blue);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.number h4 {
+    padding-top: 15px;
+    letter-spacing: 2px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+
+/*testimonial */
+.testimonial_head h1{
+    margin-top: 120px;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Parkinsans", sans-serif;
 }
