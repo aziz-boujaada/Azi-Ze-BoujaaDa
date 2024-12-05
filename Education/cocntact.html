@@ -11,38 +11,41 @@
     <meta name="author" content="Aziz Boujaada">
     <!--links-->
     <!--Css-->
-    <link rel="stylesheet" href="../education.css">
+    <link rel="stylesheet" href="education.css">
     <!--font-awesome for get icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css ">
     <!--google fonts-->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Parkinsans:wght@300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!--favicon-->
+    <link rel="icon" href="Education-images/icons8-education-52.png" type="image/png">
 
     <title>Education Platform</title>
 </head>
 
 <body>
-
-
-
     <!--HEADER SECTION-->
     <section>
         <header id="header">
             <nav>
                 <!--logo-->
                 <div class="logo">
-                    <a href="../education.html"><img src="../Education-images/education-logo.png"
-                            alt="platform logo"></a>
+                    <a href="education.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
                 </div>
                 <!--navigation list-->
                 <div class="nav_list">
                     <ul>
-                        <li><a href="../education.html">Home</a></li>
-                        <li><a href="../courses.html" class="active">Courses</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="education.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="">Pages</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="cocntact.html" class="active">Contact</a></li>
                     </ul>
                 </div>
                 <!--navigation Button-->
@@ -53,118 +56,86 @@
         </header>
     </section>
 
-    <!--COURSES SECTION -->
-    <main>
-          <!--courses welcome page section-->
-       <section id="category_part">
-        <!--category section-->
-        <div class="category_head">
-            <h1> <span>Design </span> courses</h1>
+    <!--MAIN CONTENT-->
+    <section id="contact">
+        <!--contact section-->
+        <div class="contact_head">
+            <h1>Contact <span>Us</span> </h1>
         </div>
     </section>
-
-        <!--courses content section -->
-        <section id="courses_content">
-
-            <!--curses head-->
-            <div class="section_head">
-                <h1>Our collection Courses</h1>
-                <p>explore our courses categories and choose the best for You </p>
+    <!--contact information -->
+    <section id="contact_information">
+        <div class="information_title">
+            <h1>Contact Information</h1>
+        </div>
+        <div class="contact_info">
+            <div class="our_info">
+                <i class="fa-solid fa-envelope"><span>OnlineEducation13@gmail.com</span></i>
             </div>
-            <!-- courses type (categories)   -->
-            <div class="courses_type">
-                <div class="type" class="active">
-                    <a href="../courses.html">
-                        <h5>All</h5>
-                    </a>
+            <div class="our_info">
+                <i class="fa-solid fa-phone"><span>+212 6744904456</span></i>
+            </div>
+            <div class="our_info">
+                <i class="fa-solid fa-location-dot"><span>123 street ,Marrakech , Morocco </span></i>
+            </div>
+            <div class="our_social">
+                <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--contact form section-->
+    <section id="contact_form">
+        <!--contact form head-->
+        <div class="form_head">
+            <h1>Get In Touch</h1>
+        </div>
+        <form action="">
+            <!--user name-->
+            <div class="user_name">
+                <div class="name">
+                    <label for="First_name">First Name</label><br>
+                    <input type="text" placeholder="Enter Your First Name" required>
                 </div>
-                <div class="type">
-                    <a href="web-developmnet.html">
-                        <h5>web-Development</h5>
-                    </a>
-                </div>
-                <div class="type">
-                    <a href="programming-languge.html">
-                        <h5>Programming languages</h5>
-                    </a>
-                </div>
-                <div class="type">
-                    <a href="Marketing-Personal-Development.html" >
-                        <h5>Marketing & Personal Development</h5>
-                    </a>
-                </div>
-
-                <div class="type">
-                    <a href="desing.html" class="active">
-                        <h5>ِDesign</h5>
-                    </a>
+                <div class="name">
+                    <label for="First_name">Last Name</label><br>
+                    <input type="text" placeholder="Enter Your Last Name" required>
                 </div>
             </div>
-        </section>
+            <!--Email & phone-->
+            <div class="email_phone">
+                <div class="email_ph">
+                    <label for="Email">Email</label><br>
+                    <input type="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="email_ph">
+                    <label for="phone">Phone Number</label><br>
+                    <input type="number" placeholder="Enter Your phone Number" required>
+                </div>
+            </div>
+            <!--Message-->
+            <div class="message">
+                <label for="message" class="msg-label">Message</label><br>
+                <textarea name="message" id="" placeholder="Write Your Message" required>Your Message</textarea>
+            </div>
+            <!--msg button-->
+            <div class="msg_btn">
+                <button type="submit">Send Message</button>
+            </div>
 
-        <!--courses cards-->
-        <section id="courses_card">
+        </form>
+    </section>
 
-         <!--CARD 10 UI-UX-->
-         <div class="card">
-            <!--free courses-->
-            <div class="free">
-               <span>Free</span>
-           </div>
-           <!--course image-->
-           <div class="course_img">
-               <img src="../Education-images/UI-UX-course.jpg" alt="marketing course">
-           </div>
-           <!--course creator-->
-           <div class="profile">
-               <div class="profile_img">
-                   <img src="../Education-images/aziz.jpg" alt="creator course profile">
-               </div>
-               <div class="profile_name">
-                   <h5>by Aziz Boujaada</h5>
-               </div>
-           </div>
-           <!--course name-->
-           <div class="course_name">
-               <h5>UI-UX DESIGN Full course </h5>
-           </div>
-           <!--skills of course-->
-           <div class="cours_skills">
-               <h5>skills you'll gain : <span>be a good in UI-UX Design</span></h5>
-           </div>
-           <!--course rating -->
-           <div class="rating_views">
-               <i class="fa-solid fa-star"><span>3.5</span> </i><span>10k of views</span>
-           </div>
-          <!--course level & duration-->
-           <div class="level_duration">
-               <div class=>
-                   <i class="fa-solid fa-chart-simple"></i> <span>beginner</span> 
-               </div>
-               <div>
-                   <i class="fa-solid fa-book"></i> <span>course</span>
-               </div>
-               <div>
-                   <i class="fa-solid fa-clock"></i> <span>5 hours</span>
-               </div>
-
-           </div>
-
-           <!--Enrol For Free button-->
-           <div class="enrol_btn">
-               <a href="#"><button>Enrol For Free</button></a>
-           </div>
-       </div>
-        </section>
-    </main>
-     <!--FOOTER SECTION-->
-     <section id="footer">
+    <!--FOOTER SECTION-->
+    <section id="footer">
         <footer>
             <div class="footer_container">
                 <!--logo and platform description-->
                 <div class="platform_info">
                     <div class="platform_logo">
-                        <img src="../Education-images/education-logo.png" alt="">
+                        <img src="Education-images/education-logo.png" alt="">
                     </div>
                     <div class="platform_description">
                         <p>
@@ -184,7 +155,6 @@
                         <li><a href="cocntact.html">Contact</a></li>
                         <li><a href="courses-destails.html">Courses Details</a></li>
                         <li><a href="course-lesson.html">Course Lesson</a></li>
-                        
                     </ul>
                 </div>
                 <!--Platform footer contact information-->
@@ -214,6 +184,7 @@
             </div>
         </footer>
     </section>
+
 </body>
 
 </html>

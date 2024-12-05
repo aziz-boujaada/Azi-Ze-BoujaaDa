@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(21, 21, 180);
     --header-color: rgb(177, 177, 182);
-    --footer-color: rgb(5, 5, 33);
+    --footer-color: rgb(2, 2, 69);
     --bg-color1: rgb(255, 251, 251);
     --font-color-btn: rgb(255, 251, 251);
     --button-color: rgb(9, 9, 136);
@@ -102,7 +102,7 @@ button:hover {
 .nav_list li a {
     color: black;
     font-size: 18px;
-   
+
 
 }
 
@@ -122,7 +122,7 @@ button:hover {
 .search_course input {
 
     position: relative;
-    width: 250px;
+    width: 300px;
     height: 35px;
     padding-left: 12px;
     outline: none;
@@ -130,6 +130,7 @@ button:hover {
     border-radius: 10px;
     transition: all .3s;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgb(60, 60, 62);
 }
 
 .search_course input:hover {
@@ -235,6 +236,28 @@ button:hover {
     font-size: 16px;
     color: rgb(192, 191, 191);
 }
+#category_part{
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 0 0 90px 0;
+}
+.category_head h1{
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+    text-align: center; 
+}
+.category_head span{
+
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
 
 /*home buttons*/
 .home_buttons {
@@ -302,7 +325,7 @@ button:hover {
 
 .courses_welcome h1 {
     font-size: 3rem;
-    font-family: "Ubuntu";
+    font-family: "Parkinsans", sans-serif;
 }
 
 .courses_welcome h3 {
@@ -314,7 +337,7 @@ button:hover {
 
 .courses_welcome p {
     padding-top: 40px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-family: "Open+Sans";
     color: white;
     line-height: 30px;
@@ -326,7 +349,7 @@ button:hover {
 q {
     font-size: 1.6rem;
     font-weight: 600;
-    color: rgb(167, 167, 167);
+    color: rgb(207, 207, 207);
 }
 
 
@@ -866,7 +889,7 @@ span {
     align-items: center;
     justify-content: space-around;
     gap: 30px;
-   margin: 40px;
+    margin: 40px;
 }
 
 .student_card {
@@ -1332,10 +1355,10 @@ span {
 /*Numbers speak section*/
 #Numbers_speak {
     margin: 100px;
-    padding-top: 120px ;
+    padding-top: 120px;
     background-color: whitesmoke;
     height: 50vh;
-} 
+}
 
 .numbers_speak_head h1 {
     text-align: center;
@@ -1367,9 +1390,269 @@ span {
 
 
 /*testimonial */
-.testimonial_head h1{
+.testimonial_head h1 {
     margin-top: 120px;
     text-align: center;
     font-size: 2.8rem;
     font-family: "Parkinsans", sans-serif;
+}
+
+
+
+/*CONTACT PAGE*/
+#contact {
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 0 0 90px 0;
+}
+
+/*contact head*/
+.contact_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contact_head h1 {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+.contact_head span {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+#contact_information {
+
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    margin: 60px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgb(177, 177, 182);
+}
+
+.information_title h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+
+}
+
+.contact_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+
+}
+
+.our_info i {
+    font-size: 24px;
+    color: var(--favorite-blue);
+}
+
+.our_info span {
+    font-size: 16px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+.our_social i {
+    padding-left: 16px;
+    font-size: 24px;
+    color: rgb(60, 60, 62);
+    transition: all 0.4s;
+}
+
+.our_social i:hover {
+    color: var(--favorite-blue);
+    transform: translateY(-6px);
+}
+
+#contact_form {
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    margin: 60px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgb(177, 177, 182);
+
+}
+
+.form_head h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+#contact_form form {
+    padding-top: 40px;
+    width: 100%;
+}
+
+form .user_name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    gap: 40px;
+}
+
+.user_name .name label {
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.user_name .name input {
+    width: 350px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-left: 12px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+
+}
+
+.user_name .name input:hover {
+    border: 2px solid var(--favorite-blue);
+
+}
+
+form .email_phone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    gap: 40px;
+    padding-top: 60px;
+}
+
+.email_phone .email_ph label {
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.email_phone .email_ph input {
+    width: 350px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-left: 12px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+
+}
+
+.email_phone .email_ph input:hover {
+    border: 2px solid var(--favorite-blue);
+
+}
+
+form .message {
+
+    padding-top: 60px;
+
+}
+
+.message .msg-label {
+    text-align: left;
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.message textarea {
+
+    width: 740px;
+    height: 95px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    padding: 18px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+}
+
+.msg_btn button {
+    border-radius: 0;
+    width: 400px;
+    height: 50px;
+    margin-top: 60px;
+}
+
+/*FOOTER SECTION*/
+#footer{
+    background-color: var(--footer-color);
+    border-radius: 0 90px 0  90px ;
+    height: 50vh;
+}
+.footer_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.platform_info .platform_logo img{
+    width: 100px;
+    background-color: white;
+    border-radius: 0 20px 0 20px;
+}
+.platform_info .platform_description p{
+    padding-top: 12px;
+    color: white;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.platform_links ul li  {
+   padding-top: 12px;
+   transition: all 0.4s;
+}
+.platform_links ul  a{
+ color: white;
+ font-family: "Parkinsans", sans-serif; 
+}
+.platform_links ul a:hover {
+ color: var(--favorite-blue);
+ transform: translateX(6px);
+}
+
+.platform_contact .our_info {
+  padding-top: 12px;
+}
+.platform_contact .our_info span{
+    color: white;
+}
+
+.platform_social .our_social {
+    padding-top: 12px;
+}
+.platform_social .our_social i{
+    color: white;
+}
+.platform_social .our_social i:hover{
+    color:var(--favorite-blue);
+}
+
+.platform_copyright p{
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    font-size: 14px;
 }
