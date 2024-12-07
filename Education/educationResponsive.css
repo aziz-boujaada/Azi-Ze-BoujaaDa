@@ -1,0 +1,129 @@
+/******** Responsive Design**********/
+
+@media screen and (max-width: 600px) {
+
+    #header {
+        display: none;
+    }
+
+    #home_page {
+        height: 100vh;
+        padding: 25px;
+    }
+
+    .home_category {
+        display: none;
+
+    }
+
+    #courses_card {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        background-color: white;
+    }
+
+    .card {
+        margin: 12px;
+    }
+
+    .enrol_btn button {
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+
+    #our_story {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .platform_owner {
+        text-align: left;
+        margin: 0;
+    }
+
+    .owner1_photo img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .owner2_photo img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .owner2_photo h5 {
+        margin: 0;
+    }
+
+    .story {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .our_Instructors {
+        flex-wrap: wrap;
+    }
+
+    #Numbers_speak {
+        height: auto;
+        margin: 6px;
+    }
+
+    .numbers {
+        gap: 40px;
+    }
+
+    .number h4 {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .testimonial_card {
+        flex-wrap: wrap;
+    }
+
+    #contact_information {
+        margin: 12px;
+    }
+
+    .contact_info {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contact_form {
+        margin: 12px;
+    }
+
+    .message  {
+        text-align: left;     
+    }
+    .message textarea {
+        width: 100%;
+    }
+
+    .msg_btn button {
+        width: 100%;
+    }
+
+    #footer {
+        height: auto;
+        margin: 8px;
+
+    }
+
+    .footer_container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .platform_links ,.platform_contact ,.platform_social {
+        padding-top: 30px;
+    }
+    
+    .platform_copyright p{
+        padding: 30px 0 20px 0;
+    }
+
+}
