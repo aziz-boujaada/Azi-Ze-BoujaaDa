@@ -376,6 +376,10 @@ q {
 }
 
 /*COURSES CONTENT*/
+
+.courses_type_mobile{
+    display: none;
+}
 /*courses type (category)*/
 .courses_type {
     text-align: center;
