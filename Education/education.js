@@ -1,5 +1,6 @@
 console.log("Script loaded");
 
+
 function scrollIntoDetials() {
     console.log("function called");
     const nextPage = document.querySelector(".course_skills");
@@ -28,7 +29,8 @@ function scrollIntoTestImonial() {
 }
 
 //show and hide course lessons
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
+    event.preventDefault();
     const toggleDrops = document.querySelectorAll(".toggle_drop");
 
     toggleDrops.forEach(function (toggleDrop) {
@@ -92,6 +94,11 @@ quiz_btn.addEventListener("click", function () {
     hideResult.classList.toggle("show");
     grade_hidden.classList.toggle("show");
 });
+
+
+
+
+
 
 
 
