@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Buy your World Cup 2030 tickets ">
+    <meta name="keywords"
+        content="World Cup 2030, Morocco football tickets, buy World Cup tickets, Atlas Tickets, football, football tickets  ">
+    <meta name="author" content="Aiz Ze Boujaada">
+
+    <!--links-->
+    <!--link to css file-->
+    <link rel="stylesheet" href="ticket.css">
+    <!--link to font awesome to get icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css ">
+    <!--fav icon -->
+    <link rel="icon" href="ticket_images/icons8-lion-96.png" type="image/png">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Atlas Ticket | Buy Your World Cup 2030 Tickets</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header id="header">
+        <!--logo-->
+        <div class="logo">
+            <div class="logo_img">
+                <a href="index.html"><img src="ticket_images/icons8-lion-96.png" alt="Atlas ticket logo"></a>
+            </div>
+            <div class="logo_name">
+                <h2>Atlas <span>Ticket</span></h2>
+            </div>
+        </div>
+        <!--navigation list-->
+        <div class="nav_list">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="matches.html" class="active">Matches</a> </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="drop_down"><a href="#">Pages <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                    </li>
+
+                    <div class="list_pages hide">
+                        <ul>
+                            <li><a href="#"> Players</a></li>
+                            <li><a href="#">stadiums</a></li>
+                            <li><a href="#">Buy Ticket</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <!--left navigation -->
+        <div class="left_nav">
+            <div class="nav_btn">
+                <button>Get Ticket</button>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <!--this part for show search area-->
+        <div class="search_area hidden">
+            <div class="Xmark">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="search_input">
+                <input type="text" placeholder="search">
+                <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </div>
+
+        <!--MATCHES SECTION -->
+        <section id="matches">
+            <div class="matches_head">
+                <h1>Moroccan National Team Matches</h1>
+            </div>
+        </section>
+
+        <!--matches container-->
+        <section id="matches_container ">
+            <!--title or intro -->
+            <div class="matches_title">
+                <h2>Our Morocco National Team Matches</h2>
+                <p>Here You can see All matches and Everything About moroccan Football Team</p>
+            </div>
+
+            <!-- tabs to switch between container-->
+            <div class="tabs">
+                <div class="tab_part">
+                    <h3 id="match" class="active">Matches</h3>
+                </div>
+                <div class="tab_part">
+                    <h3 id="group">Group</h3>
+                </div>
+                <div class="tab_part">
+                    <h3 id="Team">Team</h3>
+                </div>
+            </div>
+
+            <!--matches cards-->
+            <div class="matches_cards">
+                <!--first match in group stage-->
+                <div class="match_card">
+                    <h3>Group : Round 1</h3>
+
+                    <!--team VS team-->
+                    <div class="team_vs_team">
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-morocco-96.png" alt="Morocco flag">
+                            <h4>Morocco</h4>
+
+                        </div>
+                        <div class="VS">
+                            <h4>VS</h4>
+                        </div>
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-spain-flag-96.png" alt="spanish flag">
+                            <h4>Spain</h4>
+                        </div>
+                    </div>
+
+                    <!--match details-->
+                    <div class="match_details">
+                        <!--date of match-->
+                        <div class="match_date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>November-19-2030</span>
+                        </div>
+                        <!--time of match-->
+                        <div class="match_time">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>22:00 PM</span>
+                        </div>
+                        <!--country-->
+                        <div class="match_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Spain</span>
+                            <div class="location-tooltip">
+                                <img src="ticket_images/spain_map_location.jpg" alt="Spanish location in world map">
+                            </div>
+                        </div>
+                        <div class="match_staduim">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>Mohammed V stadium</span>
+                            <div class="staduim_tooltip">
+                                <img src="ticket_images/Free-Camp-Nou-Picture.jpg" alt="Camp Nou stadium">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buttons to get get your ticket-->
+                    <div class="match_ticket_btn">
+                        <button id="normal_ticket">Get Ticket Now</button>
+                        <button id="Premium_ticket">Premium Ticket</button>
+                    </div>
+
+                </div>
+                <!--second match in group stage-->
+                <div class="match_card">
+                    <h3>Group : Round 2</h3>
+                    <!--team VS team-->
+                    <div class="team_vs_team">
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-morocco-96.png" alt="Morocco flag">
+                            <h4>Morocco</h4>
+                        </div>
+                        <div class="VS">
+                            <h4>VS</h4>
+                        </div>
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-portugal-96.png" alt="spanish flag">
+                            <h4>Portugal</h4>
+                        </div>
+                    </div>
+                    <!--match details-->
+                    <div class="match_details">
+                        <!--date-->
+                        <div class="match_date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>November-19-2030</span>
+                        </div>
+                        <!--time-->
+                        <div class="match_time">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>22:00 PM</span>
+                        </div>
+                        <!--country-->
+                        <div class="match_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Morocco</span>
+                            <div class="location-tooltip">
+                                <img src="ticket_images/Morocco-on-the-map.png" alt="Morocco location in world map">
+                            </div>
+                        </div>
+                        <div class="match_staduim">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>Mohammed V stadium</span>
+                            <div class="staduim_tooltip">
+                                <img src="ticket_images/Mohhamed_V_stadium.jpg" alt="Mohammed V stadium">
+                            </div>
+                        </div>
+                    </div>
+                    <!--buttons to get your ticket-->
+                    <div class="match_ticket_btn">
+                        <button>Get Ticket Now</button>
+                        <button>Premium Ticket</button>
+                    </div>
+
+                </div>
+                <!--third match in group stage-->
+                <div class="match_card">
+                    <h3>Group : Round 3</h3>
+                    <div class="team_vs_team">
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-morocco-96.png" alt="Morocco flag">
+                            <h4>Morocco</h4>
+                        </div>
+                        <div class="VS">
+                            <h4>VS</h4>
+                        </div>
+                        <div class="team_flag flag_event">
+                            <img src="ticket_images/icons8-french-flag-96.png" alt="spanish flag">
+                            <h4>France</h4>
+                        </div>
+                    </div>
+                    <div class="match_details">
+                        <div class="match_date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>November-19-2030</span>
+                        </div>
+                        <div class="match_time">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>22:00 PM</span>
+                        </div>
+                        <div class="match_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Portugal</span>
+                            <div class="location-tooltip">
+                                <img src="ticket_images/map-of-europe-with-highlighted-portugal-vector-18695405.jpg"
+                                    alt="Portugal location in world map">
+                            </div>
+                        </div>
+                        <div class="match_staduim">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>Estadio Do Dragao</span>
+                            <div class="staduim_tooltip">
+                                <img src="ticket_images/Estadio do Dragao.jpeg" alt="Estadio do Dragao">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match_ticket_btn">
+                        <button>Get Ticket Now</button>
+                        <button>Premium Ticket</button>
+                    </div>
+
+                </div>
+            </div>
+                <!--part to visible each team player-->
+                <div class="team_player visible-team ">
+                    <div class="Xmark" id="Xmark_player">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="team_composition ">
+                        <div class="composition_stadium">
+                            <img src="ticket_images/foramtion-staduim.jpg" alt="composition_stadium">
+                            <div class="team_grid">
+                                <!--forward-->
+                                <div class="player forward"></div>
+                                <div class="player forward"></div>
+                                <div class="player forward"></div>
+                                <!--midfielder-->
+                                <div class="player midfielder"></div>
+                                <div class="player midfielder"></div>
+                                <div class="player midfielder"></div>
+
+                                <!--defenders-->
+                                <div class="player defender"></div>
+                                <div class="player defender"></div>
+                                <div class="player defender"></div>
+                                <div class="player defender"></div>
+                                <!--goalkeeper-->
+                                <div class="player goalkeeper">
+                                    <div class="player_profile">
+                                        <div class="player_img">
+
+                                        </div>
+                                        <div class="player_name">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="team_list">
+                            <h2>National Team Players List</h2>
+                            <div class="players_post">
+                                <h3>Players</h3>
+                                <!---->
+                                <div class="list_post ">
+                                    <div class="goalkeepers">
+                                        <h3 class="Positions">Goalkeepers <span><i
+                                                    class="fa-solid fa-caret-down"></i></span></h3>
+                                        <ul class="player_list show_players">
+                                            <li class="player_li" data-player="Yassine Bouno">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Yassine Bouno</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Mounir El Kajoui">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Mounir El Kajoui</h4>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!---->
+                                <div class="list_post ">
+                                    <div class="defenders">
+                                        <h3 class="Positions">Defenders <span><i
+                                                    class="fa-solid fa-caret-down"></i></span></h3>
+                                        <ul class="player_list show_players">
+                                            <li class="player_li" data-player="Naif Aguerd">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Naif Aguerd </h4>
+                                            </li>
+                                            <li class="player_li" data-player="Rmoan Saiss">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Roman Sais</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Achraf Hakimi">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Achraf Hakimi</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Nousir Mazraoui">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Nousir Mazraoui</h4>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!---->
+                                <div class="list_post ">
+                                    <div class="midfielders">
+                                        <h3 class="Positions">Midfielder <span><i
+                                                    class="fa-solid fa-caret-down"></i></span></h3>
+                                        <ul class="player_list show_players">
+                                            <li class="player_li" data-player="Azzedine Ounahi">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Azzedine Ounahi </h4>
+                                            </li>
+                                            <li class="player_li" data-player="Soufian Amrabat">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Soufian Amrabat</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Hakim Ziyech">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Hakim Ziyech</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Brahim Diaz">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Brahim Diaz</h4>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                                <div class="list_post ">
+                                    <div class="forwards">
+                                        <h3 class="Positions">forwards <span><i
+                                                    class="fa-solid fa-caret-down"></i></span></h3>
+                                        <ul class="player_list show_players">
+                                            <li class="player_li" data-player="Azzedine Ounahi">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Azzedine Ounahi </h4>
+                                            </li>
+                                            <li class="player_li" data-player="Soufian Amrabat">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Soufian Amrabat</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Hakim Ziyech">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Hakim Ziyech</h4>
+                                            </li>
+                                            <li class="player_li" data-player="Brahim Diaz">
+                                                <img src="ticket_images/bono.png" alt="">
+                                                <h4>Brahim Diaz</h4>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+    </main>
+
+    <script src="ticket.js"></script>
+</body>
+
+</html>
