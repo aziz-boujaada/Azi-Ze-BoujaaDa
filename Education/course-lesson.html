@@ -32,14 +32,26 @@
             <nav>
                 <!--logo-->
                 <div class="logo">
-                    <a href="education.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
+                    <a href="index.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
                 </div>
+                <div class="mobile_navbar">
+                    <div class="bars_icon" >
+                        <i class="fa-solid fa-bars" ></i>
+                    </div>
+                </div>
+
                 <!--navigation list-->
-                <div class="nav_list">
+
+                <div class="nav_list show_list" id="bar_effect">
                     <ul>
-                        <li><a href="education.html">Home</a></li>
-                        <li><a href="courses.html" class="active">Courses</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <div class="mobile_navbar">
+                            <div class="Xmark_icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="courses.html"  class="active">Courses</a></li>
+                        <li><a href="about.html" >About</a></li>
                         <li><a href="">Pages</a></li>
                         <li><a href="cocntact.html">Contact</a></li>
                     </ul>
@@ -1419,7 +1431,7 @@
                 <!--platform footer links-->
                 <div class="platform_links">
                     <ul>
-                        <li><a href="education.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="#">pages</a></li>
@@ -1458,6 +1470,7 @@
 
 
     <script src="education.js" defer></script>
+    <script src="educationMobile.js" defer></script>
 </body>
 
 </html>
