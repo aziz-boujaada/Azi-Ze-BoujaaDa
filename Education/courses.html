@@ -39,12 +39,24 @@
             <nav>
                 <!--logo-->
                 <div class="logo">
-                    <a href="education.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
+                    <a href="index.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
                 </div>
+                <div class="mobile_navbar">
+                    <div class="bars_icon" >
+                        <i class="fa-solid fa-bars" ></i>
+                    </div>
+                </div>
+
                 <!--navigation list-->
-                <div class="nav_list">
+
+                <div class="nav_list show_list" id="bar_effect">
                     <ul>
-                        <li><a href="education.html">Home</a></li>
+                        <div class="mobile_navbar">
+                            <div class="Xmark_icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <li><a href="index.html" >Home</a></li>
                         <li><a href="courses.html" class="active">Courses</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="">Pages</a></li>
@@ -154,7 +166,59 @@
         <!--courses cards-->
         <section id="courses_card">
   
-            <!--CARD 1 HTML-->
+
+             <!--CARD  1 front-end -->
+             <div class="card">
+                <!--free courses-->
+                <div class="free" style="background-color: red; width: 120px;">
+                   <span >Trail Version</span>
+               </div>
+               <!--course image-->
+               <div class="course_img">
+                   <img src="Education-images/front-end-course.jpg" alt="front-end course">
+               </div>
+               <!--course creator-->
+               <div class="profile">
+                   <div class="profile_img">
+                       <img src="Education-images/aziz.jpg" alt="creator course profile">
+                   </div>
+                   <div class="profile_name">
+                       <h5>by Aziz Boujaada</h5>
+                   </div>
+               </div>
+               <!--course name-->
+               <div class="course_name">
+                   <h5> FRONT-END Full course </h5>
+               </div>
+               <!--skills of course-->
+               <div class="cours_skills">
+                   <h5>skills you'll gain : <span> learn and be a good front-end developer</span></h5>
+               </div>
+               <!--course rating -->
+               <div class="rating_views">
+                   <i class="fa-solid fa-star"><span>3.5</span> </i><span>10k of views</span>
+               </div>
+              <!--course level & duration-->
+               <div class="level_duration">
+                   <div class>
+                       <i class="fa-solid fa-chart-simple"></i> <span>beginner</span> 
+                   </div>
+                   <div>
+                       <i class="fa-solid fa-book"></i> <span>course</span>
+                   </div>
+                   <div>
+                       <i class="fa-solid fa-clock"></i> <span>12 week</span>
+                   </div>
+
+               </div>
+
+               <!--Enrol For Free button-->
+               <div class="enrol_btn">
+                   <a href="courses-destails.html"><button>Enrol For Free</button></a>
+               </div>
+
+           </div>
+            <!--CARD 2 HTML-->
             <div class="card">
                 <a href="">
                 <!--free courses-->
@@ -207,7 +271,7 @@
             </a>
             </div>
 
-            <!--CARD 2 CSS-->
+            <!--CARD 3 CSS-->
             <div class="card">
                  <!--free courses-->
                  <div class="free">
@@ -258,7 +322,7 @@
 
             </div>
 
-            <!--CARD 3 JavaScript-->
+            <!--CARD 4 JavaScript-->
             <div class="card">
                  <!--free courses-->
                  <div class="free">
@@ -310,57 +374,6 @@
 
             </div>
 
-            <!--CARD  4 front-end -->
-            <div class="card">
-                 <!--free courses-->
-                 <div class="free" style="background-color: red; width: 120px;">
-                    <span >Trail Version</span>
-                </div>
-                <!--course image-->
-                <div class="course_img">
-                    <img src="Education-images/front-end-course.jpg" alt="front-end course">
-                </div>
-                <!--course creator-->
-                <div class="profile">
-                    <div class="profile_img">
-                        <img src="Education-images/aziz.jpg" alt="creator course profile">
-                    </div>
-                    <div class="profile_name">
-                        <h5>by Aziz Boujaada</h5>
-                    </div>
-                </div>
-                <!--course name-->
-                <div class="course_name">
-                    <h5> FRONT-END Full course </h5>
-                </div>
-                <!--skills of course-->
-                <div class="cours_skills">
-                    <h5>skills you'll gain : <span> learn and be a good front-end developer</span></h5>
-                </div>
-                <!--course rating -->
-                <div class="rating_views">
-                    <i class="fa-solid fa-star"><span>3.5</span> </i><span>10k of views</span>
-                </div>
-               <!--course level & duration-->
-                <div class="level_duration">
-                    <div class>
-                        <i class="fa-solid fa-chart-simple"></i> <span>beginner</span> 
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-book"></i> <span>course</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-clock"></i> <span>12 week</span>
-                    </div>
-
-                </div>
-
-                <!--Enrol For Free button-->
-                <div class="enrol_btn">
-                    <a href="courses-destails.html"><button>Enrol For Free</button></a>
-                </div>
-
-            </div>
 
             <!--CARD 5 back-end-->
             <div class="card">
@@ -951,7 +964,7 @@
             <!--platform footer links-->
             <div class="platform_links">
                 <ul>
-                    <li><a href="education.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#">pages</a></li>
