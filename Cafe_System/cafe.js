@@ -22,27 +22,31 @@ HideNavbar();
 
 /* click on the products to add to sales */
 const products = [
-    { name: "cafe creme", price: "10dh", quantity: "0" },
-    { name: "black coffee", price: "10dh", quantity: "0" },
-    { name: "Normal coffee", price: "09dh", quantity: "0" },
-    { name: "Light coffee", price: "10dh", quantity: "0" },
-    { name: "Italian coffee", price: "10dh", quantity: "0" },
-    { name: "cappuccino", price: "13dh", quantity: "0" },
-    { name: "Cold coffee", price: "15dh", quantity: "0" },
-    { name: "cafe creme", price: "10dh", quantity: "0" }
+    { img: src = "cafe_images/cafe products/cafe_creme.jpg", name: "cafe creme", price: "10dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/black-coffee.jpg", name: "black coffee", price: "10dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/black_coffee.jpeg", name: "Normal coffee", price: "09dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/milk_coffee.jpeg", name: "Light coffee", price: "10dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/caffe-italy.jpg", name: "Italian coffee", price: "10dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/cappuccino.jpeg", name: "cappuccino", price: "13dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/cold_coffee.jpg", name: "Cold coffee", price: "15dh", quantity: "0" },
+    { img: src = "cafe_images/cafe products/choclate_coffee.jpg", name: "Chocolate coffee", price: "10dh", quantity: "0" }
 ];
 
 const Product_card = document.querySelectorAll(".product_card");
+const product_properties = document.querySelector(".product_properties");
 const Product_sale = document.querySelector(".product_sale");
+const product_image = document.querySelector(".product_image");
 const product_name = document.querySelector(".product_name");
 const product_price = document.querySelector(".product_price");
 const product_quantity = document.querySelector(".product_quantity");
 const Day_End_button = document.querySelector(".day_End");
-const Day_total_display = document.querySelector(".day_total");
+const cancel_sale = document.querySelector(".cancel_sale")
+const total_display = document.querySelector(".total_display");
 
 
 function AddToSales() {
-    
+
+    product_image.innerHTML = "";
     product_name.innerHTML = "";
     product_price.innerHTML = "";
     product_quantity.innerHTML = "";
@@ -50,23 +54,55 @@ function AddToSales() {
 
     products.forEach((product) => {
         if (product.quantity > 0) {
+            product_image.innerHTML += `<img src=" ${product.img}"/>`
             product_name.innerHTML += `<h3> ${product.name}</h3>`
             product_price.innerHTML += `<h3> ${product.price}</h3>`
             product_quantity.innerHTML += `<h3> ${product.quantity}</h3>`
         }
 
+
     });
+
+}
+function CancelSale(index) {
+    const product = products[index];
+    if (!product || !cancel_sale || !product_properties) return;
+
+    const UpdateCancelButton = () => {
+        if (product.quantity > 0) {
+            cancel_sale.classList.remove("cancel_btn_visibility");
+        } else {
+            cancel_sale.classList.add("cancel_btn_visibility");
+        };
+    };
+
+    product_properties.onclick = ()=>{
+        UpdateCancelButton();
+    }
+
+    cancel_sale.onclick = () => {
+        if (product.quantity > 0) {
+            const confirmCancel = confirm("Are You sure to cancel");
+            if(confirmCancel){
+
+                product.quantity--;
+                AddToSales();
+                UpdateCancelButton();
+                
+            }
+        }
+    };
 
 }
 
 function UpgradeQuantity() {
 
     Product_card.forEach((Product_card, index) => {
-
         Product_card.addEventListener('click', () => {
             const product = products[index];
             product.quantity++;
             Product_sale.classList.remove("sale_show");
+            CancelSale(index);
             AddToSales();
         });
 
@@ -75,15 +111,20 @@ function UpgradeQuantity() {
 }
 UpgradeQuantity();
 
-function TotalDay(){
-    let day_total =0;
-    Day_End_button.addEventListener('click' , () =>{
-        day_total=0;
-        products.forEach(product =>{
-            const price = parseFloat(product.price);
-            day_total+= price;
+
+
+function CalculateTotalDay() {
+    Day_End_button.addEventListener('click', () => {
+        let day_total = 0;
+        products.forEach(products => {
+            const price = parseFloat
+                (products.price.replace("dh", "").trim());
+            day_total += price * products.quantity;
         });
-        Day_total_display.innerHTML = `<h3>${day_total}</h3>`
+        total_display.innerHTML = `<h3>Total : ${day_total.toFixed(2)} DH </h3>`
+
+
     });
 }
-TotalDay();
+CalculateTotalDay();
+
