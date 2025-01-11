@@ -43,6 +43,27 @@ const Day_End_button = document.querySelector(".day_End");
 const cancel_sale = document.querySelector(".cancel_sale")
 const total_display = document.querySelector(".total_display");
 
+const CoffeeTab = document.querySelector(".coffees_tab")
+const coffeeMenu = document.querySelector(".coffee_products");
+const JusTab = document.querySelector(".Juices_tab")
+const JuicesMenu = document.querySelector(".Juices_products");
+
+function SwitchMenuTabs() {
+    JusTab.addEventListener('click', () => {
+        coffeeMenu.classList.add("menu_visibility");
+        JuicesMenu.classList.remove("menu_visibility");
+        Product_sale.classList.add("sale_hide");
+        JusTab.style.backgroundColor="blue";
+        CoffeeTab.style.backgroundColor="";
+    });
+    CoffeeTab.addEventListener('click', () => {
+        coffeeMenu.classList.remove("menu_visibility");
+        JuicesMenu.classList.add("menu_visibility");
+        CoffeeTab.style.backgroundColor="blue";
+        JusTab.style.backgroundColor="";
+    });
+}
+SwitchMenuTabs();
 
 function AddToSales() {
 
@@ -76,23 +97,21 @@ function CancelSale(index) {
         };
     };
 
-    product_properties.onclick = ()=>{
+    product_properties.onclick = () => {
         UpdateCancelButton();
     }
 
     cancel_sale.onclick = () => {
         if (product.quantity > 0) {
             const confirmCancel = confirm("Are You sure to cancel");
-            if(confirmCancel){
+            if (confirmCancel) {
 
                 product.quantity--;
                 AddToSales();
                 UpdateCancelButton();
-                
             }
-        }
-    };
-
+        };
+    }
 }
 
 function UpgradeQuantity() {
@@ -101,7 +120,12 @@ function UpgradeQuantity() {
         Product_card.addEventListener('click', () => {
             const product = products[index];
             product.quantity++;
-            Product_sale.classList.remove("sale_show");
+            if (product.quantity > 0) {
+                Product_sale.classList.remove("sale_hide");
+            } 
+          else if(products.every(product=> product.quantity===0) ){
+                Product_sale.classList.add("sale_hide");
+            }
             CancelSale(index);
             AddToSales();
         });
@@ -119,11 +143,9 @@ function CalculateTotalDay() {
         products.forEach(products => {
             const price = parseFloat
                 (products.price.replace("dh", "").trim());
-            day_total += price * products.quantity;
-        });
-        total_display.innerHTML = `<h3>Total : ${day_total.toFixed(2)} DH </h3>`
-
-
+                    day_total += price * products.quantity;
+                });
+                total_display.innerHTML = `<h3>Total : ${day_total.toFixed(2)} DH </h3>`
     });
 }
 CalculateTotalDay();
