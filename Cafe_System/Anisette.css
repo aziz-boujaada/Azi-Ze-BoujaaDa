@@ -61,6 +61,9 @@ h2 {
 p {
     font-family: var(--font-P);
 }
+p::selection {
+    background-color: var(--primary-color);
+}
 
 a {
     text-decoration: none;
@@ -327,11 +330,18 @@ button:hover {
 }
 
 
-.product_sale .day_End button {
+.product_sale .cash button {
+    position: absolute;
+    top:  0;
+    right: 0;
+    border-radius: 0 20px 0 30px ;
+    height: 2.6rem;
+}
+.product_sale .Day_End button {
     position: absolute;
     top: 0;
-    right: 0;
-    border-radius: 0 20px 0 30px;
+    left: 0;
+    border-radius: 20px 0 30px 0;
     height: 2.6rem;
 }
 
@@ -340,7 +350,7 @@ button:hover {
     top: 0;
     left: 0;
     background-color: red;
-    width: 90px;
+    width: 40%;
     border-radius: 20px 0 30px 0;
     height: 2.6rem;
 }
@@ -369,25 +379,43 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    position: relative;
+    
 }
 
 .statistics_box {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    
     gap: 40px;
     background-color: rgba(61, 59, 56, 0.4);
     height: 80vh;
     border-radius: var(--border-radius);
 }
 
-#daily_total_element h3 {
+#daily_total_element ,.products_statistics{
    color: #ffffff;
-   font-size: 2rem;
+   font-size: 1.5rem;
    background-color: var(--primary-color);
    padding: 20px;
    border-radius: var(--border-radius);
    box-shadow: var(--box-shadow);
+   max-width: 40%;
+   min-width: 300px;
+   height: 30vh;
+   margin: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.products_statistics{
+    height: auto;
+   width:50%;
+   margin: 30px;
+}
 
+.products_statistics li{
+    font-size: 20px;
+    border-left:3px solid var(--gray-color) ;
+    padding: 10px 0 0 10px;
+   
 }
