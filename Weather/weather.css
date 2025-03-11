@@ -1,0 +1,142 @@
+:root {
+  /* website colors*/
+  --primary-color: rgb(4, 131, 242);
+  --secondary-color: #1059ec;
+  --bg-color: #ffffff;
+  --font-color: aliceblue;
+  --black-color: rgb(1, 1, 1);
+  --gray-color: #333333;
+
+  /* website border radius*/
+  --border-radius: 20px;
+
+  /* website box shadow*/
+  --box-shadow: 0 6px 10px rgba(18, 4, 165, 0.6);
+
+  /* website fonts*/
+  --fon-header: "Parkinsans";
+  --font-P: "Ubuntu";
+  --extra-font: "Roboto";
+
+  /* website transition*/
+  --transition: 0.7s;
+}
+
+/*general reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 2rem 4rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(12, 33, 227, 0.7);
+}
+button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+section {
+  margin: 4rem 4rem;
+  padding: 1rem 4rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(12, 33, 227, 0.7);
+  transition: background-color 0.3s ease-in-out;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time_display,
+.light-dark_mode {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+}
+.time_display h3{
+  font-family: var(--extra-font);
+}
+.light-dark_mode i {
+  width: 50px;
+  font-size: 20px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.active_mode {
+  border-radius: 15px;
+  background-color: rgb(19, 18, 18);
+  color: rgb(14, 124, 220);
+}
+.dark_mode_colors{
+  background-color: rgba(2, 6, 38, 0.7);
+  color: rgb(15, 124, 220);
+}
+.light_mode_colors{
+  background-color: rgba(12, 33, 227, 0.7);
+}
+.city_name {
+  text-align: center;
+  padding-top: 4rem;
+}
+.city_name input {
+  width: 40%;
+  height: 40px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: none;
+}
+.city_name input:hover {
+  box-shadow: var(--box-shadow);
+}
+.city_name input:focus {
+  box-shadow: 0 6px 12px var(--bg-color);
+  border: 1px solid var(--secondary-color);
+}
+.weather_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding-top: 5rem;
+}
+.temperature,
+.wind_speed,
+.humidity {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(95, 94, 107, 0.6);
+  border-radius: var(--border-radius);
+}
+.forecast_days {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding-top: 5rem;
+}
+.day {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(95, 94, 107, 0.6);
+  border-radius: var(--border-radius);
+}
