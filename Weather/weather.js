@@ -67,7 +67,7 @@ if(!temperature || !windSpeed || !humidity){
     
 }
 const apiKey= "55f0946fa2e98f33e4f1b12faa88a2db";
-const City = "Rabat";
+const City = "Casablanca";
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}&units=metric`)
 
@@ -75,15 +75,15 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}
 .then(response => response.json())
 .then(data => {
 
-    temperature.innerHTML =`<h3> ${data.main.temp} C°</h3>`
-    windSpeed.innerHTML =`<h3> ${data.wind.speed} KM/H</h3>`
-    humidity.innerHTML =`<h3> ${data.main.humidity} %</h3>`
+    temperature.innerHTML =`<h3> <i class="fa-solid fa-temperature-low"></i> ${data.main.temp} C°</h3>`
+    windSpeed.innerHTML =`<h3> <i class="fa-solid fa-wind"></i>${data.wind.speed} KM/H</h3>`
+    humidity.innerHTML =`<h3><i class="fa-solid fa-droplet"></i> ${data.main.humidity} %</h3>`
 
 });
 
 //Forecast for 5 coming days 
 const daysContainer =document.querySelectorAll(".forecast_days .day");
-if(!daysContainer){
+if(daysContainer.length===0){
     console.error("this element not found ");
 }
 fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${City}&appid=${apiKey}&units=metric`)
@@ -91,6 +91,31 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${City}&appid=${apiKey
  .then(data=>{
    console.log("forecast 5 days " , data);
 
-    
- })
+  let dailyForecast = [];
+   data.list.forEach(entry => {
+    let date = entry.dt_txt.split(" ")[0];
+    if(!dailyForecast.some(forecast=>forecast.date===date)){
+      dailyForecast.push({
+        date :date,
+        temp: entry.main.temp,
+        wind : entry.wind.speed,
+        humidity : entry.main.humidity,
+        rain: entry.rain ? (entry.rain["3h"] || 0) : 0
+      });
+    }
+   });
+
+   daysContainer.forEach((day ,index)=>{
+    if(dailyForecast[index]){
+      day.innerHTML= `
+        <p> <i class="fa-solid fa-calendar-days"></i> ${dailyForecast[index].date}<br></p>
+        <p> <i class="fa-solid fa-temperature-low"></i>${dailyForecast[index].temp}C°</p>
+        <p> <i class="fa-solid fa-wind"></i> ${dailyForecast[index].wind}KM/h</p>
+        <p> <i class="fa-solid fa-droplet"></i> ${dailyForecast[index].humidity}%</p>
+        <p> <i class="fa-solid fa-cloud-rain"></i>${dailyForecast[index].rain}mm</p>
+      
+      `
+    }
+   });
+ });
 
