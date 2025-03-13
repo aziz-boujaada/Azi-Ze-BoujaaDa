@@ -58,35 +58,68 @@ function updateClock() {
 updateClock();
 
 
+
 //weather data 
+
 const temperature = document.querySelector(".temperature");
 const windSpeed = document.querySelector(".wind_speed");
 const humidity = document.querySelector(".humidity");
-if(!temperature || !windSpeed || !humidity){
+const YourCity = document.querySelector(".city_display");
+const weatherStateShow = document.querySelector(".weather_state");
+if(!temperature || !windSpeed || !humidity ||!YourCity ||!weatherStateShow){
     console.error("element not found");
     
 }
-const apiKey= "55f0946fa2e98f33e4f1b12faa88a2db";
-const City = "Casablanca";
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}&units=metric`)
+let cityList = [];
+fetch("moroccan-cities.json")
+.then(response => response.json())
+.then(data =>{
+   cityList = data;
+})
+.catch(error=> console.error("upload cities failed" , error))
+
+function GetCitiesWeather(){
+  const UserInput = document.getElementById("cityInput").value.trim().toLowerCase();
+  const foundCity = cityList.find(city => city.name.toLowerCase()===UserInput);
+
+   if(!foundCity){
+       weatherStateShow.innerHTML=("No weather data");
+        return;
+   }
+
+
+   const apiKey= "55f0946fa2e98f33e4f1b12faa88a2db";
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${foundCity.name}&appid=${apiKey}&units=metric`)
 
 
 .then(response => response.json())
 .then(data => {
+     
+  const weatherConditions = data.weather[0].description;
+   console.log("description " ,weatherConditions);
+  const weatherIcon = data.weather[0].icon;
+  console.log("icon " ,weatherIcon);
 
+    YourCity.innerHTML =`<h3>${foundCity.name}</h3>`
+
+    weatherStateShow.innerHTML = `
+      <h3>${weatherConditions}</h3>
+      <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherConditions}">
+    `
     temperature.innerHTML =`<h3> <i class="fa-solid fa-temperature-low"></i> ${data.main.temp} C°</h3>`
     windSpeed.innerHTML =`<h3> <i class="fa-solid fa-wind"></i>${data.wind.speed} KM/H</h3>`
     humidity.innerHTML =`<h3><i class="fa-solid fa-droplet"></i> ${data.main.humidity} %</h3>`
-
-});
+   
+  })
+  .catch(error=> console.error("no data " ,error));
 
 //Forecast for 5 coming days 
 const daysContainer =document.querySelectorAll(".forecast_days .day");
 if(daysContainer.length===0){
     console.error("this element not found ");
 }
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${City}&appid=${apiKey}&units=metric`)
+fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${foundCity.name}&appid=${apiKey}&units=metric`)
  .then(response => response.json())
  .then(data=>{
    console.log("forecast 5 days " , data);
@@ -118,4 +151,5 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${City}&appid=${apiKey
     }
    });
  });
+}
 
