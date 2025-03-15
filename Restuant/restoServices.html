@@ -14,6 +14,7 @@
     <!--link HTML with CSS-->
 
     <link rel="stylesheet" href="resto.css">
+    <link rel="stylesheet" href="ResponsiveVERSION.css">
     <!--link with cdnjs for icons -->
     <link rel="icon" href="images/favicon.ico.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css ">
@@ -40,38 +41,66 @@
 
 <body>
 
-    <!--HEADER-->
-    <section>
-        <header id="header">
-            <div class="logo">
-                <i class="fa-solid fa-utensils"></i><span>Restaurant</span>
-            </div>
-            <div class="nav_list">
-                <ul>
-                    <a href="resto.html">
-                        <li>HOME</li>
-                    </a>
-                    <a href="aboutResto.html">
-                        <li>ABOUT</li>
-                    </a>
-                    <a href="restoServices.html">
-                        <li class="active">SERVICES</li>
-                    </a>
-                    <a href="restomenu.html">
-                        <li>MENU</li>
-                    </a>
-                    <a href="">
-                        <li>PAGES</li>
-                    </a>
-                    <a href="restoContact.html">
-                        <li>CONTACT</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="nav_btn">
-                <a href="booktable.html"> <button>BOOK A TABLE</button></a>
-            </div>
-    </section>
+        <!--HEADER-->
+        <section>
+            <header id="header">
+                <div class="logo">
+                    <i class="fa-solid fa-utensils"></i><span>Restaurant</span>
+                </div>
+    
+                <div class="mobile_nav">
+                    <div id="button_show">
+                        <i class="fa-solid fa-bars" ></i>
+                    </div>
+                </div>
+                <div class="nav_list show" id="bar_effect">
+                    <ul> 
+                        <div class="mobile_nav " >
+                        <div id="mobile_Xmark">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+    
+                        <li ><a href="index.html"  >HOME</a></li>
+                        <li><a href="aboutResto.html" >ABOUT</a> </li>
+                        <li><a href="restoServices.html" class="active">SERVICES</a></li>
+                        <li><a href="restomenu.html">MENU</a></li>
+                        <li><a href="restoContact.html" >CONTACT</a></li>
+        
+                         
+                        <li class="drop" id="toggleDrop"  >
+                            <a href="#">PAGES <span><i class="fa-solid fa-caret-down"></i></span></a>
+                             
+        
+                            <div class="drop_down hidden">
+        
+                                <a href="booktable.html">
+                                    <h3>Booking</h3>
+                                </a>
+        
+                                <a href="aboutResto.html">
+                                    <h3>Our Team</h3>
+                                </a>
+        
+                                <a href="testimoniam.html">
+                                    <h3>Testimonial</h3>
+                                </a>
+        
+        
+        
+                            </div>
+                        </li>
+                      
+        
+                    </ul>
+                </div>
+                <div class="nav_btn">
+                    <a href="booktable.html"> <button>BOOK A TABLE</button></a>
+                </div>
+                
+               
+            </header>
+        </section>
     <!--SERVICES PAGE HEAD-->
     <section id="section_title">
         <div class="title">
@@ -194,7 +223,10 @@
         </div>
         
     </footer>
+    <p class="copyright">copyright &copy; 2024 AZi Ze BouJaaDa .All rights reserved</p>
 </section>
+
+<script src="script.js"></script>
 </body>
 
 </html>

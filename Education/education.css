@@ -1,0 +1,1672 @@
+:root {
+    --primary-color: rgb(21, 21, 180);
+    --header-color: rgb(177, 177, 182);
+    --footer-color: rgb(2, 2, 69);
+    --bg-color1: rgb(255, 251, 251);
+    --font-color-btn: rgb(255, 251, 251);
+    --button-color: rgb(9, 9, 136);
+    --hover-color: rgb(35, 35, 181);
+    --favorite-blue: rgb(50, 50, 255);
+    --font-family: "Roboto", "Open+Sans", "Lato", "Ubuntu";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: var(--font-family), sans-serif;
+}
+
+/*parameter of all head section's*/
+.section_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.section_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.section_head p {
+    font-size: 20px;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: "Roboto";
+    font-size: 40px;
+    color: rgb(50, 50, 255);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--font-color-btn);
+    font-size: 20px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-color1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+/*HEADER SECTION*/
+#header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+  top: 0;
+    z-index: 1000;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+.mobile_navbar{
+    display: none;
+}
+
+/*logo img*/
+.logo img {
+    width: 160px;
+}
+
+/*navigation list */
+.nav_list ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav_list li a {
+    color: black;
+    font-size: 18px;
+
+
+}
+
+.nav_list li a:hover,
+.nav_list li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    transform: translateY(-8px);
+
+}
+
+/*search about course*/
+.search_course {
+    padding-right: 40px;
+}
+
+.search_course input {
+
+    position: relative;
+    width: 300px;
+    height: 35px;
+    padding-left: 12px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgb(60, 60, 62);
+}
+
+.search_course input:hover {
+    border: 1px solid var(--favorite-blue);
+}
+
+.search_course span i {
+    position: absolute;
+    right: 60px;
+    top: 26px;
+    font-size: 16px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.search_course span i:hover {
+    color: var(--favorite-blue);
+}
+
+.search_result {
+    background-color: rgba(240, 248, 255, 0.8);
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.search_result a {
+    color: var(--primary-color);
+    font-size: 20px;
+    text-decoration: underline;
+    padding-top: 15px;
+}
+
+/*navigation button*/
+.nav_btn button {
+    margin-right: 20px;
+}
+
+/*HOME PAGE SECTION*/
+#home_page {
+    background-image: linear-gradient(rgba(3, 3, 48, 0.3), rgba(40, 13, 163, 0.8)),
+        url(Education-images/education_bg3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 170px;
+    padding-left: 70px;
+    height: 100vh;
+
+
+}
+
+/*home information*/
+
+.home_info h1 {
+    font-size: 5rem;
+    color: var(--favorite-blue);
+    font-family: "Ubuntu";
+}
+
+.home_info h2 {
+    font-size: 30px;
+    color: rgb(219, 218, 218);
+    padding-top: 20px;
+}
+
+.home_info p {
+    font-size: 20px;
+    color: white;
+    padding-top: 30px;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+/*courses category's*/
+.home_category {
+    display: flex;
+    gap: 30px;
+    padding-top: 40px;
+}
+
+.category {
+    border-left: 2px solid white;
+    line-height: 25px;
+}
+
+.category h4 {
+    padding-left: 12px;
+    font-size: 20px;
+    color: var(--favorite-blue);
+}
+
+.category span {
+    padding-left: 12px;
+    font-size: 16px;
+    color: rgb(192, 191, 191);
+}
+#category_part{
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 0 0 90px 0;
+}
+.category_head h1{
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+    text-align: center; 
+}
+.category_head span{
+
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+/*home buttons*/
+.home_buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.home_info .btn1 button {
+    width: 180px;
+    height: 50px;
+    margin-top: 45px;
+    background-color: var(--favorite-blue);
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.home_info .btn1 button:hover {
+
+    background-color: var(--bg-color1);
+    border: 1px solid var(--favorite-blue);
+}
+
+.home_info .btn2 button {
+    width: 180px;
+    height: 50px;
+    margin-top: 40px;
+    color: var(--primary-color);
+    background-color: var(--bg-color1);
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.home_info .btn2 button:hover {
+    background-color: var(--favorite-blue);
+    color: white;
+}
+
+/*home image*/
+.home-img img {
+    width: 80%;
+    height: 80vh;
+}
+
+/*COURSES SECTION*/
+/*courses  welcome page*/
+#courses {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-top: 70px;
+    border-bottom: 2px solid var(--favorite-blue);
+
+}
+
+.courses_welcome {
+    padding-left: 50px;
+}
+
+.courses_welcome h1 {
+    font-size: 3rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.courses_welcome h3 {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-family: "Lato";
+    color: white;
+}
+
+.courses_welcome p {
+    padding-top: 40px;
+    font-size: 1.5rem;
+    font-family: "Open+Sans";
+    color: white;
+    line-height: 30px;
+    letter-spacing: 1px;
+
+}
+
+.courses_welcome p span,
+q {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(207, 207, 207);
+}
+
+
+.Welcome_img img {
+    width: 80%;
+    height: 80vh;
+
+}
+
+.read_btn button {
+    width: 180px;
+    height: 50px;
+    margin-top: 45px;
+    background-color: var(--favorite-blue);
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.read_btn button:hover {
+
+    background-color: var(--bg-color1);
+    border: 1px solid rgb(50, 50, 255);
+    box-shadow: 0 4px 6px rgba(5, 5, 33, 0.5);
+}
+
+/*COURSES CONTENT*/
+
+.courses_type_mobile{
+    display: none;
+}
+/*courses type (category)*/
+.courses_type {
+    text-align: center;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.type {
+    border-bottom: 1px solid gray;
+    padding-bottom: 4px;
+}
+
+.type:hover,
+.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid rgb(50, 50, 255);
+}
+
+.type a h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.type a h5:hover,
+.active {
+    color: rgb(50, 50, 255);
+    border: none;
+}
+
+/*COURSES CARDS SECTION */
+#courses_card {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+    margin: 30px;
+    gap: 20px;
+    margin-top: 60px;
+    background-color: whitesmoke;
+}
+
+/*cards*/
+.card {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 340px;
+    height: auto;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(3, 3, 48, 0.4);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(22, 22, 133, 0.6);
+    background-color: azure;
+}
+
+/*cards content*/
+
+/*free on head of card*/
+.free {
+    background-color: rgb(46, 45, 45);
+    border-radius: 12px 0 12px 0;
+    width: 70px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.free span {
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/*course image*/
+.course_img img {
+
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(11, 11, 94, 0.6);
+}
+
+/*author of course profile*/
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile_img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.profile_name h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/*course name*/
+.course_name h5 {
+    padding-top: 20px;
+    color: var(--favorite-blue);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "open+sans";
+
+}
+
+/*what course provide */
+.cours_skills h5 {
+    padding-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "open+sans";
+}
+
+.cours_skills h5 span {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: rgb(37, 37, 37);
+}
+
+/*rating & number of views */
+.rating_views {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.rating_views i {
+    color: goldenrod;
+    font-size: 14px;
+}
+
+
+.rating_views span,
+span {
+    font-size: 14px;
+    color: black;
+    padding-left: 8px;
+}
+
+/*Level & course  duration */
+.level_duration {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.level_duration i {
+
+    font-size: 16px;
+}
+
+.level_duration h6 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*Enrol course for free button*/
+.enrol_btn button {
+    width: 100%;
+    margin-top: 30px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    transform: translateY(20px);
+}
+
+.card:hover .enrol_btn button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.explore_more_btn button {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 6px;
+    transform: translateX(-55%);
+    width: 250px;
+}
+
+
+
+
+/*COURSES DETAILS*/
+#course_presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 90px 30px;
+    background-color: azure;
+    position: relative;
+}
+
+.course_information img {
+    width: 140px;
+    border-left: 2px solid var(--favorite-blue);
+
+}
+
+.course_information h1 {
+    font-size: 40px;
+    padding-top: 20px;
+    font-family: "Ubuntu";
+    color: black;
+}
+
+.course_information button {
+    margin-top: 30px;
+    border-radius: 0;
+}
+
+.course_image img {
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+}
+
+.course_details_btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*courses banner */
+#course_banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(3, 3, 48, 0.8);
+    padding: 30px;
+    margin-left: 10%;
+    border-radius: 8px;
+    position: absolute;
+    top: 70%;
+
+}
+
+.course_title,
+.course_level,
+.course_duration {
+    border-left: 2px solid gray;
+    padding-left: 10px;
+}
+
+.course_title i,
+.course_level i,
+.course_duration i {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--favorite-blue);
+}
+
+.course_title span,
+.course_level span,
+.course_duration span {
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.course_title p,
+.course_level p,
+.course_duration p {
+    padding-top: 6px;
+}
+
+/*ABOUT COURSE SECTION*/
+#about_course {
+    margin-top: 120px;
+    margin-left: 10%;
+}
+
+/*small tabs to switch between course details*/
+.small_tabs {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(213, 238, 248);
+    width: 50%;
+}
+
+.small_tabs h5 {
+    font-size: 16px;
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.small_tabs h5:hover {
+    color: var(--favorite-blue);
+    background-color: rgba(211, 220, 226, 0.5);
+}
+
+/*Course Objective*/
+.course_objectives {
+    padding-top: 50px;
+}
+
+.objective_title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.object {
+    padding-top: 12px;
+}
+
+.object i {
+    font-size: 22px;
+    color: var(--favorite-blue);
+}
+
+.object span {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgb(62, 60, 60);
+}
+
+/*skills yuo'll gain in course*/
+.course_skills {
+    padding-top: 50px;
+}
+
+.skills_title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.skills_name {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.skills h4 {
+
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(204, 222, 238);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+/*course description*/
+.course_description {
+    padding-top: 50px;
+}
+
+.description_title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.description p {
+
+    padding-top: 20px;
+    line-height: 25px;
+    color: rgb(62, 60, 60);
+
+}
+
+/*course plan*/
+#course_paln {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.plan {
+    border: 2px solid rgb(119, 191, 253);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.plan h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.plan h5 {
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(37, 37, 37);
+}
+
+.plan ul {
+    padding-top: 30px;
+
+}
+
+.plan ul li {
+    padding-top: 10px;
+    color: rgb(62, 60, 60);
+}
+
+.plan ul li span {
+    font-weight: 600;
+    color: var(--favorite-blue);
+}
+
+/*course owner*/
+.course_owner {
+    margin-right: 50px;
+    border: 2px solid rgb(119, 191, 253);
+    border-radius: 8px;
+    padding: 30px;
+    height: 160px;
+    width: 350px;
+}
+
+.course_owner h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.owner_profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.owner_img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.owner_name a h4 {
+    letter-spacing: 2px;
+    text-decoration: underline;
+    transition: all 0.4s;
+}
+
+.owner_name a h4:hover {
+    transform: translateX(4px);
+    text-decoration: none;
+}
+
+.owner_name a h5 {
+    padding-top: 8px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: var(--favorite-blue);
+    transition: all 0.4s;
+}
+
+.owner_name a h5:hover {
+    color: rgb(11, 11, 204);
+    transform: translateX(4px);
+}
+
+
+/*TESTIMONIAL SECTION*/
+.course_testimonial {
+    margin-top: 100px;
+}
+
+.testimonial_title h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.testimonial_title h3 span {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--favorite-blue);
+}
+
+.testimonial_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 40px;
+}
+
+.student_card {
+    border: 2px solid rgb(203, 231, 255);
+    border-radius: 12px;
+    padding: 12px;
+    width: 350px;
+    height: 250px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.student_card:hover {
+    box-shadow: 0 6px 8px rgba(24, 32, 39, 0.4);
+    transform: translateY(-5px);
+}
+
+.student_profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student_img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.student_name h4 {
+    font-size: 16px;
+}
+
+.student_name h5 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 8px;
+    color: rgb(62, 60, 60);
+}
+
+.student_say p i {
+    font-size: 24px;
+    color: var(--favorite-blue);
+    padding-right: 6px;
+}
+
+.student_say p {
+    line-height: 22px;
+    color: rgb(62, 60, 60);
+
+}
+
+
+/*COURSE CONTENT / LESSON*/
+#course_content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+
+}
+
+.course_info {
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+
+}
+
+/*left small card */
+.course_info img {
+    width: 160px;
+    border-left: 3px solid var(--favorite-blue);
+
+}
+
+.course_info h3 {
+    font-size: 18px;
+    font-family: "ubuntu";
+    padding-top: 15px;
+    line-height: 22px;
+
+}
+
+.course_info h5 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 15px;
+    color: rgb(62, 60, 60);
+
+}
+
+/*lessons */
+.course_lessons {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    width: 70%;
+}
+
+/*introduction to lessons*/
+.lesson_intro h3 {
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 9px;
+}
+
+.lesson_intro p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-top: 15px;
+    color: rgb(62, 60, 60);
+}
+
+.lesson_intro h4 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    padding-top: 25px;
+}
+
+.lesson_intro ul {
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+
+.lesson_intro ul li {
+    padding-top: 10px;
+    list-style: disc;
+    color: rgb(62, 60, 60);
+}
+
+/*4 parts of course*/
+.lesson_parts {
+    padding-top: 30px;
+}
+
+.part {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.lesson_drop_down h3 {
+    padding: 12px 0;
+
+}
+
+.lesson_drop_down h3 span {
+    padding-right: 12px;
+    font-size: 18px;
+
+}
+
+.lesson_name_text {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.name_lesson h4 {
+    padding-right: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(53, 52, 52);
+    cursor: pointer;
+}
+
+.name_lesson h4 .book_icon {
+    padding-right: 12px;
+    font-size: 16px;
+    color: var(--favorite-blue);
+    cursor: pointer;
+
+}
+
+.lesson_time h4 {
+    color: rgb(62, 60, 60);
+}
+
+.lesson_p p {
+    padding-top: 20px;
+    line-height: 22px;
+    color: rgb(62, 60, 60);
+
+}
+
+.hidden {
+    display: none;
+
+}
+
+.lesson_p {
+    border: 1px solid var(--favorite-blue);
+    border-radius: 10px;
+    margin: 12px;
+    padding: 12px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/*QUIZ PART*/
+.question {
+    padding: 12px;
+}
+
+.question h4 {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.answers_list {
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+.answers_list label {
+    font-size: 16px;
+    color: rgb(62, 60, 60);
+    padding-left: 8px;
+}
+
+.answers_list input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    accent-color: var(--favorite-blue);
+}
+
+#submit_quiz {
+    margin-top: 20px;
+
+}
+
+/*div to show quiz result and grad*/
+.user_result {
+    display: flex;
+    gap: 30px;
+}
+
+#quizResult {
+    background-color: green;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+
+
+
+}
+
+#grade {
+
+    margin-top: 20px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    font-weight: 700;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: none;
+}
+
+
+/*ABOUT PAGE*/
+#about {
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 0 0 90px 0;
+}
+
+/*about head*/
+.about_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about_head h1 {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+.about_head span {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+.about_head p {
+    font-size: 20px;
+    line-height: 35px;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+/*about our story*/
+#our_story {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px;
+}
+.about_title h1{
+    text-align: center;
+    padding-top: 40px;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.platform_owner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.owner1_photo img {
+    width: 240px;
+    height: 280px;
+    border-radius: 6px;
+}
+
+.owner1_photo h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(62, 60, 60);
+}
+
+.owner2_photo img {
+    width: 300px;
+    height: 280px;
+    border-radius: 6px;
+    margin: 8px 0 0 120px;
+}
+
+.owner2_photo h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(62, 60, 60);
+    margin: 8px 0 10px 120px;
+}
+
+.story {
+    margin-left: 30px;
+    padding: 25px;
+    width: 50%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgb(192, 191, 191);
+    transition: all 0.5s;
+}
+
+.story:hover {
+    transform: translateX(-6px);
+    box-shadow: 0 4px 6px var(--favorite-blue);
+}
+
+.story h2 {
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+.story p {
+    padding-top: 40px;
+    font-size: 18px;
+    line-height: 1.7rem;
+    color: rgb(62, 60, 60);
+}
+
+/*Instructors*/
+#Instructors {
+    margin-top: 120px;
+}
+
+.Instructors_head h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.our_Instructors {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 30px;
+}
+
+.Instructors_card {
+    box-shadow: 0 4px 10px rgb(177, 177, 182);
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Instructors_card:hover {
+    box-shadow: 0 4px 10px var(--favorite-blue);
+    transform: translateY(-7px);
+}
+
+.Instructors_profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Instructors_img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.Instructors_name h4 {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: rgb(62, 60, 60);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.Instructors_role p {
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(62, 60, 60);
+}
+
+.Instructors_social_media {
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.Instructors_social_media i {
+    font-size: 20px;
+    color: var(--favorite-blue);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.Instructors_social_media i:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+
+/*Numbers speak section*/
+#Numbers_speak {
+    margin: 100px;
+    padding-top: 120px;
+    background-color: whitesmoke;
+    height: 50vh;
+}
+
+.numbers_speak_head h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.number h2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--favorite-blue);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.number h4 {
+    padding-top: 15px;
+    letter-spacing: 2px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+
+/*testimonial */
+.testimonial_head h1 {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+
+
+/*CONTACT PAGE*/
+#contact {
+    padding-top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+        url(Education-images/education_course_page.jpg);
+    background-position: calc(100-80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 0 0 90px 0;
+}
+
+/*contact head*/
+.contact_head {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contact_head h1 {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: aliceblue;
+}
+
+.contact_head span {
+    font-size: 5rem;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--favorite-blue);
+}
+
+#contact_information {
+
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    margin: 60px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgb(177, 177, 182);
+}
+
+.information_title h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+
+}
+
+.contact_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+
+}
+
+.our_info i {
+    font-size: 24px;
+    color: var(--favorite-blue);
+}
+
+.our_info span {
+    font-size: 16px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+.our_social i {
+    padding-left: 16px;
+    font-size: 24px;
+    color: rgb(60, 60, 62);
+    transition: all 0.4s;
+}
+
+.our_social i:hover {
+    color: var(--favorite-blue);
+    transform: translateY(-6px);
+}
+
+#contact_form {
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    margin: 60px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgb(177, 177, 182);
+
+}
+
+.form_head h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Parkinsans", sans-serif;
+}
+
+#contact_form form {
+    padding-top: 40px;
+    width: 100%;
+}
+
+form .user_name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    gap: 40px;
+}
+
+.user_name .name label {
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.user_name .name input {
+    width: 350px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-left: 12px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+
+}
+
+.user_name .name input:hover {
+    border: 2px solid var(--favorite-blue);
+
+}
+
+form .email_phone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    gap: 40px;
+    padding-top: 60px;
+}
+
+.email_phone .email_ph label {
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.email_phone .email_ph input {
+    width: 350px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-left: 12px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+
+}
+
+.email_phone .email_ph input:hover {
+    border: 2px solid var(--favorite-blue);
+
+}
+
+form .message {
+    padding-top: 60px;
+}
+
+.message .msg-label {
+    text-align: left;
+    font-size: 18px;
+    color: rgb(60, 60, 62);
+    font-family: "Parkinsans", sans-serif;
+}
+
+.message textarea {
+
+    width: 740px;
+    height: 95px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    padding: 18px;
+    margin-top: 15px;
+    border: 1px solid rgb(60, 60, 62);
+}
+
+.msg_btn button {
+    border-radius: 0;
+    width: 400px;
+    height: 50px;
+    margin-top: 60px;
+}
+
+/*FOOTER SECTION*/
+#footer{
+    background-color: var(--footer-color);
+    border-radius: 0 90px 0  90px ;
+    height: 50vh;
+}
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.platform_info .platform_logo img{
+    width: 100px;
+    background-color: white;
+    border-radius: 0 20px 0 20px;
+}
+.platform_info .platform_description p{
+    padding-top: 12px;
+    color: white;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.platform_links ul li  {
+   padding-top: 12px;
+   transition: all 0.4s;
+}
+.platform_links ul  a{
+ color: white;
+ font-family: "Parkinsans", sans-serif; 
+}
+.platform_links ul a:hover {
+ color: var(--favorite-blue);
+ transform: translateX(6px);
+}
+
+.platform_contact .our_info {
+  padding-top: 12px;
+}
+.platform_contact .our_info span{
+    color: white;
+}
+
+.platform_social .our_social {
+    padding-top: 12px;
+}
+.platform_social .our_social i{
+    color: white;
+}
+.platform_social .our_social i:hover{
+    color:var(--favorite-blue);
+}
+
+.platform_copyright p{
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    font-size: 14px;
+}

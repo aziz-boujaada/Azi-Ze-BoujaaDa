@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Online Education Platform for get a lot of courses">
+    <meta name="keywords" content="education, learn , courses ,free courses ,web-development,business management ">
+    <meta name="author" content="Aziz Boujaada">
+    <!--links-->
+    <!--Css-->
+    <link rel="stylesheet" href="education.css">
+    <link rel="stylesheet" href="educationResponsive.css">
+    <!--font-awesome for get icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css ">
+    <!--google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+     <!--favicon-->
+    <link rel="icon" href="Education-images/icons8-education-52.png" type="image/png">
+
+    <title>Education Platform courses</title>
+</head>
+
+<body>
+    <!--HEADER SECTION-->
+    <section>
+        <header id="header">
+            <nav>
+                <!--logo-->
+                <div class="logo">
+                    <a href="index.html"><img src="Education-images/education-logo.png" alt="platform logo"></a>
+                </div>
+                <div class="mobile_navbar">
+                    <div class="bars_icon" >
+                        <i class="fa-solid fa-bars" ></i>
+                    </div>
+                </div>
+
+                <!--navigation list-->
+
+                <div class="nav_list show_list" id="bar_effect">
+                    <ul>
+                        <div class="mobile_navbar">
+                            <div class="Xmark_icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="courses.html"  class="active">Courses</a></li>
+                        <li><a href="about.html" >About</a></li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="cocntact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!--navigation Button-->
+                <div class="nav_btn">
+                    <a href=""><button>Get Started</button></a>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <!--MAIN SECTION-->
+    <main>
+        <!--COURSE DETAILS SECTION-->
+        <!--course presentation-->
+        <section id="course_presentation">
+            <div class="course_information">
+                <img src="Education-images/education-logo.png" alt="">
+                <h1>Learn How To build a Full Front-End Website With HTML,<br> CSS And JavaScript </h1>
+
+                <div class="course_details_btn">
+                   <a href="course-lesson.html"> <button>GO TO COURSE</button></a>
+                    <a href="courses.html"> <button>GO BACK</button></a>
+                </div>
+
+            </div>
+            <div class="course_image">
+                <img src="Education-images/front-end-course.jpg" alt="front-end-course image">
+            </div>
+        </section>
+        <!--about course small banner-->
+         <section id="course_banner">
+            <div class="course_title">
+                <i class="fa-solid fa-code"></i><span>Front-End</span>
+                <p>You will learn the basics of front-end development <br> through many lessons and practice</p>
+            </div>
+            <div class="course_level">
+                <i class="fa-solid fa-chart-simple"></i><span>beginner Level</span>
+                <p>It does not require prior experience <br> that you will learn with us</p>
+            </div>
+            <div class="course_duration">
+                <i class="fa-solid fa-clock"></i><span>3-5 weeks</span>
+                <p>Complete at your own pace</p>
+            </div>
+        </section>
+
+        <!--ABOUT COURSE-->
+        <section id="about_course">
+            <!--small tabs to switch between Course details -->
+            <div class="small_tabs">
+                <div>
+                    <a href="#" class="active">
+                        <h5> About</h5>
+                    </a>
+                </div>
+                <div>
+                    <a href="#"  onclick=" scrollIntoDetials()">
+                        <h5 id="GoTo_detials">Course Details</h5>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" onclick="scrollIntoTestImonial()">
+                        <h5>Testimonial</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Course Objectives -->
+            <div class="course_objectives">
+                <div class="objective_title">
+                    <h3>Objectives</h3>
+                </div>
+                <div class="objectives">
+                    <div class="object">
+                        <i class="fa-solid fa-check"></i> <span>You will learn HTML basics and will be able to master
+                            basics <br> concepts,
+                            semantics, and how to write bound and clean code</span>
+                    </div>
+                    <div class="object">
+                        <i class="fa-solid fa-check"></i> <span>You will learn the basics of CSS and all its features
+                            <br>
+                            that will enable you to design attractive websites and create responsive design to all
+                            devices</span>
+                    </div>
+                    <div class="object">
+                        <i class="fa-solid fa-check"></i> <span>You will learn the basics of JS and all its features<br>
+                            that will enable you to add more dynamic
+                            and interactive frames to your sites
+                        </span>
+                    </div>
+                    <div class="object">
+                        <i class="fa-solid fa-check"></i> <span>Finally, we will give you suggestions for applied
+                            projects <br>
+                            to show what you have learned from the basics of Front-End development through our course
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <!--Course description-->
+            <div class="course_description">
+                <div class="description_title">
+                    <h3>About this Course</h3>
+                </div>
+                <div class="description">
+                    <p>Imagine you're a beginner in web development and you're eager to learn the basics of building
+                        websites. <br>
+                        In this course, you'll learn how to create a full website using HTML, CSS, and JavaScript . <br>
+                        You will be taught how to structure pages with HTML, style them with CSS, and add interactivity
+                        with JavaScript. <br>
+                        This course is designed for beginners, so you will learn the fundamentals step by step, <br>
+                        from scratch, allowing you to build your own websites. <br>
+                        <br>
+                        <strong>ROLE :</strong> Front-End Developer <br>
+                        <br>
+                        <strong>SKILLS GAINED :</strong> HTML, CSS, JavaScript <br>
+                        <br>
+                        <strong>PREREQUISITES :</strong> <br>
+                        No prior knowledge required. This course is tailored for beginners who want to learn web
+                        development from the ground up.
+                    </p>
+                </div>
+            </div>
+            
+            <!--skills yuo'll gain in course-->
+            <div class="course_skills">
+                <div class="skills_title">
+                    <h3>Skills you'll gain</h3>
+                </div>
+                <div class="skills_name">
+                    <div class="skills">
+                        <h4>HTML & CSS</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Web Design</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Responsive Web Design</h4>
+                    </div>
+                    <div class="skills">
+                        <h4>Front-End Development</h4>
+                    </div>
+                </div>
+            </div>
+            <!--Course Plan-->
+            <div id="course_paln">
+                <div class="plan">
+                    <h3>Course Plan</h3>
+                    <h5>This Course requires you to independently complete the following steps:</h5>
+                    <ul>
+
+                        <li> <span>1.</span> Learn HTML: Create page structures using basic elements.</li>
+                        <li> <span>2.</span> Learn CSS: Style pages with colors, fonts, and layouts.</li>
+                        <li> <span>3.</span> Introduction to JavaScript: Add interactivity and control page behavior.
+                        </li>
+
+                        <li> <span>4.</span> Responsive Design: Make pages compatible with different devices.</li>
+                        <li> <span>5.</span> Practical Projects: Build real websites using HTML, CSS, and JavaScript.
+                        </li>
+                        <li> <span>6.</span> Final Evaluation: Create a full website project and showcase the skills
+                            learned.</li>
+                    </ul>
+                </div>
+                <div class="course_owner">
+                    <h3>Offered By</h3>
+                    <div class="owner_profile">
+                        <div class="owner_img">
+                            <img src="Education-images/aziz.jpg" alt="">
+                        </div>
+                        <div class="owner_name">
+                            <a href="#">
+                                <h4>Aziz Boujaada</h4>
+                            </a>
+                            <a href="#">
+                                <h5>Learn more</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--course testimonial-->
+            <div class="course_testimonial">
+                <div class="testimonial_title">
+                    <h3>What our Former students say About The <span> Online Education Platform </span> ?</h3>
+                </div>
+                <!--testimonial cards -->
+                <div class="testimonial_card">
+                    <!--testimonial 1-->
+                    <div class="student_card">
+                        <!--student profile-->
+                        <div class="student_profile">
+                            <div class="student_img">
+                                <img src="Education-images/aziz.jpg" alt="student profile image">
+                            </div>
+                            <div class="student_name">
+                                <h4>Aziz Boujaada</h4>
+                                <h5>Learner since 2024</h5>
+                            </div>
+                        </div>
+                        <!--students say-->
+                        <div class="student_say">
+                            <p>
+                                <span><i class="fa-solid fa-quote-left"></i></span>
+                                The course was amazing! I learned the fundamentals of designing
+                                and developing user interfaces using HTML, CSS, and JavaScript.
+                                Thanks to this course, I am now able to build responsive and attractive websites
+
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!--testimonial 2-->
+                    <div class="student_card">
+                        <!--student profile-->
+                        <div class="student_profile">
+                            <div class="student_img">
+                                <img src="Education-images/testimonial-2.jpg" alt="student profile image">
+                            </div>
+                            <div class="student_name">
+                                <h4>Youness Boujaada </h4>
+                                <h5>Learner since 2024</h5>
+                            </div>
+                        </div>
+                        <!--students say-->
+                        <div class="student_say">
+                            <p>
+                                <span><i class="fa-solid fa-quote-left"></i></span>
+                                This course completely changed the way I understand web development.
+                                I learned how to build responsive websites using HTML and CSS,
+                                and I gained the ability to enhance user experience with JavaScript.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--testimonial 3-->
+                    <div class="student_card">
+
+                        <!--student profile-->
+                        <div class="student_profile">
+                            <div class="student_img">
+                                <img src="Education-images/testimonial-3.jpg" alt="studentprofile image">
+                            </div>
+                            <div class="student_name">
+                                <h4>Yassine Bzizou </h4>
+                                <h5>Learner since 2024</h5>
+                            </div>
+                        </div>
+                        <!--students say-->
+                        <div class="student_say">
+                            <p>
+                                <span><i class="fa-solid fa-quote-left"></i></span>
+                                I used to think that building websites was very complicated,
+                                but this course made things much easier. I loved the focus on creating
+                                professional websites from scratch using the basics of development.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--testimonial 4-->
+                    <div class="student_card">
+                        <!--student profile-->
+                        <div class="student_profile">
+                            <div class="student_img">
+                                <img src="Education-images/aziz.jpg" alt="studentprofile image">
+                            </div>
+                            <div class="student_name">
+                                <h4>Anas Tighmi</h4>
+                                <h5>Learner since 2024</h5>
+                            </div>
+                        </div>
+                        <!--students say-->
+                        <div class="student_say">
+                            <p>
+                                <span><i class="fa-solid fa-quote-left"></i></span>
+                                Through this course, I learned how to turn ideas into functional websites.
+                                I can now build beautiful, responsive pages that work seamlessly across all devices.
+                                This was my first step toward becoming a professional in web development
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+ <!--FOOTER SECTION-->
+ <section id="footer">
+    <footer>
+        <div class="footer_container">
+            <!--logo and platform description-->
+            <div class="platform_info">
+                <div class="platform_logo">
+                    <img src="Education-images/education-logo.png" alt="">
+                </div>
+                <div class="platform_description">
+                    <p>
+                        Here you can find a good courses <br>
+                        on web-Development ,Marketing & Business Management <br>
+                        Start Learning today and develop Your skills!
+                    </p>
+                </div>
+            </div>
+            <!--platform footer links-->
+            <div class="platform_links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">pages</a></li>
+                    <li><a href="cocntact.html">Contact</a></li>
+                    <li><a href="courses-destails.html">Courses Details</a></li>
+                    <li><a href="course-lesson.html">Course Lesson</a></li>
+                </ul>
+            </div>
+            <!--Platform footer contact information-->
+            <div class="platform_contact">
+                <div class="our_info">
+                    <i class="fa-solid fa-envelope"><span>OnlineEducation13@gmail.com</span></i>
+                </div>
+                <div class="our_info">
+                    <i class="fa-solid fa-phone"><span>+212 6744904456</span></i>
+                </div>
+                <div class="our_info">
+                    <i class="fa-solid fa-location-dot"><span>123 street ,Marrakech , Morocco </span></i>
+                </div>
+            </div>
+            <div class="platform_social">
+
+                <div class="our_social">
+                    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="platform_copyright">
+            <p class="copyright">copyright &copy; 2024 AZi Ze BouJaaDa .All rights reserved</p>
+        </div>
+    </footer>
+</section>
+
+    <script src="education.js" defer></script>
+    <script src="educationMobile.js" defer></script>
+</body>
+
+</html>

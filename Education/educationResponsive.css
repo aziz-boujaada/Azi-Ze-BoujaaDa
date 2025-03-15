@@ -1,0 +1,347 @@
+/******** Responsive Design**********/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    :root {
+        --primary-color: rgb(21, 21, 180);
+        --header-color: rgb(177, 177, 182);
+        --footer-color: rgb(2, 2, 69);
+        --bg-color1: rgb(255, 251, 251);
+        --font-color-btn: rgb(255, 251, 251);
+        --button-color: rgb(9, 9, 136);
+        --hover-color: rgb(35, 35, 181);
+        --favorite-blue: rgb(50, 50, 255);
+        --font-family: "Roboto", "Open+Sans", "Lato", "Ubuntu";
+    }
+    body{
+        width: 100%;
+    }
+    #header{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: aliceblue;
+    }
+    .nav_list ul{
+        flex-direction: column;
+        background-color:rgb(240, 248, 255);
+        border-radius: 0 0 0 20px;
+        padding: 50px;
+        position: absolute;
+        left: 60%;
+        top: -4%;
+    }
+    .show_list{
+        display: none;
+    }
+    .bars_icon i{
+        font-size: 24px;
+        margin-left: 190px;
+    }
+    .mobile_navbar{
+        display: block;
+    }
+    .Xmark_icon i{
+        font-size: 24px;
+        margin-right: 50px;
+    }
+
+    .search_course{
+        
+        display: none;
+    
+    }
+   
+
+
+    .nav_btn button{
+        display: none;
+    }
+
+    /*home page */
+    #home_page {
+        height: 100vh;
+        padding: 25px;
+    }
+    .home_info{
+        padding-top: 70px;
+    }
+
+    .home_category {
+        display: none;
+
+    }
+
+    /*ABOUT PAGE*/
+
+    /*courses  page */
+    #courses{
+        height: 100vh;
+    }
+    .courses_welcome{
+        padding: 8px;
+    }
+    .courses_type {
+        display: none;
+    }
+
+    /*courses categories setting of mobile version*/
+    .courses_type_mobile {
+        display: block;
+        box-shadow: 0 6px 10px rgba(60, 60, 62, 0.5);
+        text-align: center;
+        margin: 40px;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    #category_part {
+        width: 100%;
+    }
+
+    .category_head h1 {
+        font-size: 3rem;
+    }
+
+    .category_head span {
+        font-size: 3rem;
+    }
+
+    #chose_category h3 {
+        border: 1px solid black;
+        font-family: "Parkinsans", sans-serif;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .drop_category {
+        margin-top: 15px;
+        padding: 12px;
+        border: 1px solid rgba(60, 60, 62, 0.2);
+        border-radius: 8px;
+        transition: all 0.4s ease;
+    }
+
+    .category_link {
+        margin-top: 20px;
+        padding: 12px;
+        text-align: center;
+        transition: .2s;
+    }
+
+    .category_link:hover {
+        background-color: rgb(133, 133, 133);
+    }
+
+    .hide_category {
+        display: none;
+    }
+
+    /*end of mobile categories settings*/
+
+    /*courses card start*/
+    #courses_card {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        background-color: white;
+    }
+
+    .card {
+        margin: 12px;
+    }
+
+    .enrol_btn button {
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+
+    /*courses card end*/
+
+    /*about page */
+    #about {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(44, 0, 241, 0.8)),
+            url(Education-images/education_course_page.jpg);
+    }
+
+    .about_head p {
+        margin-bottom: 20px;
+    }
+
+    #our_story {
+        margin: 0;
+        padding: 10px;
+    }
+
+
+    .platform_owner {
+        display: none;
+    }
+
+
+
+    .owner2_photo h5 {
+        margin: 0;
+    }
+
+    .story {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .our_Instructors {
+        flex-wrap: wrap;
+    }
+
+    #Numbers_speak {
+        height: auto;
+        margin: 6px;
+    }
+
+    .numbers {
+        gap: 40px;
+    }
+
+    .number h4 {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .testimonial_card {
+        flex-wrap: wrap;
+    }
+
+    /*contact page */
+
+    #contact_information {
+        margin: 12px;
+    }
+
+    .contact_info {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contact_form {
+        margin: 12px;
+    }
+
+    .message {
+        text-align: left;
+    }
+
+    .message textarea {
+        width: 100%;
+    }
+
+    .msg_btn button {
+        width: 100%;
+    }
+
+    /*footer */
+    #footer {
+        height: auto;
+        margin: 8px;
+
+    }
+
+    .footer_container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .platform_links,
+    .platform_contact,
+    .platform_social {
+        padding-top: 30px;
+    }
+
+    .platform_copyright p {
+        padding: 30px 0 20px 0;
+    }
+
+
+    /*COURSE DETAILS PAGE*/
+    #course_presentation {
+        flex-direction: column-reverse;
+    }
+
+    #course_banner {
+        top: 100%;
+        position: relative;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #about_course {
+        margin-left: 10px;
+    }
+
+    .small_tabs {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .course_objectives {
+        margin: 0 !important;
+    }
+
+    .objectives {
+        width: 98%;
+        gap: 8px;
+        margin-right: 5px;
+
+    }
+
+    .object {
+        box-shadow: 0 4px 6px rgba(60, 60, 62, 0.5);
+        padding: 10px;
+    }
+
+    .skills_name {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 98%;
+    }
+
+    .plan {
+        width: 98%;
+    }
+
+    .course_owner {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    /*end of course details page */
+
+    /*COURSE LESSON PAGE*/
+    #course_content {
+        flex-direction: column;
+    }
+
+    .course_info {
+        width: 98%;
+        margin: 5px;
+        box-shadow: 0 4px 8px rgba(60, 60, 62, 0.5);
+    }
+
+    .course_lessons {
+        width: 98%;
+        margin: 50px 5px;
+        box-shadow: 0 4px 8px rgba(60, 60, 62, 0.5);
+
+    }
+
+    .lesson_p {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #quizResult {
+        width: 250px;
+    }
+
+}
