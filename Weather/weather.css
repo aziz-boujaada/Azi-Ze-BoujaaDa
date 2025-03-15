@@ -152,7 +152,7 @@ section {
 }
 .city_display h3{
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-size: 2.4rem;
   letter-spacing: 2px;
   font-family: var(--extra-font);
@@ -173,7 +173,7 @@ section {
   align-items: center;
   justify-content: space-around;
   gap: 50px;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .temperature,
@@ -195,7 +195,7 @@ section {
   justify-content: space-around;
   gap: 50px;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 3rem;
   background-color: rgba(95, 94, 107, 0.6);
   border-radius: 12px;
 }

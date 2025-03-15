@@ -1,4 +1,8 @@
 console.log("script loaded");
+require('dotenv').config();
+
+const apiKey = process.env.API_KEY;
+console.log("API Key:", apiKey);
 function lightDarkMode() {
   const lightMode = document.getElementById("light_mode");
   const darkMode = document.getElementById("dark_mode");
@@ -89,7 +93,7 @@ function GetCitiesWeather(){
    }
 
 
-   const apiKey= "55f0946fa2e98f33e4f1b12faa88a2db";
+
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${foundCity.name}&appid=${apiKey}&units=metric`)
 
 
