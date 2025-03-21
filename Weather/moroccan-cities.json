@@ -41,5 +41,17 @@
   { "name": "Jerada", "lat": 34.3114, "lon": -2.1788 },
   { "name": "Boujdour", "lat": 26.1333, "lon": -14.5 },
   { "name": "Guercif", "lat": 34.2251, "lon": -3.3536 },
-  { "name": "Ait Melloul", "lat": 30.3342, "lon": -9.4972 }
+  { "name": "Ait Melloul", "lat": 30.3342, "lon": -9.4972 },
+  { "name": "Azilal", "lat": 32.4000, "lon": -6.5900 },
+  { "name": "Khenifra", "lat": 32.9382, "lon": -5.6763 },
+  { "name": "Midelt", "lat": 32.6851, "lon": -4.7452 },
+  { "name": "Ifrane Atlas Saghir", "lat": 30.7014, "lon": -9.5178 },
+  { "name": "Tinghir", "lat": 31.5147, "lon": -5.532 },
+  { "name": "Ifrane", "lat": 33.5344, "lon": -6.9238 },
+  { "name": "Tata", "lat": 29.7367, "lon": -7.9877 },
+  { "name": "Al Hoceima", "lat": 35.2491, "lon": -3.9335 },
+  { "name": "Azgour", "lat": 31.4248, "lon": -7.8742 },
+  { "name": "Ait Daoud", "lat": 31.106454407557344, "lon": -8.37798750956473 }
+
+  
 ]

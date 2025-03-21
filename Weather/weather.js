@@ -1,12 +1,9 @@
 console.log("script loaded");
-require('dotenv').config();
 
-const apiKey = process.env.API_KEY;
-console.log("API Key:", apiKey);
+const lightMode = document.getElementById("light_mode");
+const darkMode = document.getElementById("dark_mode");
+const weatherSection = document.getElementById("weather_display");
 function lightDarkMode() {
-  const lightMode = document.getElementById("light_mode");
-  const darkMode = document.getElementById("dark_mode");
-  const weatherSection = document.getElementById("weather_display");
 
   if (!lightMode || !darkMode || !weatherSection) {
     console.error("element not found");
@@ -66,11 +63,14 @@ updateClock();
 //weather data 
 
 const temperature = document.querySelector(".temperature");
+const tempFeelsLike = document.querySelector(".feels_like");
 const windSpeed = document.querySelector(".wind_speed");
 const humidity = document.querySelector(".humidity");
+const visibility = document.querySelector(".visibility");
+const pressure = document.querySelector(".pressure");
 const YourCity = document.querySelector(".city_display");
 const weatherStateShow = document.querySelector(".weather_state");
-if(!temperature || !windSpeed || !humidity ||!YourCity ||!weatherStateShow){
+if(!temperature ||!tempFeelsLike|| !windSpeed || !humidity || !visibility || !pressure ||!YourCity ||!weatherStateShow){
     console.error("element not found");
     
 }
@@ -88,12 +88,12 @@ function GetCitiesWeather(){
   const foundCity = cityList.find(city => city.name.toLowerCase()===UserInput);
 
    if(!foundCity){
-       weatherStateShow.innerHTML=("No weather data");
+       weatherStateShow.innerHTML=("No weather data! Please cheek Your Internet Connection! Or Enter correct City Name");
         return;
    }
 
 
-
+const apiKey = "YOUR_API_KEY";
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${foundCity.name}&appid=${apiKey}&units=metric`)
 
 
@@ -111,9 +111,16 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${foundCity.name}&appid
       <h3>${weatherConditions}</h3>
       <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherConditions}">
     `
-    temperature.innerHTML =`<h3> <i class="fa-solid fa-temperature-low"></i> ${data.main.temp} C°</h3>`
-    windSpeed.innerHTML =`<h3> <i class="fa-solid fa-wind"></i>${data.wind.speed} KM/H</h3>`
-    humidity.innerHTML =`<h3><i class="fa-solid fa-droplet"></i> ${data.main.humidity} %</h3>`
+    const ImgUrlJpg = `images/${weatherConditions.replace(/\s/g , "_")}.jpg`
+    const ImgUrlJpeg = `images/${weatherConditions.replace(/\s/g , "_")}.jpeg`
+    weatherSection.style.backgroundImage = `url("${ImgUrlJpg}")`
+    weatherSection.style.backgroundImage = `url("${ImgUrlJpeg}")`
+    temperature.innerHTML =`<h3> <span><i class="fa-solid fa-temperature-low"></i> temperature <br> </span> ${data.main.temp} C°</h3>`
+    tempFeelsLike.innerHTML =`<h3><span><i class="fa-solid fa-temperature-low"></i> feels like <br> </span> ${data.main.feels_like} C°</h3>`
+    windSpeed.innerHTML =`<h3><span><i class="fa-solid fa-wind"></i> wind <br> </span> ${data.wind.speed} KM/H</h3>`
+    humidity.innerHTML =`<h3><span><i class="fa-solid fa-droplet"></i>Humidity <br> </span> ${data.main.humidity} %</h3>`
+    visibility.innerHTML =`<h3><span><i class="fa-solid fa-eye"></i>Visibility <br> </span> ${(data.visibility/1000).toFixed(1)} KM</h3>`
+    pressure.innerHTML =`<h3><span><i class="fa-solid fa-gauge"></i> Pressure <br> </span> ${data.main.pressure} Hpa</h3>`
    
   })
   .catch(error=> console.error("no data " ,error));
@@ -131,9 +138,11 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${foundCity.name}&appi
   let dailyForecast = [];
    data.list.forEach(entry => {
     let date = entry.dt_txt.split(" ")[0];
+    let dayName = new Date(date).toLocaleDateString("en-US" , {weekday :"long"});
     if(!dailyForecast.some(forecast=>forecast.date===date)){
       dailyForecast.push({
         date :date,
+        dayName:dayName,
         temp: entry.main.temp,
         wind : entry.wind.speed,
         humidity : entry.main.humidity,
@@ -145,7 +154,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${foundCity.name}&appi
    daysContainer.forEach((day ,index)=>{
     if(dailyForecast[index]){
       day.innerHTML= `
-        <p> <i class="fa-solid fa-calendar-days"></i> ${dailyForecast[index].date}<br></p>
+        <p> <i class="fa-solid fa-calendar-days"></i> ${dailyForecast[index].dayName}</p>
         <p> <i class="fa-solid fa-temperature-low"></i>${dailyForecast[index].temp}C°</p>
         <p> <i class="fa-solid fa-wind"></i> ${dailyForecast[index].wind}KM/h</p>
         <p> <i class="fa-solid fa-droplet"></i> ${dailyForecast[index].humidity}%</p>

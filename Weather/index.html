@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <!--fav icon -->
-    <link rel="icon" href="ticket_images/icons8-lion-96.png" type="image/png" />
+    <link rel="icon" href="images/icons8-night-wind-48.png" type="image/png" />
 
     <title>Weather</title>
   </head>
@@ -37,10 +37,11 @@
         <header id="header">
           <div class="time_display"></div>
           <div class="light-dark_mode">
-            <button id="light_mode" class="active_mode" name="light-mode">
+            <button id="light_mode" class="active_mode" name="light-mode" aria-label="light-mode_button">
               <i class="fa-regular fa-sun"></i>
             </button>
-            <button id="dark_mode" name="light-mode">
+
+            <button id="dark_mode" name="light-mode" aria-label="dark_mode_button">
               <i class="fa-solid fa-moon"></i>
             </button>
           </div>
@@ -48,17 +49,13 @@
         <!--end of part HEADER-->
         <div class="city_name">
           <input type="text" id="cityInput" placeholder="Enter your City" />
-          <span onclick="GetCitiesWeather()"><i class="fa-solid fa-magnifying-glass-location"></i></span>
+          <span onclick="GetCitiesWeather()"
+            ><i class="fa-solid fa-magnifying-glass-location"></i
+          ></span>
         </div>
         <div class="city_weather">
-            <div class="city_display"></div>
-            <div class="weather_state"></div>
-        </div>
-
-        <div class="weather_info">
-          <div class="temperature"></div>
-          <div class="wind_speed"></div>
-          <div class="humidity"></div>
+          <div class="city_display"></div>
+          <div class="weather_state"></div>
         </div>
 
         <div class="forecast_days">
@@ -68,6 +65,14 @@
           <div class="day"></div>
           <div class="day"></div>
           <div class="day"></div>
+        </div>
+        <div class="weather_info">
+          <div class="temperature"></div>
+          <div class="feels_like"></div>
+          <div class="wind_speed"></div>
+          <div class="humidity"></div>
+          <div class="visibility"></div>
+          <div class="pressure"></div>
         </div>
       </section>
     </main>
