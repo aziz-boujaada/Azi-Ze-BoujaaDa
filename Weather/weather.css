@@ -47,9 +47,7 @@ button {
 }
 
 section {
- 
   padding: 10px;
-  border-radius: var(--border-radius);
   background-color: rgba(12, 33, 227, 0.7);
   transition: background-color 0.3s ease-in-out;
 }
@@ -60,14 +58,21 @@ section {
   justify-content: space-around;
   position: fixed;
   width: 100%;
+ padding: 0;
 }
 
+#weather_display{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
 .time_display,
 .light-dark_mode {
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
   padding: 10px;
-  margin: 0 10px;
+
   width: 100%;
   max-width: 150px;
   height: 45px;
@@ -93,8 +98,8 @@ section {
   color: rgb(14, 124, 220);
 }
 
-.dark_mode_colors {
-  background-color: rgba(2, 6, 38, 0.7);
+.dark_mode_colors  {
+  background-color: rgba(2, 6, 38, 0.4) !important;
   color: rgb(15, 124, 220);
 }
 
@@ -109,6 +114,7 @@ section {
 .city_name {
   text-align: center;
   padding-top: 6rem;
+
 }
 
 .city_name input {
@@ -117,7 +123,8 @@ section {
   height: 45px;
   padding: 10px;
   border-radius: var(--border-radius);
- background-color:  rgba(95, 94, 107, 0.6);
+  background-color: rgba(56, 55, 52, 0.4);
+  color: aliceblue;
   outline: none;
   border: 1px solid var(--secondary-color);
 }
@@ -140,13 +147,14 @@ section {
   right: 5%;
  font-size: 24px;
  margin-top: 10px;
+ color: var(--secondary-color);
 }
 .city_name span:hover {
   transform: scale(1);
   color: black;
 }
 .city_weather{
-  background-color: rgba(95, 94, 107, 0.6);
+   background-color: rgba(56, 55, 52, 0.4);
   margin-top: 2rem;
   border-radius: 20px;
 }
@@ -169,23 +177,44 @@ section {
 
 
 .weather_info {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-around;
-  gap: 50px;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
   padding-top: 3rem;
 }
 
 .temperature,
 .wind_speed,
-.humidity {
+.humidity,
+.feels_like,
+.visibility,
+.pressure{
+  position: relative;
   width: 100%;
-  height: 100px;
-  padding: 1rem;
+  height: 150px;
+  
   text-align: center;
-  background-color: rgba(95, 94, 107, 0.6);
+  padding-top: 40px;
+  background-color: rgba(56, 55, 52, 0.4);
   border-radius: var(--border-radius);
   overflow: hidden;
+}
+.temperature span,
+.wind_speed span,
+.humidity span,
+.feels_like span,
+.visibility span,
+.pressure
+span{
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #d8d8d8;
+  letter-spacing: 2px;
+  position: absolute;
+  top:10px;
+  left: 10px;
 }
 
 .forecast_days {
@@ -196,7 +225,7 @@ section {
   gap: 50px;
   width: 100%;
   margin-top: 3rem;
-  background-color: rgba(95, 94, 107, 0.6);
+  background-color: rgba(56, 55, 52, 0.4);
   border-radius: 12px;
 }
 .forecast_days h3{
@@ -216,8 +245,16 @@ section {
   text-align: center;
  
 }
+.day:last-child{
+  border-bottom: none;
+}
 .day i{
   color: aliceblue;
   padding-bottom: 12px;
 }
+.day p{
+  font-size: 16px;
+}
+
+
 }
