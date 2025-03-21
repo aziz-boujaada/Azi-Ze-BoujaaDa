@@ -70,99 +70,151 @@ const visibility = document.querySelector(".visibility");
 const pressure = document.querySelector(".pressure");
 const YourCity = document.querySelector(".city_display");
 const weatherStateShow = document.querySelector(".weather_state");
-if(!temperature ||!tempFeelsLike|| !windSpeed || !humidity || !visibility || !pressure ||!YourCity ||!weatherStateShow){
-    console.error("element not found");
+document.addEventListener("DOMContentLoaded" ,function(){
+
+  if(!temperature ||!tempFeelsLike|| !windSpeed || !humidity || !visibility || !pressure ||!YourCity ||!weatherStateShow){
+    console.error("one or more element not found");
     
+  }
+  
+});
+
+//function to get current location
+const apiKey = "YOUR_API_KEY";
+function UseCurrentLocation(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition((position) =>{
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      console.log(` your current position : ${lat} , ${lon}`);
+      getWeatherByLocation(lat ,lon ,apiKey);
+  
+    },
+    (error)=>{
+      console.error("get location failed" ,error.message)
+    }
+    
+  )
+  }else{
+    console.error("browser not supported location")
+  }
 }
 
+//get weather by user location
+function getWeatherByLocation(lat , lon ,apiKey){
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+  .then(response=> response.json())
+  .then (data => {
+   
+    UpdateWeatherUI(data);
+    comingDaysForecast({name: data.name} ,apiKey); 
+ 
+  })
+}
+function UpdateWeatherUI(data){
+ 
+
+  const weatherConditions = data.weather[0].description;
+  console.log("description " ,weatherConditions);
+  const weatherIcon = data.weather[0].icon;
+  console.log("icon " ,weatherIcon);
+  
+  YourCity.innerHTML = `<h3>${data.name}</h3>`;
+  
+  weatherStateShow.innerHTML = `
+   <h3>${weatherConditions}</h3>
+   <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherConditions}">
+  `
+  const ImgUrlJpg = `images/${weatherConditions.replace(/\s/g , "_")}.jpg`
+  
+  weatherSection.style.backgroundImage = `url("${ImgUrlJpg}")`
+  
+  
+  temperature.innerHTML =`<h3> <span><i class="fa-solid fa-temperature-low"></i> temperature <br> </span> ${data.main.temp} C°</h3>`
+  tempFeelsLike.innerHTML =`<h3><span><i class="fa-solid fa-temperature-low"></i> feels like <br> </span> ${data.main.feels_like} C°</h3>`
+  windSpeed.innerHTML =`<h3><span><i class="fa-solid fa-wind"></i> wind <br> </span> ${data.wind.speed} KM/H</h3>`
+  humidity.innerHTML =`<h3><span><i class="fa-solid fa-droplet"></i>Humidity <br> </span> ${data.main.humidity} %</h3>`
+  visibility.innerHTML =`<h3><span><i class="fa-solid fa-eye"></i>Visibility <br> </span> ${(data.visibility/1000).toFixed(1)} KM</h3>`
+  pressure.innerHTML =`<h3><span><i class="fa-solid fa-gauge"></i> Pressure <br> </span> ${data.main.pressure} Hpa</h3>`
+   
+  }
+
+//fetch cities from Json file
 let cityList = [];
 fetch("moroccan-cities.json")
 .then(response => response.json())
 .then(data =>{
-   cityList = data;
+  cityList = data
 })
 .catch(error=> console.error("upload cities failed" , error))
 
+// function to Get cities weather 
 function GetCitiesWeather(){
-  const UserInput = document.getElementById("cityInput").value.trim().toLowerCase();
-  const foundCity = cityList.find(city => city.name.toLowerCase()===UserInput);
+const UserInput = document.getElementById("cityInput").value.trim().toLowerCase();
+const foundCity = cityList.find(city => city.name.toLowerCase()===UserInput);
 
-   if(!foundCity){
-       weatherStateShow.innerHTML=("No weather data! Please cheek Your Internet Connection! Or Enter correct City Name");
-        return;
-   }
-
-
-const apiKey = "YOUR_API_KEY";
+if(!foundCity){
+ UseCurrentLocation();
+ return;
+}else{
+  
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${foundCity.name}&appid=${apiKey}&units=metric`)
 
 
 .then(response => response.json())
 .then(data => {
-     
-  const weatherConditions = data.weather[0].description;
-   console.log("description " ,weatherConditions);
-  const weatherIcon = data.weather[0].icon;
-  console.log("icon " ,weatherIcon);
+  UpdateWeatherUI(data);
+  comingDaysForecast(foundCity ,apiKey);
 
-    YourCity.innerHTML =`<h3>${foundCity.name}</h3>`
+})
 
-    weatherStateShow.innerHTML = `
-      <h3>${weatherConditions}</h3>
-      <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherConditions}">
-    `
-    const ImgUrlJpg = `images/${weatherConditions.replace(/\s/g , "_")}.jpg`
-    const ImgUrlJpeg = `images/${weatherConditions.replace(/\s/g , "_")}.jpeg`
-    weatherSection.style.backgroundImage = `url("${ImgUrlJpg}")`
-    weatherSection.style.backgroundImage = `url("${ImgUrlJpeg}")`
-    temperature.innerHTML =`<h3> <span><i class="fa-solid fa-temperature-low"></i> temperature <br> </span> ${data.main.temp} C°</h3>`
-    tempFeelsLike.innerHTML =`<h3><span><i class="fa-solid fa-temperature-low"></i> feels like <br> </span> ${data.main.feels_like} C°</h3>`
-    windSpeed.innerHTML =`<h3><span><i class="fa-solid fa-wind"></i> wind <br> </span> ${data.wind.speed} KM/H</h3>`
-    humidity.innerHTML =`<h3><span><i class="fa-solid fa-droplet"></i>Humidity <br> </span> ${data.main.humidity} %</h3>`
-    visibility.innerHTML =`<h3><span><i class="fa-solid fa-eye"></i>Visibility <br> </span> ${(data.visibility/1000).toFixed(1)} KM</h3>`
-    pressure.innerHTML =`<h3><span><i class="fa-solid fa-gauge"></i> Pressure <br> </span> ${data.main.pressure} Hpa</h3>`
-   
-  })
-  .catch(error=> console.error("no data " ,error));
+}
+}
+
 
 //Forecast for 5 coming days 
-const daysContainer =document.querySelectorAll(".forecast_days .day");
-if(daysContainer.length===0){
-    console.error("this element not found ");
-}
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${foundCity.name}&appid=${apiKey}&units=metric`)
- .then(response => response.json())
- .then(data=>{
-   console.log("forecast 5 days " , data);
+function comingDaysForecast(city ,apiKey){
 
-  let dailyForecast = [];
-   data.list.forEach(entry => {
-    let date = entry.dt_txt.split(" ")[0];
-    let dayName = new Date(date).toLocaleDateString("en-US" , {weekday :"long"});
-    if(!dailyForecast.some(forecast=>forecast.date===date)){
-      dailyForecast.push({
-        date :date,
-        dayName:dayName,
-        temp: entry.main.temp,
-        wind : entry.wind.speed,
-        humidity : entry.main.humidity,
-        rain: entry.rain ? (entry.rain["3h"] || 0) : 0
-      });
-    }
+  const daysContainer =document.querySelectorAll(".forecast_days .day");
+  if(daysContainer.length===0){
+      console.error("this element not found ");
+  }
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.name}&appid=${apiKey}&units=metric`)
+   .then(response => response.json())
+   .then(data=>{
+     console.log("forecast 5 days " , data);
+  
+    let dailyForecast = [];
+     data.list.forEach(entry => {
+      let date = entry.dt_txt.split(" ")[0];
+      let dayName = new Date(date).toLocaleDateString("en-US" , {weekday :"long"});
+      if(!dailyForecast.some(forecast=>forecast.date===date)){
+        dailyForecast.push({
+          date :date,
+          dayName:dayName,
+          temp: entry.main.temp,
+          wind : entry.wind.speed,
+          humidity : entry.main.humidity,
+          rain: entry.rain ? (entry.rain["3h"] || 0) : 0
+        });
+      }
+     });
+  
+     daysContainer.forEach((day ,index)=>{
+      if(dailyForecast[index]){
+        day.innerHTML= `
+          <p> <i class="fa-solid fa-calendar-days"></i> ${dailyForecast[index].dayName}</p>
+          <p> <i class="fa-solid fa-temperature-low"></i>${dailyForecast[index].temp}C°</p>
+          <p> <i class="fa-solid fa-wind"></i> ${dailyForecast[index].wind}KM/h</p>
+          <p> <i class="fa-solid fa-droplet"></i> ${dailyForecast[index].humidity}%</p>
+          <p> <i class="fa-solid fa-cloud-rain"></i>${dailyForecast[index].rain}mm</p>
+        
+        `
+      }else{
+        UpdateWeatherUI(data)
+      }
+     });
    });
-
-   daysContainer.forEach((day ,index)=>{
-    if(dailyForecast[index]){
-      day.innerHTML= `
-        <p> <i class="fa-solid fa-calendar-days"></i> ${dailyForecast[index].dayName}</p>
-        <p> <i class="fa-solid fa-temperature-low"></i>${dailyForecast[index].temp}C°</p>
-        <p> <i class="fa-solid fa-wind"></i> ${dailyForecast[index].wind}KM/h</p>
-        <p> <i class="fa-solid fa-droplet"></i> ${dailyForecast[index].humidity}%</p>
-        <p> <i class="fa-solid fa-cloud-rain"></i>${dailyForecast[index].rain}mm</p>
-      
-      `
-    }
-   });
- });
 }
+
 

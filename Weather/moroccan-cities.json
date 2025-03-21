@@ -42,7 +42,7 @@
   { "name": "Boujdour", "lat": 26.1333, "lon": -14.5 },
   { "name": "Guercif", "lat": 34.2251, "lon": -3.3536 },
   { "name": "Ait Melloul", "lat": 30.3342, "lon": -9.4972 },
-  { "name": "Azilal", "lat": 32.4000, "lon": -6.5900 },
+  { "name": "Azilal", "lat": 32.4, "lon": -6.59 },
   { "name": "Khenifra", "lat": 32.9382, "lon": -5.6763 },
   { "name": "Midelt", "lat": 32.6851, "lon": -4.7452 },
   { "name": "Ifrane Atlas Saghir", "lat": 30.7014, "lon": -9.5178 },
@@ -51,7 +51,111 @@
   { "name": "Tata", "lat": 29.7367, "lon": -7.9877 },
   { "name": "Al Hoceima", "lat": 35.2491, "lon": -3.9335 },
   { "name": "Azgour", "lat": 31.4248, "lon": -7.8742 },
-  { "name": "Ait Daoud", "lat": 31.106454407557344, "lon": -8.37798750956473 }
+  { "name": "Ait Daoud", "lat": 31.105768727684353, "lon": -8.378772687041769 },
 
-  
+  {
+    "name": "Tangier",
+    "latitude": 35.7595,
+    "longitude": -5.83395
+  },
+  {
+    "name": "Tetouan",
+    "latitude": 35.5785,
+    "longitude": -5.3684
+  },
+  {
+    "name": "Chefchaouen",
+    "latitude": 35.1688,
+    "longitude": -5.2636
+  },
+  {
+    "name": "Al Hoceima",
+    "latitude": 35.2514,
+    "longitude": -3.9324
+  },
+  {
+    "name": "Larache",
+    "latitude": 35.1932,
+    "longitude": -6.1557
+  },
+  {
+    "name": "Asilah",
+    "latitude": 35.4653,
+    "longitude": -6.0342
+  },
+  {
+    "name": "Fnideq",
+    "latitude": 35.8427,
+    "longitude": -5.3584
+  },
+  {
+    "name": "M'diq",
+    "latitude": 35.6829,
+    "longitude": -5.3278
+  },
+  {
+    "name": "Martil",
+    "latitude": 35.6164,
+    "longitude": -5.2756
+  },
+  {
+    "name": "Ouezzane",
+    "latitude": 34.7959,
+    "longitude": -5.5782
+  },
+  {
+    "name": "Ksar el-Kebir",
+    "latitude": 35.0024,
+    "longitude": -5.9053
+  },
+  {
+    "name": "Souk El Arbaa",
+    "latitude": 34.6867,
+    "longitude": -5.9684
+  },
+  {
+    "name": "Taza",
+    "latitude": 34.2163,
+    "longitude": -3.9981
+  },
+  {
+    "name": "Taounate",
+    "latitude": 34.5358,
+    "longitude": -4.64
+  },
+  {
+    "name": "Targuist",
+    "latitude": 34.9352,
+    "longitude": -4.3133
+  },
+  {
+    "name": "Imzouren",
+    "latitude": 35.1527,
+    "longitude": -3.8581
+  },
+  {
+    "name": "Bni Bouayach",
+    "latitude": 35.1092,
+    "longitude": -3.8406
+  },
+  {
+    "name": "Ajdir",
+    "latitude": 35.1442,
+    "longitude": -3.8997
+  },
+  {
+    "name": "Aknoul",
+    "latitude": 34.7422,
+    "longitude": -3.9003
+  },
+  {
+    "name": "Bab Berred",
+    "latitude": 34.9867,
+    "longitude": -4.9117
+  },
+  {
+    "name": "Bab Taza",
+    "latitude": 35.1223,
+    "longitude": -5.1145
+  }
 ]
